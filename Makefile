@@ -2,24 +2,24 @@ SHELL := /bin/bash
 OS := $(shell uname)
 
 define start-services
-	@docker-compose -f compose.yaml up --force-recreate -d --remove-orphans sonar fluentbit mysql kafka kafdrop elasticsearch prometheus grafana telegraf influxdb
+	@docker compose -f compose.yaml up --force-recreate -d --remove-orphans sonar fluentbit db kafka kafdrop elasticsearch prometheus grafana telegraf influxdb keycloak
 endef
 
 define check
-	@docker-compose -f sonar-compose.yaml up --force-recreate -d --remove-orphans sonar-db sonar
+	@docker compose -f sonar-compose.yaml up --force-recreate -d --remove-orphans sonar-db sonar
 endef
 
 define start-app
-	@docker-compose -f compose.yaml up -d app
+	@docker compose -f compose.yaml up -d app
 endef
 
 define teardown
-	@docker-compose -f compose.yaml rm -f -v -s
+	@docker compose -f compose.yaml rm -f -v -s
 	@docker system prune -f --volumes
 endef
 
 define check-teardown
-	@docker-compose -f sonar-compose.yaml rm -f -v -s
+	@docker compose -f sonar-compose.yaml rm -f -v -s
 	@docker system prune -f --volumes
 endef
 
@@ -32,7 +32,7 @@ define local-app
 endef
 
 define setup
-	@docker-compose -f compose.yaml up -d --build --force-recreate --remove-orphans
+	@docker compose -f compose.yaml up -d --build --force-recreate --remove-orphans
 endef
 
 define k8s-apply
@@ -153,3 +153,6 @@ coverage:
 
 tests:
 	sudo ./gradlew test
+
+# condb:
+#     mysql -h 127.0.0.1 -P 3306 -u test template-service-java-springboot -p

@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.8"
 
 services:
   app:
@@ -22,7 +22,7 @@ services:
 
     depends_on:
       - fluentbit
-      - mysql
+      - db
       - kafka
       - elasticsearch
       - prometheus
@@ -36,18 +36,19 @@ services:
 
     environment:
       - SLEEP_LENGTH=5
-      - spring.datasource.url=jdbc:mysql://mysql:3306/template-service-java-springboot?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false&autoReconnect=true&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+      - spring.datasource.url=jdbc:mysql://db:3306/template-service-java-springboot?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false&autoReconnect=true&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
       - spring.datasource.username=test
       - spring.datasource.password=root1234
       - spring.kafka.bootstrap-servers=kafka:9092
 
   sonar:
     image: sonarqube:7.9.5-community
+    container_name: sonar
     depends_on:
       - sonar-db
       - init
     environment:
-      SONAR_JDBC_URL: jdbc:postgresql://sonar-db:5432/sonar
+      SONAR_JDBC_URL: jdbc:postgresql://sonar-db:5433/sonar
       SONAR_JDBC_USERNAME: sonartest
       SONAR_JDBC_PASSWORD: sonartest
       sonar.web.port: 9000
@@ -65,6 +66,7 @@ services:
       - "9017:9000"
   init:
     image: bash
+    container_name: init
     privileged: true
     user: root
     volumes:
@@ -72,16 +74,20 @@ services:
     command: [ "sh", "-e", "/mnt/init.sh" ]
 
   sonar-db:
-    image: postgres:12
+    image: postgres:14.4
+    container_name: sonar-db
     environment:
       POSTGRES_USER: sonartest
       POSTGRES_PASSWORD: sonartest
     volumes:
-      - postgresql:/var/lib/postgresql
-      - postgresql_data:/var/lib/postgresql/data
+      - sonar_postgresql:/var/lib/postgresql
+      - sonar_postgresql_data:/var/lib/postgresql/data
+    ports:
+      - '5433:5432'
 
   fluentbit:
     image: 'shubham01/template-service-java-springboot-fluentbit:latest'
+    container_name: fluentbit
     hostname: fluentbit
     ports:
       - "24224:24224"
@@ -91,8 +97,9 @@ services:
       - ./fluentbit/parsers.conf:/fluent-bit/etc/parsers.conf
       - ./log/:/etc/data
 
-  mysql:
+  db:
     image: 'mysql:latest'
+    container_name: db
     environment:
       - 'MYSQL_DATABASE=template-service-java-springboot'
       - 'MYSQL_PASSWORD=root1234'
@@ -101,7 +108,77 @@ services:
     ports:
       - '3306:3306'
 
+  keycloak:
+    image: 'keycloak/keycloak:22.0'
+    container_name: keycloak
+    command: [ 'start-dev' ]
+    depends_on:
+      - keycloak-db
+    environment:
+      JAVA_OPTS_APPEND: -Dkeycloak.profile.feature.upload_scripts=enabled
+      TZ: '...'
+      DB: postgres
+      DB_URL: jdbc:postgresql://keycloak-db:5432/keycloak?user=postgres
+      DB_PASSWORD: postgres
+      LOG_LEVEL: warn
+      HOSTNAME: localhost
+#      KC_HOSTNAME: localhost
+      KC_HOSTNAME_PORT: 8180
+      KC_HOSTNAME_URL: http://127.0.0.1:8180
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: password
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://keycloak-db:5432/keycloak?user=postgres
+      KC_DB_USERNAME: postgres
+      KC_DB_PASSWORD: postgres
+      KC_DB_ADDR: localhost
+      KC_DB_DATABASE: keycloak
+      KC_HEALTH_ENABLED: 'true'
+      KC_HTTP_ENABLED: 'true'
+      KC_METRICS_ENABLED: 'true'
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: password
+      KC_LOG_LEVEL: info
+    ports:
+      - "8180:8080"
+      - "8787:8787" # debug port
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/health/ready" ]
+      interval: 15s
+      timeout: 2s
+      retries: 15
+
+  pgadmin:
+    container_name: pgadmin
+    image: "dpage/pgadmin4:5.1"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: postgres@domain.local
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    ports:
+      - "5050:80"
+
+  keycloak-db:
+    container_name: keycloak-db
+    image: "postgres:14.4"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "root" ]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    volumes:
+      - keycloak_postgresql:/var/lib/postgresql
+      - keycloak_postgresql_data:/var/lib/postgresql/data
+#        - ./sql:/docker-entrypoint-initdb.d/:ro # turn it on, if you need run init DB
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: keycloak
+      POSTGRES_HOST: postgres
+    ports:
+      - "5432:5432"
+
   zookeeper:
+    container_name: zookeeper
     image: confluentinc/cp-zookeeper:latest
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
@@ -110,6 +187,7 @@ services:
       - 22181:2181
 
   kafka:
+    container_name: kafka
     image: confluentinc/cp-kafka:latest
     depends_on:
       - zookeeper
@@ -125,6 +203,7 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
   kafdrop:
+    container_name: kafdrop
     image: obsidiandynamics/kafdrop
     restart: "no"
     ports:
@@ -136,6 +215,7 @@ services:
       - "kafka"
 
   elasticsearch:
+    container_name: elasticsearch
     image: elasticsearch:8.9.1
     ports:
       - "9200:9200"
@@ -205,8 +285,10 @@ volumes:
   sonarqube_extensions:
   sonarqube_logs:
   sonarqube_temp:
-  postgresql:
-  postgresql_data:
+  sonar_postgresql:
+  sonar_postgresql_data:
+  keycloak_postgresql:
+  keycloak_postgresql_data:
 
 networks:
   template-service-java-springboot:
