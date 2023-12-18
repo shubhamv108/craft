@@ -47,6 +47,6 @@ jobs:
 #          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 #        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 #      - name: Build the Docker image
-#        run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/template-service-java-springboot:latest
+#        run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/craft:latest
 #      - name: Docker Push To DockerHub
-#        run: docker push ${{secrets.DOCKER_USER}}/template-service-java-springboot
+#        run: docker push ${{secrets.DOCKER_USER}}/craft

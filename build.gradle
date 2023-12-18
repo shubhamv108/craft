@@ -67,6 +67,11 @@ dependencies {
 		'org.springframework.boot:spring-boot-starter-webflux',
 		'org.springframework.boot:spring-boot-starter-web',
 		'org.springframework.kafka:spring-kafka',
+
+//		'org.springframework.boot:spring-boot-starter-oauth2-client',
+		'org.springframework.boot:spring-boot-starter-oauth2-resource-server',
+		'org.springframework.boot:spring-boot-starter-security',
+		'org.springframework.boot:spring-boot-starter-thymeleaf',
 	)
 	runtimeOnly (
 		'com.mysql:mysql-connector-j',
@@ -76,6 +81,7 @@ dependencies {
 		'org.springframework.boot:spring-boot-starter-test',
 		'io.projectreactor:reactor-test',
 		'org.springframework.kafka:spring-kafka-test',
+		'org.springframework.security:spring-security-test',
 	)
 }
 
@@ -161,7 +167,7 @@ sonarqube {
 		property "sonar.login", ""
 		property "sonar.password", ""
 		property "sonar.projectKey", "project:service"
-		property 'sonar.projectName', 'template-service-java-springboot'
+		property 'sonar.projectName', 'craft'
 		property 'sonar.java.source', 21
 		property 'sonar.junit.reportPaths', 'build/results'
 		property 'encoding', 'UTF-8'

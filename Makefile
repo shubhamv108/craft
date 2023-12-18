@@ -58,8 +58,8 @@ define k8s-delete-app
 endef
 
 define del-local-app
-    @docker stop template-service-java-springboot
-    @docker rm template-service-java-springboot
+    @docker stop craft
+    @docker rm craft
 endef
 
 
@@ -115,13 +115,13 @@ build-local: clean
 	./gradlew build
 
 rm-images: clean
-	docker image rm shubham01/template-service-java-springboot-fluentbit
-	docker image rm shubham01/template-service-java-springboot
-	docker image rm template-service-java-springboot
+	docker image rm shubham01/craft-fluentbit
+	docker image rm shubham01/craft
+	docker image rm craft
 
 docker-build:
-	docker build -t shubham01/template-service-java-springboot:latest .
-	docker build -t shubham01/template-service-java-springboot-fluentbit:latest fluentbit
+	docker build -t shubham01/craft:latest .
+	docker build -t shubham01/craft-fluentbit:latest fluentbit
 
 build: clean build-local docker-build
 
@@ -131,8 +131,8 @@ run-local: build-local
 	./gradlew bootRun
 
 run: build
-	docker run -p 8080:8080 shubham01/template-service-java-springboot:latest --network="host"
-	docker run -p 24224:24224 shubham01/template-service-java-springboot-fluentbit:latest --network="host"
+	docker run -p 8080:8080 shubham01/craft:latest --network="host"
+	docker run -p 24224:24224 shubham01/craft-fluentbit:latest --network="host"
 
 k8s-apply:
 	$(call k8s-apply)
@@ -143,7 +143,7 @@ k8s-delete-app:
 del-local-app:
 	$(call del-local-app)
 
-local-app: build
+local-app: format build
 	$(call local-app)
 
 local-app-re: del-local-app local-app
@@ -155,4 +155,4 @@ tests:
 	sudo ./gradlew test
 
 # condb:
-#     mysql -h 127.0.0.1 -P 3306 -u test template-service-java-springboot -p
+#     mysql -h 127.0.0.1 -P 3306 -u test craft -p

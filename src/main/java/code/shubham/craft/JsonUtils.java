@@ -1,4 +1,4 @@
-package code.shubham.templateservicejavaspringboot;
+package code.shubham.craft;
 
 import com.google.gson.Gson;
 

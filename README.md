@@ -1,11 +1,11 @@
-# template-service-java-springboot
+# craft
 Simple application to demonstrate server sent events using Spring Boot.
 
 
 # Replace
-### template-service-java-springboot
-### templateservicejavaspringboot
-### TemplateServiceJavaSpringBoot
+### craft
+### craft
+### Craft
 
 # Github Secrets
 DOCKER_USER
