@@ -23,26 +23,9 @@ Instructions to the Candidate:
 4. You can use pen/paper to answer if there is any questions asked during the interview
    process.
 
-
-# Replace
-### craft
-### craft
-### Craft
-
-# Github Secrets
+## Github Secrets
 DOCKER_USER
 DOCKER_PASSWORD
 
 
-# APIs
-## DriverOnboarding
-1. /drivers/onboard/v1/updateStatus
-   <details>
-      <summary>Request</summary>
-      ```
-         {
-            ""
-         }
-      ```
-   </details>
-2. /drivers/onboard/v1/updateStatus
+# [API Documentation](http://localhost:8080/craft/swagger-ui/index.html#/)

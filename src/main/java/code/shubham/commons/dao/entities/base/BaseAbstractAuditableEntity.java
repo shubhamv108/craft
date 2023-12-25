@@ -28,7 +28,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @MappedSuperclass
-@EqualsAndHashCode(callSuper=true)
+@EqualsAndHashCode(callSuper = true)
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = { "createdAt", "updatedAt" }, allowGetters = true)
 public abstract class BaseAbstractAuditableEntity extends BaseIdEntity {
