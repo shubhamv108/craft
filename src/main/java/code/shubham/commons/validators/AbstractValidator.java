@@ -1,10 +1,13 @@
 package code.shubham.commons.validators;
 
-public abstract class AbstractValidator<OBJECT> implements code.shubham.commons.validators.IValidator<OBJECT> {
+import java.util.Collection;
+import java.util.Map;
 
-	private final java.util.Collection<java.util.Map<String, java.util.Collection<String>>> errorMessagesList = new java.util.ArrayList<>();
+public abstract class AbstractValidator<OBJECT> implements IValidator<OBJECT> {
 
-	private java.util.Map<String, java.util.Collection<String>> messages = new java.util.LinkedHashMap<>();
+	private final Collection<Map<String, Collection<String>>> errorMessagesList = new java.util.ArrayList<>();
+
+	private Map<String, Collection<String>> messages = new java.util.LinkedHashMap<>();
 
 	public void next() {
 		this.errorMessagesList.add(messages);
@@ -19,14 +22,14 @@ public abstract class AbstractValidator<OBJECT> implements code.shubham.commons.
 	protected boolean putMessage(final String messageKey, final String messageValueFormat,
 			final Object... messageValueArguments) {
 		String messageValue = String.format(messageValueFormat, messageValueArguments);
-		java.util.Collection<String> messagesValues = this.messages.get(messageKey);
+		Collection<String> messagesValues = this.messages.get(messageKey);
 		if (messagesValues == null)
 			this.messages.put(messageKey, messagesValues = new java.util.ArrayList<>());
 		return messagesValues.add(messageValue);
 	}
 
-	protected boolean putMessages(final String messageKey, final java.util.Collection<String> messageValue) {
-		java.util.Collection<String> messagesValues = this.messages.get(messageKey);
+	protected boolean putMessages(final String messageKey, final Collection<String> messageValue) {
+		Collection<String> messagesValues = this.messages.get(messageKey);
 		if (messagesValues == null)
 			this.messages.put(messageKey, messagesValues = new java.util.ArrayList<>());
 		return messagesValues.addAll(messageValue);
@@ -38,13 +41,13 @@ public abstract class AbstractValidator<OBJECT> implements code.shubham.commons.
 	}
 
 	@Override
-	public java.util.Map<String, java.util.Collection<String>> getResult() {
-		java.util.Map<String, java.util.Collection<String>> copy = new java.util.LinkedHashMap<>();
+	public Map<String, Collection<String>> getResult() {
+		Map<String, Collection<String>> copy = new java.util.LinkedHashMap<>();
 		this.messages.forEach((k, v) -> copy.put(k, new java.util.ArrayList<String>(v)));
 		return copy;
 	}
 
-	private java.util.Map<String, java.util.Collection<String>> getMessages() {
+	private Map<String, Collection<String>> getMessages() {
 		return this.messages;
 	}
 

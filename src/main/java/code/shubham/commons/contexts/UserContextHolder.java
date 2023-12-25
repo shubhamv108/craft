@@ -1,14 +1,16 @@
 package code.shubham.commons.contexts;
 
+import code.shubham.core.iammodels.UserDTO;
+
 public class UserContextHolder {
 
-	private static final ThreadLocal<Integer> CURRENT_USER = new ThreadLocal<>();
+	private static final ThreadLocal<UserDTO> CURRENT_USER = new ThreadLocal<>();
 
-	public static void setUserId(Integer userId) {
-		CURRENT_USER.set(userId);
+	public static void set(final UserDTO user) {
+		CURRENT_USER.set(user);
 	}
 
-	public static Integer getUserId() {
+	public static UserDTO get() {
 		return CURRENT_USER.get();
 	}
 

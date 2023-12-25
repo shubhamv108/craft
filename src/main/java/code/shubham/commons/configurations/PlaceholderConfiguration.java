@@ -9,9 +9,9 @@ public class PlaceholderConfiguration {
 
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
-		var p = new PropertySourcesPlaceholderConfigurer();
-		p.setIgnoreResourceNotFound(true);
-		return p;
+		final PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
+		propertySourcesPlaceholderConfigurer.setIgnoreResourceNotFound(true);
+		return propertySourcesPlaceholderConfigurer;
 	}
 
 }

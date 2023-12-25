@@ -1,8 +1,15 @@
 package code.shubham.commons.exceptions;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+import java.util.Collection;
+import java.util.Map;
+
+@ResponseStatus(HttpStatus.BAD_REQUEST)
 public class InvalidParametersException extends InvalidRequestException {
 
-	public InvalidParametersException(final java.util.Map<String, java.util.Collection<String>> messages) {
+	public InvalidParametersException(final Map<String, Collection<String>> messages) {
 		super(messages);
 	}
 
@@ -10,9 +17,9 @@ public class InvalidParametersException extends InvalidRequestException {
 	public String getMessage() {
 		StringBuilder errorMessageBuilder = new StringBuilder();
 		if (this.errorMessages != null)
-			for (java.util.Map.Entry<String, java.util.Collection<String>> entry : this.errorMessages.entrySet()) {
+			for (java.util.Map.Entry<String, Collection<String>> entry : this.errorMessages.entrySet()) {
 				String errorMessage = entry.getKey();
-				java.util.Collection<String> params = entry.getValue();
+				Collection<String> params = entry.getValue();
 				errorMessageBuilder.append(String.format(String.join(", ", params), errorMessage));
 			}
 		return errorMessageBuilder.toString();

@@ -1,11 +1,15 @@
 package code.shubham.commons.exceptions;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+@ResponseStatus(HttpStatus.BAD_REQUEST)
 public class InvalidRequestException extends ClientException {
 
 	private final Collection<Map<String, Collection<String>>> errorMessagesList = new ArrayList<>();
@@ -16,9 +20,9 @@ public class InvalidRequestException extends ClientException {
 		this(null);
 	}
 
-	public InvalidRequestException(String key, String message) {
+	public InvalidRequestException(String key, String message, String... args) {
 		this(null);
-		this.errorMessages.put(key, new ArrayList<>(Arrays.asList(message)));
+		this.errorMessages.put(key, new ArrayList<>(Arrays.asList(String.format(message, args))));
 	}
 
 	public InvalidRequestException(final Map<String, Collection<String>> errorMessages) {
@@ -108,6 +112,8 @@ public class InvalidRequestException extends ClientException {
 	}
 
 	public Collection<Map<String, Collection<String>>> getOriginalErrors() {
+		if (this.errorMessagesList.isEmpty())
+			this.errorMessagesList.add(errorMessages);
 		return this.errorMessagesList;
 	}
 

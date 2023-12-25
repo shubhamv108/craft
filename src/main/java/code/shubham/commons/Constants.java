@@ -10,6 +10,6 @@ public interface Constants {
 
 	}
 
-	Integer SYSTEM_USER_ID = 999999999;
+	String SYSTEM_USER_ID = "$$SYSTEM_DEFAULT$$";
 
 }

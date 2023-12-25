@@ -1,0 +1,296 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: craft
+    hostname: craft
+    image: craft
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        END: 'TEST'
+    volumes:
+      - "/tmp:/tmp"
+
+    ports:
+      - '8080:8080'
+
+    restart: 'on-failure'
+
+    depends_on:
+      - fluentbit
+      - db
+      - kafka
+      - elasticsearch
+      - prometheus
+
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: fluentbit:24224
+        fluentd-async-connect: "true"
+        tag: 'containerssh.{{.ID}}'
+
+    environment:
+      - SLEEP_LENGTH=5
+      - spring.datasource.url=jdbc:mysql://db:3306/craft?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false&autoReconnect=true&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+      - spring.datasource.username=test
+      - spring.datasource.password=root1234
+      - spring.kafka.bootstrap-servers=kafka:9092
+      - spring.security.oauth2.client.registration.google.client-id=809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com
+      - spring.security.oauth2.client.registration.google.client-secret=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
+  sonar:
+    image: sonarqube:7.9.5-community
+    container_name: sonar
+    depends_on:
+      - sonar-db
+      - init
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://sonar-db:5433/sonar
+      SONAR_JDBC_USERNAME: sonartest
+      SONAR_JDBC_PASSWORD: sonartest
+      sonar.web.port: 9000
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+      - sonarqube_temp:/opt/sonarqube/temp
+    ulimits:
+      nproc: 131072
+      nofile:
+        soft: 8192
+        hard: 131072
+    ports:
+      - "9017:9000"
+  init:
+    image: bash
+    container_name: init
+    privileged: true
+    user: root
+    volumes:
+      - ./sonarqube/init.sh:/mnt/init.sh
+    command: [ "sh", "-e", "/mnt/init.sh" ]
+
+  sonar-db:
+    image: postgres:14.4
+    container_name: sonar-db
+    environment:
+      POSTGRES_USER: sonartest
+      POSTGRES_PASSWORD: sonartest
+    volumes:
+      - sonar_postgresql:/var/lib/postgresql
+      - sonar_postgresql_data:/var/lib/postgresql/data
+    ports:
+      - '5433:5432'
+
+  fluentbit:
+    image: 'shubham01/craft-fluentbit:latest'
+    container_name: fluentbit
+    hostname: fluentbit
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    volumes:
+      - ./fluentbit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+      - ./fluentbit/parsers.conf:/fluent-bit/etc/parsers.conf
+      - ./log/:/etc/data
+
+  db:
+    image: 'mysql:latest'
+    container_name: db
+    environment:
+      - 'MYSQL_DATABASE=craft'
+      - 'MYSQL_PASSWORD=root1234'
+      - 'MYSQL_ROOT_PASSWORD=root1234'
+      - 'MYSQL_USER=test'
+    ports:
+      - '3306:3306'
+
+  keycloak:
+    image: 'keycloak/keycloak:22.0'
+    container_name: keycloak
+    command: [ 'start-dev' ]
+    depends_on:
+      - keycloak-db
+    environment:
+      JAVA_OPTS_APPEND: -Dkeycloak.profile.feature.upload_scripts=enabled
+      TZ: '...'
+      DB: postgres
+      DB_URL: jdbc:postgresql://keycloak-db:5432/keycloak?user=postgres
+      DB_PASSWORD: postgres
+      LOG_LEVEL: warn
+      HOSTNAME: localhost
+#      KC_HOSTNAME: localhost
+      KC_HOSTNAME_PORT: 8180
+      KC_HOSTNAME_URL: http://127.0.0.1:8180
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: password
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://keycloak-db:5432/keycloak?user=postgres
+      KC_DB_USERNAME: postgres
+      KC_DB_PASSWORD: postgres
+      KC_DB_ADDR: localhost
+      KC_DB_DATABASE: keycloak
+      KC_HEALTH_ENABLED: 'true'
+      KC_HTTP_ENABLED: 'true'
+      KC_METRICS_ENABLED: 'true'
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: password
+      KC_LOG_LEVEL: info
+    ports:
+      - "8180:8080"
+      - "8787:8787" # debug port
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/health/ready" ]
+      interval: 15s
+      timeout: 2s
+      retries: 15
+
+  pgadmin:
+    container_name: pgadmin
+    image: "dpage/pgadmin4:5.1"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: postgres@domain.local
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    ports:
+      - "5050:80"
+
+  keycloak-db:
+    container_name: keycloak-db
+    image: "postgres:14.4"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "root" ]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    volumes:
+      - keycloak_postgresql:/var/lib/postgresql
+      - keycloak_postgresql_data:/var/lib/postgresql/data
+#        - ./sql:/docker-entrypoint-initdb.d/:ro # turn it on, if you need run init DB
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: keycloak
+      POSTGRES_HOST: postgres
+    ports:
+      - "5432:5432"
+
+  zookeeper:
+    container_name: zookeeper
+    image: confluentinc/cp-zookeeper:latest
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - 22181:2181
+
+  kafka:
+    container_name: kafka
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - zookeeper
+    ports:
+      - 9092:9092
+      - 29092:29092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  kafdrop:
+    container_name: kafdrop
+    image: obsidiandynamics/kafdrop
+    restart: "no"
+    ports:
+      - "9000:9000"
+    environment:
+      KAFKA_BROKERCONNECT: "kafka:9092"
+      JVM_OPTS: "-Xms16M -Xmx48M -Xss256K -XX:-TieredCompilation -XX:+UseStringDeduplication -noverify"
+    depends_on:
+      - "kafka"
+
+  elasticsearch:
+    container_name: elasticsearch
+    image: elasticsearch:8.9.1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.type=single-node
+
+  prometheus:
+    image: prom/prometheus:v2.44.0
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana-server
+    restart: always
+    depends_on:
+      - prometheus
+      - influxdb
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_INSTALL_PLUGINS=
+    links:
+      - influxdb
+    ports:
+      - '3000:3000'
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+
+  telegraf:
+    image: telegraf
+    container_name: telegraf
+    restart: always
+    volumes:
+      - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    depends_on:
+      - influxdb
+      - elasticsearch
+    links:
+      - influxdb
+    ports:
+      - '8125:8125'
+
+  influxdb:
+    image: influxdb:1.8-alpine
+    container_name: influxdb
+    restart: always
+    environment:
+      - INFLUXDB_DB=influx
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=admin
+    ports:
+      - '8086:8086'
+    volumes:
+      - influxdb_data:/var/lib/influxdb
+
+volumes:
+  grafana_data: { }
+  influxdb_data: { }
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+  sonarqube_temp:
+  sonar_postgresql:
+  sonar_postgresql_data:
+  keycloak_postgresql:
+  keycloak_postgresql_data:
+
+networks:
+  craft:
+    external: true

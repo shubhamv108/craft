@@ -16,7 +16,7 @@ public abstract class AbstractCommandParamsValidator
 	}
 
 	protected void validateIntegerParam(final String param, final String paramName) {
-		if (!code.shubham.commons.util.StringUtils.isInteger(param))
+		if (!code.shubham.commons.utils.StringUtils.isInteger(param))
 			this.putMessage(MUST_BE_OF_TYPE_INTEGER, paramName);
 	}
 
@@ -26,7 +26,7 @@ public abstract class AbstractCommandParamsValidator
 	}
 
 	protected void validateIntegerParamOrThrowException(final String param, final String paramName) {
-		if (!code.shubham.commons.util.StringUtils.isInteger(param))
+		if (!code.shubham.commons.utils.StringUtils.isInteger(param))
 			throw new InvalidParameterException(String.format("%s must be an integer", paramName));
 	}
 

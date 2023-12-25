@@ -1,9 +1,13 @@
 package code.shubham.commons.exceptions;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.BAD_REQUEST)
 public class InvalidParameterException extends RuntimeException {
 
-	public InvalidParameterException(final String message) {
-		super(message);
+	public InvalidParameterException(final String message, final String... args) {
+		super(String.format(message, args));
 	}
 
 }

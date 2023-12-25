@@ -2,7 +2,7 @@ SHELL := /bin/bash
 OS := $(shell uname)
 
 define start-services
-	@docker compose -f compose.yaml up --force-recreate -d --remove-orphans sonar fluentbit db kafka kafdrop elasticsearch prometheus grafana telegraf influxdb keycloak
+	@docker compose -f docker-compose.yaml up --force-recreate -d --remove-orphans sonar fluentbit db kafka kafdrop elasticsearch prometheus grafana telegraf influxdb keycloak-db keycloak
 endef
 
 define check
@@ -10,11 +10,11 @@ define check
 endef
 
 define start-app
-	@docker compose -f compose.yaml up -d app
+	@docker compose -f docker-compose.yaml up -d app
 endef
 
 define teardown
-	@docker compose -f compose.yaml rm -f -v -s
+	@docker compose -f docker-compose.yaml rm -f -v -s
 	@docker system prune -f --volumes
 endef
 
@@ -32,7 +32,7 @@ define local-app
 endef
 
 define setup
-	@docker compose -f compose.yaml up -d --build --force-recreate --remove-orphans
+	@docker compose -f docker-compose.yaml up -d --build --force-recreate --remove-orphans
 endef
 
 define k8s-apply
@@ -98,7 +98,7 @@ teardown:
 	$(call teardown, "Tearing down...")
 
 run-test:
-	@docker-compose -f compose.yaml up --build --force-recreate -d service
+	@docker-compose -f docker-compose.yaml up --build --force-recreate -d service
 
 migrations:
 
