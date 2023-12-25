@@ -151,8 +151,13 @@ local-app-re: del-local-app local-app
 coverage:
 	./gradlew jacocoTestCoverageVerification
 
-tests:
+tests: local-setup
 	sudo ./gradlew test
+
+github-action-build: local-setup
+	./gradlew build
+
+
 
 # condb:
 #     mysql -h 127.0.0.1 -P 3306 -u test craft -p
