@@ -6482,3 +6482,1097 @@ The last packet successfully received from the server was 9 milliseconds ago. Th
 [2023-12-26 08:42:25.279] [] [51]  INFO localhost --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 [2023-12-26 08:42:25.282] [] [51]  INFO localhost --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
 [2023-12-26 08:42:25.285] [] [51]  INFO localhost --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+[2023-12-26 11:21:29.102] [] [1]  INFO localhost --- [    Test worker] c.s.c.i.w.v.c.UserControllerTest         : Starting UserControllerTest using Java 21.0.1 with PID 2387053 (started by root in /home/r00t/git/shubham/craft)
+[2023-12-26 11:21:29.188] [] [1]  INFO localhost --- [    Test worker] c.s.c.i.w.v.c.UserControllerTest         : No active profile set, falling back to 1 default profile: "default"
+[2023-12-26 11:21:30.159] [] [1] DEBUG localhost --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7f3e9acc
+[2023-12-26 11:21:34.144] [] [1]  INFO localhost --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-12-26 11:21:34.311] [] [1]  INFO localhost --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 156 ms. Found 16 JPA repository interfaces.
+[2023-12-26 11:21:35.543] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.sentry.spring.jakarta.tracing.SentryAdviceConfiguration' of type [io.sentry.spring.jakarta.tracing.SentryAdviceConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:35.561] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.sentry.spring.jakarta.tracing.SentrySpanPointcutConfiguration' of type [io.sentry.spring.jakarta.tracing.SentrySpanPointcutConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:35.576] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentrySpanPointcut' of type [org.springframework.aop.support.ComposablePointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:35.584] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.sentry.spring.boot.jakarta.SentryAutoConfiguration$HubConfiguration' of type [io.sentry.spring.boot.jakarta.SentryAutoConfiguration$HubConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:35.623] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.sentry.spring.boot.jakarta.SentryAutoConfiguration$HubConfiguration$ContextTagsEventProcessorConfiguration' of type [io.sentry.spring.boot.jakarta.SentryAutoConfiguration$HubConfiguration$ContextTagsEventProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:35.833] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:35.849] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'stringOrNumberMigrationVersionConverter' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$StringOrNumberToMigrationVersionConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:35.928] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentry-io.sentry.spring.boot.jakarta.SentryProperties' of type [io.sentry.spring.boot.jakarta.SentryProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:36.043] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'contextTagsEventProcessor' of type [io.sentry.spring.jakarta.ContextTagsEventProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:36.069] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'inAppPackagesResolver' of type [io.sentry.spring.boot.jakarta.InAppIncludesResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:36.090] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentryOptionsConfiguration' of type [io.sentry.spring.boot.jakarta.SentryAutoConfiguration$HubConfiguration$$Lambda/0x00007fc6d86c4bd8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:36.151] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'craftApplication' of type [code.shubham.CraftApplication$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:36.332] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentryHub' of type [io.sentry.HubAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:36.422] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentrySpanAdvice' of type [io.sentry.spring.jakarta.tracing.SentrySpanAdvice] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:36.430] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentrySpanAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:36.435] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.sentry.spring.jakarta.tracing.SentryTransactionPointcutConfiguration' of type [io.sentry.spring.jakarta.tracing.SentryTransactionPointcutConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:36.448] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentryTransactionPointcut' of type [org.springframework.aop.support.ComposablePointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:36.459] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentryTransactionAdvice' of type [io.sentry.spring.jakarta.tracing.SentryTransactionAdvice] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:36.463] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentryTransactionAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:21:37.003] [] [1]  INFO localhost --- [    Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+[2023-12-26 11:21:37.476] [] [1]  INFO localhost --- [    Test worker] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21727e54
+[2023-12-26 11:21:37.483] [] [1]  INFO localhost --- [    Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+[2023-12-26 11:21:37.748] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.l.VersionPrinter                 : Flyway Community Edition 9.22.3 by Redgate
+[2023-12-26 11:21:37.750] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.l.VersionPrinter                 : See release notes here: https://rd.gt/416ObMi
+[2023-12-26 11:21:37.754] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.l.VersionPrinter                 : 
+[2023-12-26 11:21:37.824] [] [1]  INFO localhost --- [    Test worker] o.f.c.FlywayExecutor                     : Database: jdbc:mysql://localhost:3306/craft (MySQL 8.2)
+[2023-12-26 11:21:37.854] [] [1]  WARN localhost --- [    Test worker] o.f.c.i.d.b.Database                     : Flyway upgrade recommended: MySQL 8.2 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.0.
+[2023-12-26 11:21:37.920] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `craft`.`flyway_schema_history` does not exist yet
+[2023-12-26 11:21:37.933] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.c.DbValidate                     : Successfully validated 2 migrations (execution time 00:00.054s)
+[2023-12-26 11:21:37.965] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `craft`.`flyway_schema_history` ...
+[2023-12-26 11:21:38.124] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.c.DbMigrate                      : Current version of schema `craft`: << Empty Schema >>
+[2023-12-26 11:21:38.149] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.c.DbMigrate                      : Migrating schema `craft` to version "1 - 00001 create insert user role"
+[2023-12-26 11:21:38.346] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.c.DbMigrate                      : Migrating schema `craft` to version "2 - 00002 create insert customer product mapping"
+[2023-12-26 11:21:38.424] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.c.DbMigrate                      : Successfully applied 2 migrations to schema `craft`, now at version v2 (execution time 00:00.194s)
+[2023-12-26 11:21:39.259] [] [1]  INFO localhost --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+[2023-12-26 11:21:44.645] [] [1]  INFO localhost --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-26 11:21:45.734] [] [1]  INFO localhost --- [    Test worker] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+[2023-12-26 11:21:47.569] [] [1]  WARN localhost --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-12-26 11:21:47.849] [] [1] DEBUG localhost --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 26 mappings in 'requestMappingHandlerMapping'
+[2023-12-26 11:21:48.023] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+[2023-12-26 11:21:48.269] [] [1]  INFO localhost --- [    Test worker] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 14 endpoint(s) beneath base path '/actuator'
+[2023-12-26 11:21:48.402] [] [1]  INFO localhost --- [    Test worker] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41723269, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@151a7f12, org.springframework.security.web.context.SecurityContextHolderFilter@3fa841ea, org.springframework.security.web.header.HeaderWriterFilter@2795cf23, org.springframework.web.filter.CorsFilter@108d75d9, org.springframework.security.web.authentication.logout.LogoutFilter@626528b7, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@2dde5ae5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50927ea4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a661106, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@341fa52, org.springframework.security.web.session.SessionManagementFilter@41814a6d, org.springframework.security.web.access.ExceptionTranslationFilter@6ed548ac, org.springframework.security.web.access.intercept.AuthorizationFilter@1304e6ac]
+[2023-12-26 11:21:48.616] [] [1] DEBUG localhost --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2023-12-26 11:21:48.652] [] [1] DEBUG localhost --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+[2023-12-26 11:21:49.168] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-driveronboard-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = driveronboard
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:21:49.282] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:21:49.283] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:21:49.283] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703569909281
+[2023-12-26 11:21:49.292] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Subscribed to topic(s): driver, backgroundverification, order
+[2023-12-26 11:21:49.299] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-order-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = order
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:21:49.304] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:21:49.305] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:21:49.305] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703569909304
+[2023-12-26 11:21:49.308] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-2, groupId=order] Subscribed to topic(s): shipment, ordercommand
+[2023-12-26 11:21:49.310] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-productorderdriveronboard-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = productorderdriveronboard
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:21:49.319] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:21:49.319] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:21:49.320] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703569909319
+[2023-12-26 11:21:49.323] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Subscribed to topic(s): driveronboard
+[2023-12-26 11:21:49.326] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-shipmentorder-4
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = shipmentorder
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:21:49.333] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:21:49.334] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:21:49.334] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703569909333
+[2023-12-26 11:21:49.338] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Subscribed to topic(s): order
+[2023-12-26 11:21:49.340] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-backgroundverificationdriveronboard-5
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = backgroundverificationdriveronboard
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:21:49.346] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:21:49.346] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:21:49.346] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703569909346
+[2023-12-26 11:21:49.350] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Subscribed to topic(s): driveronboard
+[2023-12-26 11:21:49.352] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-driver-6
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = driver
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:21:49.356] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:21:49.356] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:21:49.357] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703569909356
+[2023-12-26 11:21:49.361] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-driver-6, groupId=driver] Subscribed to topic(s): driveronboard
+[2023-12-26 11:21:49.382] [] [1]  INFO localhost --- [    Test worker] c.s.c.i.w.v.c.UserControllerTest         : Started UserControllerTest in 21.412 seconds (process running for 28.352)
+[2023-12-26 11:21:49.700] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 2 : {driveronboard=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:21:49.703] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Cluster ID: 4ZUfcVECTeixYWqLLymvpw
+[2023-12-26 11:21:49.705] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 2 : {driveronboard=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:21:49.706] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-driver-6, groupId=driver] Cluster ID: 4ZUfcVECTeixYWqLLymvpw
+[2023-12-26 11:21:49.749] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 2 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:49.749] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 2 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:49.751] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Cluster ID: 4ZUfcVECTeixYWqLLymvpw
+[2023-12-26 11:21:49.752] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Cluster ID: 4ZUfcVECTeixYWqLLymvpw
+[2023-12-26 11:21:49.769] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 2 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:21:49.770] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Cluster ID: 4ZUfcVECTeixYWqLLymvpw
+[2023-12-26 11:21:49.773] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 2 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:49.774] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-order-2, groupId=order] Cluster ID: 4ZUfcVECTeixYWqLLymvpw
+[2023-12-26 11:21:49.792] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 4 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:49.792] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 4 : {driveronboard=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:21:49.873] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 4 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:49.873] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 4 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:49.895] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 6 : {driveronboard=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:21:49.900] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 4 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:49.900] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 6 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:49.905] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 4 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:49.979] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 6 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:49.979] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 6 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:49.989] [] [1]  INFO localhost --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [code.shubham.craft.CraftTests]: CraftTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2023-12-26 11:21:49.998] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 8 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.005] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 8 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.008] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 6 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.012] [] [1]  INFO localhost --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration code.shubham.CraftApplication for test class code.shubham.craft.CraftTests
+[2023-12-26 11:21:50.013] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 6 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.037] [] [1]  INFO localhost --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+[2023-12-26 11:21:50.037] [] [1]  INFO localhost --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+[2023-12-26 11:21:50.039] [] [1]  INFO localhost --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 2 ms
+[2023-12-26 11:21:50.082] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 8 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.082] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 8 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.102] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 10 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.107] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 10 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.112] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 8 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.117] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 8 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.185] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 10 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.185] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 10 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.205] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 12 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.212] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 12 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.219] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 10 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.229] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 10 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.289] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 12 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.289] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 12 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.303] [] [1] DEBUG localhost --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationController#updateStatus(UpdateBackgroundVerificationStatusRequest)
+[2023-12-26 11:21:50.309] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 14 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.315] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 14 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.325] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 12 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.337] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 12 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.386] [] [1] DEBUG localhost --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [UpdateBackgroundVerificationStatusRequest(clientReferenceId=a2dca92b-fe74-47f6-a369-8940f6291e72, co (truncated)...]
+[2023-12-26 11:21:50.392] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 14 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.392] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 14 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.417] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 16 : {driveronboard=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:21:50.419] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 16 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.432] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 14 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.442] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 14 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.494] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 16 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.494] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 16 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.520] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 18 : {driveronboard=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:21:50.521] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 18 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.536] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 16 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.547] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 16 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.558] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.p.ProducerConfig                 : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[2023-12-26 11:21:50.572] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.p.KafkaProducer                  : [Producer clientId=producer-1] Instantiated an idempotent producer.
+[2023-12-26 11:21:50.589] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:21:50.590] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:21:50.590] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703569910589
+[2023-12-26 11:21:50.598] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 18 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.598] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 18 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.598] [] [79]  INFO localhost --- [ad | producer-1] o.a.k.c.Metadata                         : [Producer clientId=producer-1] Cluster ID: 4ZUfcVECTeixYWqLLymvpw
+[2023-12-26 11:21:50.606] [] [79]  WARN localhost --- [ad | producer-1] o.a.k.c.NetworkClient                    : [Producer clientId=producer-1] Error while fetching metadata with correlation id 4 : {backgroundverification=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.619] [] [79]  INFO localhost --- [ad | producer-1] o.a.k.c.p.i.TransactionManager           : [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+[2023-12-26 11:21:50.622] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 20 : {driveronboard=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:21:50.624] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 20 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.642] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 18 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.652] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 18 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:50.658] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:21:50.661] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] (Re-)joining group
+[2023-12-26 11:21:50.692] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Request joining group due to: need to re-join with the given member-id: consumer-driveronboard-1-cba50237-f748-4dc0-aff6-b57fb5bae7d9
+[2023-12-26 11:21:50.692] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:21:50.692] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] (Re-)joining group
+[2023-12-26 11:21:50.705] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:21:50.705] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:21:50.706] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] (Re-)joining group
+[2023-12-26 11:21:50.706] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] (Re-)joining group
+[2023-12-26 11:21:50.710] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Request joining group due to: need to re-join with the given member-id: consumer-shipmentorder-4-3c843a9e-e459-4043-b65d-42e0f9f87519
+[2023-12-26 11:21:50.710] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Request joining group due to: need to re-join with the given member-id: consumer-backgroundverificationdriveronboard-5-7882b521-3cdb-4538-b271-a98c64354673
+[2023-12-26 11:21:50.711] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:21:50.711] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] (Re-)joining group
+[2023-12-26 11:21:50.711] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:21:50.711] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] (Re-)joining group
+[2023-12-26 11:21:50.726] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:21:50.726] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:21:50.727] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] (Re-)joining group
+[2023-12-26 11:21:50.728] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] (Re-)joining group
+[2023-12-26 11:21:50.739] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Request joining group due to: need to re-join with the given member-id: consumer-productorderdriveronboard-3-21bc4c44-648b-431b-b293-e4c593dca34b
+[2023-12-26 11:21:50.739] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Request joining group due to: need to re-join with the given member-id: consumer-driver-6-494ca748-9a3e-46a0-b051-b7c6b4536c4d
+[2023-12-26 11:21:50.739] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:21:50.739] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] (Re-)joining group
+[2023-12-26 11:21:50.739] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:21:50.739] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] (Re-)joining group
+[2023-12-26 11:21:50.745] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:21:50.747] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] (Re-)joining group
+[2023-12-26 11:21:50.751] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Request joining group due to: need to re-join with the given member-id: consumer-order-2-d34a1937-afca-4279-9975-c1987d5eb9eb
+[2023-12-26 11:21:50.752] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:21:50.752] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] (Re-)joining group
+[2023-12-26 11:21:50.762] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2023-12-26 11:21:50.764] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ServiceResponse(statusCode=200, data=BackgroundVerification(applicantId=b2dca92b-fe74-47f6-a369-8940 (truncated)...]
+[2023-12-26 11:21:50.818] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 1000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-test-7
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:21:50.824] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:21:50.824] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:21:50.825] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703569910824
+[2023-12-26 11:21:50.826] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.KafkaConsumer                  : [Consumer clientId=consumer-test-7, groupId=test] Subscribed to topic(s): backgroundverification
+[2023-12-26 11:21:50.856] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.Metadata                         : [Consumer clientId=consumer-test-7, groupId=test] Cluster ID: 4ZUfcVECTeixYWqLLymvpw
+[2023-12-26 11:21:50.857] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-test-7, groupId=test] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:21:50.861] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-test-7, groupId=test] (Re-)joining group
+[2023-12-26 11:21:50.863] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-test-7, groupId=test] Request joining group due to: need to re-join with the given member-id: consumer-test-7-22070189-3243-4929-bb83-4e33f4c1ff81
+[2023-12-26 11:21:50.863] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-test-7, groupId=test] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:21:50.863] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-test-7, groupId=test] (Re-)joining group
+[2023-12-26 11:21:53.711] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Successfully joined group with generation Generation{generationId=1, memberId='consumer-driveronboard-1-cba50237-f748-4dc0-aff6-b57fb5bae7d9', protocol='range'}
+[2023-12-26 11:21:53.714] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Successfully joined group with generation Generation{generationId=1, memberId='consumer-shipmentorder-4-3c843a9e-e459-4043-b65d-42e0f9f87519', protocol='range'}
+[2023-12-26 11:21:53.715] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Successfully joined group with generation Generation{generationId=1, memberId='consumer-backgroundverificationdriveronboard-5-7882b521-3cdb-4538-b271-a98c64354673', protocol='range'}
+[2023-12-26 11:21:53.717] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Finished assignment for group at generation 1: {consumer-driveronboard-1-cba50237-f748-4dc0-aff6-b57fb5bae7d9=Assignment(partitions=[driver-0, backgroundverification-0, order-0])}
+[2023-12-26 11:21:53.717] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Finished assignment for group at generation 1: {consumer-shipmentorder-4-3c843a9e-e459-4043-b65d-42e0f9f87519=Assignment(partitions=[order-0])}
+[2023-12-26 11:21:53.717] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Finished assignment for group at generation 1: {consumer-backgroundverificationdriveronboard-5-7882b521-3cdb-4538-b271-a98c64354673=Assignment(partitions=[driveronboard-0])}
+[2023-12-26 11:21:53.738] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Successfully synced group in generation Generation{generationId=1, memberId='consumer-driveronboard-1-cba50237-f748-4dc0-aff6-b57fb5bae7d9', protocol='range'}
+[2023-12-26 11:21:53.738] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Successfully synced group in generation Generation{generationId=1, memberId='consumer-backgroundverificationdriveronboard-5-7882b521-3cdb-4538-b271-a98c64354673', protocol='range'}
+[2023-12-26 11:21:53.738] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Successfully synced group in generation Generation{generationId=1, memberId='consumer-shipmentorder-4-3c843a9e-e459-4043-b65d-42e0f9f87519', protocol='range'}
+[2023-12-26 11:21:53.738] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Notifying assignor about the new Assignment(partitions=[order-0])
+[2023-12-26 11:21:53.738] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Notifying assignor about the new Assignment(partitions=[driveronboard-0])
+[2023-12-26 11:21:53.738] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Notifying assignor about the new Assignment(partitions=[driver-0, backgroundverification-0, order-0])
+[2023-12-26 11:21:53.741] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Adding newly assigned partitions: backgroundverification-0, driver-0, order-0
+[2023-12-26 11:21:53.741] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Adding newly assigned partitions: driveronboard-0
+[2023-12-26 11:21:53.741] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Adding newly assigned partitions: order-0
+[2023-12-26 11:21:53.742] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Successfully joined group with generation Generation{generationId=1, memberId='consumer-productorderdriveronboard-3-21bc4c44-648b-431b-b293-e4c593dca34b', protocol='range'}
+[2023-12-26 11:21:53.743] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Finished assignment for group at generation 1: {consumer-productorderdriveronboard-3-21bc4c44-648b-431b-b293-e4c593dca34b=Assignment(partitions=[driveronboard-0])}
+[2023-12-26 11:21:53.743] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Successfully joined group with generation Generation{generationId=1, memberId='consumer-driver-6-494ca748-9a3e-46a0-b051-b7c6b4536c4d', protocol='range'}
+[2023-12-26 11:21:53.744] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Finished assignment for group at generation 1: {consumer-driver-6-494ca748-9a3e-46a0-b051-b7c6b4536c4d=Assignment(partitions=[driveronboard-0])}
+[2023-12-26 11:21:53.749] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Successfully synced group in generation Generation{generationId=1, memberId='consumer-driver-6-494ca748-9a3e-46a0-b051-b7c6b4536c4d', protocol='range'}
+[2023-12-26 11:21:53.749] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Successfully synced group in generation Generation{generationId=1, memberId='consumer-productorderdriveronboard-3-21bc4c44-648b-431b-b293-e4c593dca34b', protocol='range'}
+[2023-12-26 11:21:53.749] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Notifying assignor about the new Assignment(partitions=[driveronboard-0])
+[2023-12-26 11:21:53.749] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Notifying assignor about the new Assignment(partitions=[driveronboard-0])
+[2023-12-26 11:21:53.749] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Adding newly assigned partitions: driveronboard-0
+[2023-12-26 11:21:53.749] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Adding newly assigned partitions: driveronboard-0
+[2023-12-26 11:21:53.755] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Successfully joined group with generation Generation{generationId=1, memberId='consumer-order-2-d34a1937-afca-4279-9975-c1987d5eb9eb', protocol='range'}
+[2023-12-26 11:21:53.756] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Finished assignment for group at generation 1: {consumer-order-2-d34a1937-afca-4279-9975-c1987d5eb9eb=Assignment(partitions=[shipment-0, ordercommand-0])}
+[2023-12-26 11:21:53.757] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Found no committed offset for partition driveronboard-0
+[2023-12-26 11:21:53.757] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Found no committed offset for partition driveronboard-0
+[2023-12-26 11:21:53.757] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Found no committed offset for partition driver-0
+[2023-12-26 11:21:53.757] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Found no committed offset for partition driveronboard-0
+[2023-12-26 11:21:53.757] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Found no committed offset for partition order-0
+[2023-12-26 11:21:53.757] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Found no committed offset for partition backgroundverification-0
+[2023-12-26 11:21:53.757] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Found no committed offset for partition order-0
+[2023-12-26 11:21:53.760] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Successfully synced group in generation Generation{generationId=1, memberId='consumer-order-2-d34a1937-afca-4279-9975-c1987d5eb9eb', protocol='range'}
+[2023-12-26 11:21:53.760] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Notifying assignor about the new Assignment(partitions=[shipment-0, ordercommand-0])
+[2023-12-26 11:21:53.760] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Adding newly assigned partitions: ordercommand-0, shipment-0
+[2023-12-26 11:21:53.763] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Found no committed offset for partition shipment-0
+[2023-12-26 11:21:53.763] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Found no committed offset for partition ordercommand-0
+[2023-12-26 11:21:53.768] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.SubscriptionState            : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Resetting offset for partition driveronboard-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 1 rack: null)], epoch=0}}.
+[2023-12-26 11:21:53.768] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.SubscriptionState            : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Resetting offset for partition driveronboard-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 1 rack: null)], epoch=0}}.
+[2023-12-26 11:21:53.768] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.SubscriptionState            : [Consumer clientId=consumer-driver-6, groupId=driver] Resetting offset for partition driveronboard-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 1 rack: null)], epoch=0}}.
+[2023-12-26 11:21:53.768] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.SubscriptionState            : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Resetting offset for partition driver-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 1 rack: null)], epoch=0}}.
+[2023-12-26 11:21:53.768] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.SubscriptionState            : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Resetting offset for partition order-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 1 rack: null)], epoch=0}}.
+[2023-12-26 11:21:53.768] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.SubscriptionState            : [Consumer clientId=consumer-order-2, groupId=order] Resetting offset for partition shipment-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 1 rack: null)], epoch=0}}.
+[2023-12-26 11:21:53.769] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.SubscriptionState            : [Consumer clientId=consumer-order-2, groupId=order] Resetting offset for partition ordercommand-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 1 rack: null)], epoch=0}}.
+[2023-12-26 11:21:53.769] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.SubscriptionState            : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Resetting offset for partition backgroundverification-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 1 rack: null)], epoch=0}}.
+[2023-12-26 11:21:53.769] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.SubscriptionState            : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Resetting offset for partition order-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 1 rack: null)], epoch=0}}.
+[2023-12-26 11:21:53.769] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : productorderdriveronboard: partitions assigned: [driveronboard-0]
+[2023-12-26 11:21:53.769] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : driver: partitions assigned: [driveronboard-0]
+[2023-12-26 11:21:53.769] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order: partitions assigned: [ordercommand-0, shipment-0]
+[2023-12-26 11:21:53.769] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : shipmentorder: partitions assigned: [order-0]
+[2023-12-26 11:21:53.769] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : backgroundverificationdriveronboard: partitions assigned: [driveronboard-0]
+[2023-12-26 11:21:53.769] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : driveronboard: partitions assigned: [backgroundverification-0, driver-0, order-0]
+[2023-12-26 11:21:53.812] [] [61]  INFO localhost --- [ntainer#2-0-C-1] c.s.c.w.AbstractWorker                   : [STARTED]: Processing event name: BackgroundVerificationStatusUpdated, type: BACKGROUND_VERIFICATION, correlation_id: ffc16dc4-1cfe-4afe-b109-91449546ff99
+[2023-12-26 11:21:53.812] [] [61]  INFO localhost --- [ntainer#2-0-C-1] c.s.c.w.AbstractWorker                   : [Received] Event data: {"applicantId":"b2dca92b-fe74-47f6-a369-8940f6291d72","applicantType":"DRIVER","status":"COMPLETED","userId":"ee4a64f6-b2de-44a5-b378-480f79e98e08","clientReferenceId":"a2dca92b-fe74-47f6-a369-8940f6291e72","createdAt":"Dec 26, 2023, 11:21:50 AM","updatedAt":"Dec 26, 2023, 11:21:50 AM","version":1,"createdBy":"$$NONE$$","updatedBy":"$$NONE$$","id":"55401059-d815-416d-9ddc-dc891517bcff"}
+[2023-12-26 11:21:53.821] [] [61]  INFO localhost --- [ntainer#2-0-C-1] c.s.c.w.AbstractWorker                   : [FAIL]: Processing event name: BackgroundVerificationStatusUpdated, type: BACKGROUND_VERIFICATION, correlation_id: ffc16dc4-1cfe-4afe-b109-91449546ff99, Reason: null
+[2023-12-26 11:21:53.851] [] [79]  WARN localhost --- [ad | producer-1] o.a.k.c.NetworkClient                    : [Producer clientId=producer-1] Error while fetching metadata with correlation id 7 : {driveronboardorderfailure=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:21:53.868] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-test-7, groupId=test] Successfully joined group with generation Generation{generationId=1, memberId='consumer-test-7-22070189-3243-4929-bb83-4e33f4c1ff81', protocol='range'}
+[2023-12-26 11:21:53.869] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-test-7, groupId=test] Finished assignment for group at generation 1: {consumer-test-7-22070189-3243-4929-bb83-4e33f4c1ff81=Assignment(partitions=[backgroundverification-0])}
+[2023-12-26 11:21:53.873] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-test-7, groupId=test] Successfully synced group in generation Generation{generationId=1, memberId='consumer-test-7-22070189-3243-4929-bb83-4e33f4c1ff81', protocol='range'}
+[2023-12-26 11:21:53.873] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-test-7, groupId=test] Notifying assignor about the new Assignment(partitions=[backgroundverification-0])
+[2023-12-26 11:21:53.874] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-test-7, groupId=test] Adding newly assigned partitions: backgroundverification-0
+[2023-12-26 11:21:53.876] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-test-7, groupId=test] Found no committed offset for partition backgroundverification-0
+[2023-12-26 11:21:53.881] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.i.SubscriptionState            : [Consumer clientId=consumer-test-7, groupId=test] Resetting offset for partition backgroundverification-0 to position FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 1 rack: null)], epoch=0}}.
+[2023-12-26 11:21:53.956] [] [79]  INFO localhost --- [ad | producer-1] o.a.k.c.Metadata                         : [Producer clientId=producer-1] Resetting the last seen epoch of partition backgroundverification-0 to 0 since the associated topicId changed from null to 2z4FkBKUSbSLsPFuTHKr-Q
+[2023-12-26 11:21:53.958] [] [61]  INFO localhost --- [ntainer#2-0-C-1] c.s.c.w.AbstractWorker                   : [COMPLETED]: Processing event name: BackgroundVerificationStatusUpdated, type: BACKGROUND_VERIFICATION, correlation_id: ffc16dc4-1cfe-4afe-b109-91449546ff99
+[2023-12-26 11:24:30.467] [] [51] DEBUG localhost --- [ionShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7f3e9acc, started on Tue Dec 26 11:21:30 IST 2023
+[2023-12-26 11:24:30.564] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Revoke previously assigned partitions ordercommand-0, shipment-0
+[2023-12-26 11:24:30.564] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Revoke previously assigned partitions driveronboard-0
+[2023-12-26 11:24:30.564] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Revoke previously assigned partitions backgroundverification-0, driver-0, order-0
+[2023-12-26 11:24:30.564] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Revoke previously assigned partitions driveronboard-0
+[2023-12-26 11:24:30.565] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order: partitions revoked: [ordercommand-0, shipment-0]
+[2023-12-26 11:24:30.564] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Revoke previously assigned partitions driveronboard-0
+[2023-12-26 11:24:30.565] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : driveronboard: partitions revoked: [backgroundverification-0, driver-0, order-0]
+[2023-12-26 11:24:30.564] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Revoke previously assigned partitions order-0
+[2023-12-26 11:24:30.565] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : driver: partitions revoked: [driveronboard-0]
+[2023-12-26 11:24:30.565] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : backgroundverificationdriveronboard: partitions revoked: [driveronboard-0]
+[2023-12-26 11:24:30.565] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : shipmentorder: partitions revoked: [order-0]
+[2023-12-26 11:24:30.565] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : productorderdriveronboard: partitions revoked: [driveronboard-0]
+[2023-12-26 11:24:30.565] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Member consumer-order-2-d34a1937-afca-4279-9975-c1987d5eb9eb sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:24:30.565] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Member consumer-driveronboard-1-cba50237-f748-4dc0-aff6-b57fb5bae7d9 sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:24:30.565] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Member consumer-shipmentorder-4-3c843a9e-e459-4043-b65d-42e0f9f87519 sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:24:30.565] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Member consumer-driver-6-494ca748-9a3e-46a0-b051-b7c6b4536c4d sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:24:30.565] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Member consumer-backgroundverificationdriveronboard-5-7882b521-3cdb-4538-b271-a98c64354673 sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:24:30.565] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Member consumer-productorderdriveronboard-3-21bc4c44-648b-431b-b293-e4c593dca34b sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:24:30.566] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [64]  INFO localhost --- [ntainer#3-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-2, groupId=order] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:24:30.566] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [76]  INFO localhost --- [ntainer#1-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-driver-6, groupId=driver] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:24:30.566] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [73]  INFO localhost --- [ntainer#0-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:24:30.566] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [67]  INFO localhost --- [ntainer#4-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:24:30.566] [] [70]  INFO localhost --- [ntainer#5-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:24:30.566] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.566] [] [61]  INFO localhost --- [ntainer#2-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:24:30.567] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.567] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.567] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.567] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.567] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.567] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.567] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.567] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.568] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.568] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.568] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.568] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:24:30.863] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:24:30.863] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:24:30.863] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:24:30.863] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:24:30.863] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:24:30.863] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:24:30.863] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:24:30.863] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:24:30.863] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:24:30.864] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:24:30.864] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:24:30.863] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:24:30.864] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:24:30.864] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:24:30.864] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:24:30.864] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:24:30.864] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:24:30.864] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:24:30.870] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-productorderdriveronboard-3 unregistered
+[2023-12-26 11:24:30.871] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : productorderdriveronboard: Consumer stopped
+[2023-12-26 11:24:30.877] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-order-2 unregistered
+[2023-12-26 11:24:30.877] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-driver-6 unregistered
+[2023-12-26 11:24:30.877] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order: Consumer stopped
+[2023-12-26 11:24:30.878] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : driver: Consumer stopped
+[2023-12-26 11:24:30.878] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-driveronboard-1 unregistered
+[2023-12-26 11:24:30.878] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : driveronboard: Consumer stopped
+[2023-12-26 11:24:30.878] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-backgroundverificationdriveronboard-5 unregistered
+[2023-12-26 11:24:30.878] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-shipmentorder-4 unregistered
+[2023-12-26 11:24:30.878] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : backgroundverificationdriveronboard: Consumer stopped
+[2023-12-26 11:24:30.879] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : shipmentorder: Consumer stopped
+[2023-12-26 11:24:30.879] [] [51]  INFO localhost --- [ionShutdownHook] o.a.k.c.p.KafkaProducer                  : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+[2023-12-26 11:24:30.882] [] [51]  INFO localhost --- [ionShutdownHook] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:24:30.882] [] [51]  INFO localhost --- [ionShutdownHook] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:24:30.882] [] [51]  INFO localhost --- [ionShutdownHook] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:24:30.883] [] [51]  INFO localhost --- [ionShutdownHook] o.a.k.c.u.AppInfoParser                  : App info kafka.producer for producer-1 unregistered
+[2023-12-26 11:24:30.902] [] [51]  INFO localhost --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-26 11:24:30.905] [] [51]  INFO localhost --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+[2023-12-26 11:24:30.923] [] [51]  INFO localhost --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
