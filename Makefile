@@ -153,8 +153,9 @@ coverage:
 
 tests: local-setup
 	sudo ./gradlew test
+	make teardown
 
-github-action-build: local-setup
+pipeline-build: local-setup
 	./gradlew build
 
 
