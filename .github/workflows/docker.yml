@@ -20,13 +20,13 @@ jobs:
       - name: Format with Gradle
         uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
         with:
-          arguments: ./gradlew format
+          arguments: format
       - name: Start services
         run: docker compose -f docker-compose.yaml up --force-recreate -d --remove-orphans sonar fluentbit db kafka kafdrop elasticsearch prometheus grafana telegraf influxdb keycloak-db keycloak
       - name: Build with Gradle
         uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
         with:
-          arguments: ./gradlew build
+          arguments: build
 #      - name: Checkmarx Action
 #        uses: checkmarx-ts/checkmarx-github-action@<version>
 #        with:
@@ -41,6 +41,10 @@ jobs:
         uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
         with:
           arguments: jacocoTestCoverageVerification
+      - name: Teardown
+        run: docker compose -f docker-compose.yaml rm -f -v -s
+      - name: Prune volumes
+        run: docker system prune -f --volumes
       - name: Docker Login
         env:
           DOCKER_USER: ${{ secrets.DOCKER_USER }}
