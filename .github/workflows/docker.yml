@@ -19,10 +19,14 @@ jobs:
           distribution: 'temurin'
       - name: checkout repo
         uses: actions/checkout@main
+      - name: Format with Gradle
+        uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
+        with:
+          arguments: ./gradlew format
       - name: Build with Gradle
         uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
         with:
-          arguments: make github-action-build
+          arguments: ./gradlew build
 #      - name: Checkmarx Action
 #        uses: checkmarx-ts/checkmarx-github-action@<version>
 #        with:
