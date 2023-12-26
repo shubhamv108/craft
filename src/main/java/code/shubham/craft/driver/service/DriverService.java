@@ -9,6 +9,10 @@ import code.shubham.commons.models.Event;
 import code.shubham.commons.utils.JsonUtils;
 import code.shubham.commons.utils.UUIDUtils;
 import code.shubham.commons.utils.Utils;
+import code.shubham.craft.driver.cab.dao.entities.Cab;
+import code.shubham.craft.driver.cab.services.CabService;
+import code.shubham.craft.driver.cabmodels.CabDTO;
+import code.shubham.craft.driver.cabmodels.RegisterCabRequest;
 import code.shubham.craft.constants.EventName;
 import code.shubham.craft.constants.EventType;
 import code.shubham.craft.driver.dao.entities.Driver;
@@ -35,21 +39,39 @@ public class DriverService {
 
 	private final KafkaPublisher kafkaPublisher;
 
+	private final CabService cabService;
+
 	@Autowired
-	public DriverService(final DriverRepository repository, final KafkaPublisher kafkaPublisher) {
+	public DriverService(final DriverRepository repository, final KafkaPublisher kafkaPublisher,
+			final CabService cabService) {
 		this.repository = repository;
 		this.kafkaPublisher = kafkaPublisher;
+		this.cabService = cabService;
 	}
 
-	public Driver register(final Driver driver) {
+	@Transactional(rollbackOn = Exception.class)
+	public Driver register(final Driver driver, final CabDTO cab) {
 		driver.setStatus(DriverStatus.ONBOARDING);
 		final Optional<Driver> existing = this.getByUserId(driver.getUserId());
 		if (existing.isPresent())
 			throw new InvalidRequestException("email", "User with email: %s already registered as a driver",
 					UserContextHolder.get().email());
 
+		final RegisterCabRequest registerCabRequest = RegisterCabRequest.builder()
+			.userId(driver.getUserId())
+			.registrationNumber(cab.getRegistrationNumber())
+			.color(cab.getColor())
+			.build();
+
 		driver.setUserId(UserIDContextHolder.get());
-		return this.createOrUpdateStatus(driver);
+		final Driver persisted = this.repository.save(driver);
+
+		registerCabRequest.setDriverId(driver.getId());
+		this.cabService.add(registerCabRequest);
+
+		this.publishEvent(driver);
+
+		return persisted;
 	}
 
 	public Driver updateStatus(final String driverId, final DriverStatus completedStatus) {
@@ -63,17 +85,26 @@ public class DriverService {
 		return this.repository.save(existing);
 	}
 
-	public Driver markReadyForRide(final String driverId, final String userId) {
+	public Driver markReadyForRide(final String driverId, final String userId, final String vehicleRegistrationNumber) {
 		final Driver driver = this.getByIdAndUserId(driverId, userId);
 		if (!driver.getStatus().name().equals(DriverStatus.ACTIVE.name()))
 			throw new InvalidRequestException("driverId", "driver with id: %s not active", driverId);
-		driver.setAvailableForRide(true);
+
+		final Cab cab = this.cabService.fetch(driverId, userId, vehicleRegistrationNumber)
+			.orElseThrow(() -> new InvalidRequestException("vehicleRegistrationNumber",
+					"No cab found for vehicleRegistrationNumber: %s", vehicleRegistrationNumber));
+
+		driver.setActiveCabId(cab.getId());
 		return this.repository.save(driver);
 	}
 
 	public Driver getByIdAndUserId(final String id, final String userId) {
-		return this.repository.findByIdAndUserId(id, userId)
+		return this.fetchByIdAndUserId(id, userId)
 			.orElseThrow(() -> new InvalidRequestException("driverId", "no driver found for driverId: %s", id));
+	}
+
+	public Optional<Driver> fetchByIdAndUserId(final String id, final String userId) {
+		return this.repository.findByIdAndUserId(id, userId);
 	}
 
 	private Optional<Driver> getByUserId(final String userId) {
@@ -81,18 +112,22 @@ public class DriverService {
 	}
 
 	@Transactional(rollbackOn = Exception.class)
-	private Driver createOrUpdateStatus(final Driver driver) {
+	private Driver createOrUpdateStatus(final Driver driver, final Cab cab) {
 		final Driver persisted = this.repository.save(driver);
+		this.publishEvent(driver);
+		return persisted;
+	}
+
+	private void publishEvent(final Driver driver) {
 		this.kafkaPublisher.send(this.topicName,
 				Event.builder()
 					.eventName(EventName.DriverStatusUpdated.name())
 					.eventType(EventType.DRIVER.name())
-					.data(JsonUtils.get(persisted))
-					.uniqueReferenceId(UUIDUtils.uuid4(persisted.getId() + "_" + persisted.getUpdatedAt()))
-					.userId(persisted.getUserId())
+					.data(JsonUtils.get(driver))
+					.uniqueReferenceId(UUIDUtils.uuid4(driver.getId() + "_" + driver.getUpdatedAt()))
+					.userId(driver.getUserId())
 					.correlationId(CorrelationIDContext.get())
 					.build()); // use eventuate for event sourcing
-		return persisted;
 	}
 
 }

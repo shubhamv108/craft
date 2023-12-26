@@ -17,6 +17,9 @@ public class MarkAvailableForRideRequestValidator extends AbstractRequestValidat
 		if (StringUtils.isEmpty(request.getUserId()))
 			this.putMessage("userId", MUST_NOT_BE_EMPTY, "userId");
 
+		if (StringUtils.isEmpty(request.getVehicleRegistrationNumber()))
+			this.putMessage("vehicleRegistrationNumber", MUST_NOT_BE_EMPTY, "vehicleRegistrationNumber");
+
 		return this;
 	}
 

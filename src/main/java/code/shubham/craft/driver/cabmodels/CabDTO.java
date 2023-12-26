@@ -1,4 +1,4 @@
-package code.shubham.craft.drivermodels;
+package code.shubham.craft.driver.cabmodels;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -9,24 +9,20 @@ import lombok.Data;
 
 @Builder
 @Data
-public class RegisterDriverRequest {
+public class CabDTO {
+
+	private String cabId;
 
 	@NotNull
 	@NotEmpty
-	@Min(10)
-	@Max(64)
-	private String vehicleRegistrationNumber;
+	@Min(6)
+	@Max(40)
+	private String registrationNumber;
 
 	@NotNull
 	@NotEmpty
-	@Min(10)
-	@Max(64)
-	private String vehicleColor;
-
-	@NotNull
-	@NotEmpty
-	@Min(10)
-	@Max(64)
-	private String drivingLicense;
+	@Min(3)
+	@Max(40)
+	private String color;
 
 }

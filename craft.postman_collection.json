@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "34c88662-b99f-45e4-a80c-5a2bd19769a3",
-		"name": "uber-driver-app",
+		"name": "craft",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "5074949"
 	},
@@ -68,7 +68,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"vehicleRegistrationNumber\": \"up32jx9749\",\n    \"vehicleColor\": \"marsh grey\",\n    \"drivingLicense\": \"as\"\n}",
+					"raw": "{\n    \"drivingLicenseName\": \"Shubham\",\n    \"drivingLicense\": \"asdsadadsad9087\",\n    \"cab\": {\n        \"registrationNumber\": \"up32jx9749\",\n        \"color\": \"marsh grey\"\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1128,7 +1128,93 @@
 			"response": []
 		},
 		{
-			"name": "[PATCH] Driver-AvailableForRide",
+			"name": "[GET] Cab-GetAllByDriverUser",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessTokenUrl",
+							"value": "https://oauth2.googleapis.com/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Googlw OAuth2",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.google.com/o/oauth2/auth",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://oauth.pstmn.io/v1/callback",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "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",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip}}:{{port}}/craft/cabs/v1?driverId={{driverId}}&userId={{userId}}",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"craft",
+						"cabs",
+						"v1"
+					],
+					"query": [
+						{
+							"key": "driverId",
+							"value": "{{driverId}}"
+						},
+						{
+							"key": "userId",
+							"value": "{{userId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[PATCH] Driver-MarkAvailableForRide",
 			"request": {
 				"auth": {
 					"type": "oauth2",

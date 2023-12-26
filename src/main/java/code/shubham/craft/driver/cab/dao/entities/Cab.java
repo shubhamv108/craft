@@ -1,10 +1,10 @@
-package code.shubham.craft.productorder.doa.entities;
+package code.shubham.craft.driver.cab.dao.entities;
 
 import code.shubham.commons.dao.entities.base.BaseAbstractAuditableEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Index;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Builder
@@ -13,17 +13,19 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "customer_type__product_mapping", indexes = { @Index(columnList = "customerType") })
-public class CustomerTypeProduct extends BaseAbstractAuditableEntity {
+@Table(name = "cabs")
+public class Cab extends BaseAbstractAuditableEntity {
+
+	@Column(nullable = false, unique = true)
+	private String registrationNumber;
 
 	@Column(nullable = false)
-	private String customerType;
+	private String color;
 
 	@Column(nullable = false)
-	private String productId;
+	private String driverId;
 
-	@Builder.Default
 	@Column(nullable = false)
-	private int quantity = 1;
+	private String userId;
 
 }

@@ -15,10 +15,8 @@ import lombok.*;
 @Table(name = "drivers")
 public class Driver extends BaseAbstractAuditableEntity {
 
-	@Column(nullable = false, unique = true)
-	private String vehicleRegistrationNumber;
-
-	private String vehicleColor;
+	@Column(nullable = false)
+	private String drivingLicenseName;
 
 	@Column(nullable = false, unique = true)
 	private String drivingLicense;
@@ -29,8 +27,7 @@ public class Driver extends BaseAbstractAuditableEntity {
 	@Column(nullable = false)
 	private DriverStatus status;
 
-	@Builder.Default
 	@Column
-	private boolean availableForRide = false;
+	private String activeCabId;
 
 }

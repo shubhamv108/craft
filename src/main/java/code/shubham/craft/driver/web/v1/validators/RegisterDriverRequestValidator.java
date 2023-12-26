@@ -3,19 +3,28 @@ package code.shubham.craft.driver.web.v1.validators;
 import code.shubham.commons.utils.StringUtils;
 import code.shubham.commons.validators.AbstractRequestValidator;
 import code.shubham.commons.validators.IValidator;
-import code.shubham.craft.drivermodels.RegisterDriverRequest;
+import code.shubham.craft.drivermodels.RegisterDriver;
 
-public class RegisterDriverRequestValidator extends AbstractRequestValidator<RegisterDriverRequest> {
+public class RegisterDriverRequestValidator extends AbstractRequestValidator<RegisterDriver.Request> {
 
 	@Override
-	public IValidator<RegisterDriverRequest> validate(final RegisterDriverRequest request) {
+	public IValidator<RegisterDriver.Request> validate(final RegisterDriver.Request request) {
 		super.validate(request);
 
-		if (StringUtils.isEmpty(request.getVehicleColor()))
-			this.putMessage("vehicleColor", MUST_NOT_BE_EMPTY, "vehicleColor");
+		if (StringUtils.isEmpty(request.getDrivingLicense()))
+			this.putMessage("drivingLicense", MUST_NOT_BE_EMPTY, "drivingLicense");
 
-		if (StringUtils.isEmpty(request.getVehicleColor()))
-			this.putMessage("vehicleRegistrationNumber", MUST_NOT_BE_EMPTY, "vehicleRegistrationNumber");
+		if (StringUtils.isEmpty(request.getDrivingLicenseName()))
+			this.putMessage("drivingLicenseName", MUST_NOT_BE_EMPTY, "drivingLicenseName");
+
+		if (request.getCab() == null)
+			this.putMessage("cab", MUST_NOT_BE_EMPTY, "cab");
+
+		if (request.getCab() == null || StringUtils.isEmpty(request.getCab().getRegistrationNumber()))
+			this.putMessage("cab.registrationNumber", MUST_NOT_BE_EMPTY, "cab.registrationNumber");
+
+		if (request.getCab() == null || StringUtils.isEmpty(request.getCab().getColor()))
+			this.putMessage("cab.color", MUST_NOT_BE_EMPTY, "cab.color");
 
 		return this;
 	}

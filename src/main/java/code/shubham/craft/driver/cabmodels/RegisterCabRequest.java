@@ -1,5 +1,6 @@
-package code.shubham.craft.drivermodels;
+package code.shubham.craft.driver.cabmodels;
 
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -8,24 +9,30 @@ import lombok.Data;
 
 @Builder
 @Data
-public class MarkAvailableForRideRequest {
+public class RegisterCabRequest {
 
 	@NotNull
 	@NotEmpty
 	@Min(6)
-	@Min(40)
-	private String userId;
+	@Max(12)
+	private String registrationNumber;
+
+	@NotNull
+	@NotEmpty
+	@Min(3)
+	@Max(12)
+	private String color;
 
 	@NotNull
 	@NotEmpty
 	@Min(6)
-	@Min(40)
+	@Max(24)
 	private String driverId;
 
 	@NotNull
 	@NotEmpty
 	@Min(6)
-	@Min(40)
-	private String vehicleRegistrationNumber;
+	@Max(40)
+	private String userId;
 
 }
