@@ -17,12 +17,12 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-      - name: checkout repo
-        uses: actions/checkout@main
       - name: Format with Gradle
         uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
         with:
           arguments: ./gradlew format
+      - name: Start services
+        run: docker compose -f docker-compose.yaml up --force-recreate -d --remove-orphans sonar fluentbit db kafka kafdrop elasticsearch prometheus grafana telegraf influxdb keycloak-db keycloak
       - name: Build with Gradle
         uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
         with:

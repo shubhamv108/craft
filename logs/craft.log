@@ -10214,3 +10214,1316 @@ code.shubham.commons.exceptions.UnauthorizedException
 [2023-12-26 11:33:18.567] [] [51]  INFO localhost --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 [2023-12-26 11:33:18.568] [] [51]  INFO localhost --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
 [2023-12-26 11:33:18.570] [] [51]  INFO localhost --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+[2023-12-26 11:41:46.798] [] [1]  INFO localhost --- [    Test worker] c.s.c.i.w.v.c.UserControllerTest         : Starting UserControllerTest using Java 21.0.1 with PID 2474156 (started by root in /home/r00t/git/shubham/craft)
+[2023-12-26 11:41:46.836] [] [1]  INFO localhost --- [    Test worker] c.s.c.i.w.v.c.UserControllerTest         : No active profile set, falling back to 1 default profile: "default"
+[2023-12-26 11:41:48.029] [] [1] DEBUG localhost --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7f3e9acc
+[2023-12-26 11:41:53.508] [] [1]  INFO localhost --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-12-26 11:41:53.809] [] [1]  INFO localhost --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 272 ms. Found 16 JPA repository interfaces.
+[2023-12-26 11:41:54.936] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.sentry.spring.jakarta.tracing.SentryAdviceConfiguration' of type [io.sentry.spring.jakarta.tracing.SentryAdviceConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:54.950] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.sentry.spring.jakarta.tracing.SentrySpanPointcutConfiguration' of type [io.sentry.spring.jakarta.tracing.SentrySpanPointcutConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:54.957] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentrySpanPointcut' of type [org.springframework.aop.support.ComposablePointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:54.960] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.sentry.spring.boot.jakarta.SentryAutoConfiguration$HubConfiguration' of type [io.sentry.spring.boot.jakarta.SentryAutoConfiguration$HubConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:54.980] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.sentry.spring.boot.jakarta.SentryAutoConfiguration$HubConfiguration$ContextTagsEventProcessorConfiguration' of type [io.sentry.spring.boot.jakarta.SentryAutoConfiguration$HubConfiguration$ContextTagsEventProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.126] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.146] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'stringOrNumberMigrationVersionConverter' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$StringOrNumberToMigrationVersionConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.192] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentry-io.sentry.spring.boot.jakarta.SentryProperties' of type [io.sentry.spring.boot.jakarta.SentryProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.255] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'contextTagsEventProcessor' of type [io.sentry.spring.jakarta.ContextTagsEventProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.276] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'inAppPackagesResolver' of type [io.sentry.spring.boot.jakarta.InAppIncludesResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.290] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentryOptionsConfiguration' of type [io.sentry.spring.boot.jakarta.SentryAutoConfiguration$HubConfiguration$$Lambda/0x00007fd00c6bebe8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.342] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'craftApplication' of type [code.shubham.CraftApplication$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.459] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentryHub' of type [io.sentry.HubAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.566] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentrySpanAdvice' of type [io.sentry.spring.jakarta.tracing.SentrySpanAdvice] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.570] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentrySpanAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.572] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.sentry.spring.jakarta.tracing.SentryTransactionPointcutConfiguration' of type [io.sentry.spring.jakarta.tracing.SentryTransactionPointcutConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.579] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentryTransactionPointcut' of type [org.springframework.aop.support.ComposablePointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.587] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentryTransactionAdvice' of type [io.sentry.spring.jakarta.tracing.SentryTransactionAdvice] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:55.590] [] [1]  WARN localhost --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'sentryTransactionAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [healthEndpointGroupsBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2023-12-26 11:41:56.099] [] [1]  INFO localhost --- [    Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+[2023-12-26 11:41:56.474] [] [1]  INFO localhost --- [    Test worker] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4769a5a1
+[2023-12-26 11:41:56.476] [] [1]  INFO localhost --- [    Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+[2023-12-26 11:41:56.627] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.l.VersionPrinter                 : Flyway Community Edition 9.22.3 by Redgate
+[2023-12-26 11:41:56.628] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.l.VersionPrinter                 : See release notes here: https://rd.gt/416ObMi
+[2023-12-26 11:41:56.628] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.l.VersionPrinter                 : 
+[2023-12-26 11:41:56.667] [] [1]  INFO localhost --- [    Test worker] o.f.c.FlywayExecutor                     : Database: jdbc:mysql://localhost:3306/craft (MySQL 8.2)
+[2023-12-26 11:41:56.683] [] [1]  WARN localhost --- [    Test worker] o.f.c.i.d.b.Database                     : Flyway upgrade recommended: MySQL 8.2 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.0.
+[2023-12-26 11:41:56.716] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `craft`.`flyway_schema_history` does not exist yet
+[2023-12-26 11:41:56.721] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.c.DbValidate                     : Successfully validated 2 migrations (execution time 00:00.022s)
+[2023-12-26 11:41:56.752] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `craft`.`flyway_schema_history` ...
+[2023-12-26 11:41:56.879] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.c.DbMigrate                      : Current version of schema `craft`: << Empty Schema >>
+[2023-12-26 11:41:56.912] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.c.DbMigrate                      : Migrating schema `craft` to version "1 - 00001 create insert user role"
+[2023-12-26 11:41:57.126] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.c.DbMigrate                      : Migrating schema `craft` to version "2 - 00002 create insert customer product mapping"
+[2023-12-26 11:41:57.224] [] [1]  INFO localhost --- [    Test worker] o.f.c.i.c.DbMigrate                      : Successfully applied 2 migrations to schema `craft`, now at version v2 (execution time 00:00.215s)
+[2023-12-26 11:41:58.307] [] [1]  INFO localhost --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+[2023-12-26 11:42:03.628] [] [1]  INFO localhost --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-26 11:42:04.854] [] [1]  INFO localhost --- [    Test worker] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+[2023-12-26 11:42:07.471] [] [1]  WARN localhost --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-12-26 11:42:07.730] [] [1] DEBUG localhost --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 26 mappings in 'requestMappingHandlerMapping'
+[2023-12-26 11:42:08.012] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+[2023-12-26 11:42:08.310] [] [1]  INFO localhost --- [    Test worker] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 14 endpoint(s) beneath base path '/actuator'
+[2023-12-26 11:42:08.465] [] [1]  INFO localhost --- [    Test worker] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3dad3e98, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3129bded, org.springframework.security.web.context.SecurityContextHolderFilter@94adeac, org.springframework.security.web.header.HeaderWriterFilter@67133268, org.springframework.web.filter.CorsFilter@141fe0f8, org.springframework.security.web.authentication.logout.LogoutFilter@45addb81, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@1b943124, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38e12425, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5325ee26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44f1a8c0, org.springframework.security.web.session.SessionManagementFilter@59d3495a, org.springframework.security.web.access.ExceptionTranslationFilter@7f2e139f, org.springframework.security.web.access.intercept.AuthorizationFilter@4e7e446b]
+[2023-12-26 11:42:08.712] [] [1] DEBUG localhost --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2023-12-26 11:42:08.760] [] [1] DEBUG localhost --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+[2023-12-26 11:42:09.250] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-driveronboard-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = driveronboard
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:42:09.320] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:42:09.320] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:42:09.321] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703571129319
+[2023-12-26 11:42:09.330] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Subscribed to topic(s): driver, backgroundverification, order
+[2023-12-26 11:42:09.341] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-order-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = order
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:42:09.350] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:42:09.351] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:42:09.351] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703571129350
+[2023-12-26 11:42:09.358] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-2, groupId=order] Subscribed to topic(s): shipment, ordercommand
+[2023-12-26 11:42:09.360] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-productorderdriveronboard-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = productorderdriveronboard
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:42:09.368] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:42:09.368] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:42:09.369] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703571129368
+[2023-12-26 11:42:09.374] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Subscribed to topic(s): driveronboard
+[2023-12-26 11:42:09.376] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-shipmentorder-4
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = shipmentorder
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:42:09.382] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:42:09.383] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:42:09.383] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703571129382
+[2023-12-26 11:42:09.391] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Subscribed to topic(s): order
+[2023-12-26 11:42:09.394] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-backgroundverificationdriveronboard-5
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = backgroundverificationdriveronboard
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:42:09.398] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:42:09.398] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:42:09.398] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703571129398
+[2023-12-26 11:42:09.402] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Subscribed to topic(s): driveronboard
+[2023-12-26 11:42:09.408] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-driver-6
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = driver
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2023-12-26 11:42:09.410] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:42:09.410] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:42:09.410] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703571129410
+[2023-12-26 11:42:09.412] [] [1]  INFO localhost --- [    Test worker] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-driver-6, groupId=driver] Subscribed to topic(s): driveronboard
+[2023-12-26 11:42:09.423] [] [1]  INFO localhost --- [    Test worker] c.s.c.i.w.v.c.UserControllerTest         : Started UserControllerTest in 23.547 seconds (process running for 30.581)
+[2023-12-26 11:42:09.707] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 2 : {driveronboard=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:42:09.707] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 2 : {driveronboard=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:42:09.709] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-driver-6, groupId=driver] Cluster ID: fLEFWcyOSv6Gt9MfzPBXsw
+[2023-12-26 11:42:09.709] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Cluster ID: fLEFWcyOSv6Gt9MfzPBXsw
+[2023-12-26 11:42:09.734] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 2 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.734] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 2 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.734] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Cluster ID: fLEFWcyOSv6Gt9MfzPBXsw
+[2023-12-26 11:42:09.734] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Cluster ID: fLEFWcyOSv6Gt9MfzPBXsw
+[2023-12-26 11:42:09.748] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 2 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:42:09.748] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 2 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.748] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Cluster ID: fLEFWcyOSv6Gt9MfzPBXsw
+[2023-12-26 11:42:09.748] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-order-2, groupId=order] Cluster ID: fLEFWcyOSv6Gt9MfzPBXsw
+[2023-12-26 11:42:09.808] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 4 : {driveronboard=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:42:09.812] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 4 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.860] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 4 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.862] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 4 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.871] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 4 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.871] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 4 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=UNKNOWN_TOPIC_OR_PARTITION}
+[2023-12-26 11:42:09.914] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 6 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.917] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 6 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.966] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 6 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.966] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 6 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.977] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 6 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:09.979] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 6 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.019] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 8 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.023] [] [1]  INFO localhost --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [code.shubham.craft.CraftTests]: CraftTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2023-12-26 11:42:10.024] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 8 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.046] [] [1]  INFO localhost --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration code.shubham.CraftApplication for test class code.shubham.craft.CraftTests
+[2023-12-26 11:42:10.069] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 8 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.069] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 8 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.074] [] [1]  INFO localhost --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+[2023-12-26 11:42:10.074] [] [1]  INFO localhost --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+[2023-12-26 11:42:10.076] [] [1]  INFO localhost --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 2 ms
+[2023-12-26 11:42:10.081] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 8 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.084] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 8 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.122] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 10 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.127] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 10 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.173] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 10 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.173] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 10 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.185] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 10 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.191] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 10 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.228] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 12 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.233] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 12 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.276] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 12 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.276] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 12 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.291] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 12 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.297] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 12 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.331] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 14 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.334] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 14 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.352] [] [1] DEBUG localhost --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationController#updateStatus(UpdateBackgroundVerificationStatusRequest)
+[2023-12-26 11:42:10.387] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 14 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.387] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 14 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.397] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 14 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.402] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 14 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.435] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 16 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.437] [] [1] DEBUG localhost --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [UpdateBackgroundVerificationStatusRequest(clientReferenceId=a2dca92b-fe74-47f6-a369-8940f6291e72, co (truncated)...]
+[2023-12-26 11:42:10.439] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 16 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.491] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 16 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.491] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 16 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.500] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 16 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.508] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 16 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.539] [] [73]  WARN localhost --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Error while fetching metadata with correlation id 18 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.542] [] [76]  WARN localhost --- [ntainer#1-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driver-6, groupId=driver] Error while fetching metadata with correlation id 18 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.566] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.p.ProducerConfig                 : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[2023-12-26 11:42:10.575] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.p.KafkaProducer                  : [Producer clientId=producer-1] Instantiated an idempotent producer.
+[2023-12-26 11:42:10.587] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.0
+[2023-12-26 11:42:10.587] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka commitId: 60e845626d8a465a
+[2023-12-26 11:42:10.587] [] [1]  INFO localhost --- [    Test worker] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1703571130587
+[2023-12-26 11:42:10.593] [] [67]  WARN localhost --- [ntainer#4-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Error while fetching metadata with correlation id 18 : {driveronboard=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.593] [] [79]  INFO localhost --- [ad | producer-1] o.a.k.c.Metadata                         : [Producer clientId=producer-1] Cluster ID: fLEFWcyOSv6Gt9MfzPBXsw
+[2023-12-26 11:42:10.593] [] [70]  WARN localhost --- [ntainer#5-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Error while fetching metadata with correlation id 18 : {order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.599] [] [79]  WARN localhost --- [ad | producer-1] o.a.k.c.NetworkClient                    : [Producer clientId=producer-1] Error while fetching metadata with correlation id 4 : {backgroundverification=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.604] [] [64]  WARN localhost --- [ntainer#3-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-order-2, groupId=order] Error while fetching metadata with correlation id 18 : {shipment=LEADER_NOT_AVAILABLE, ordercommand=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.613] [] [61]  WARN localhost --- [ntainer#2-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Error while fetching metadata with correlation id 18 : {driver=LEADER_NOT_AVAILABLE, backgroundverification=LEADER_NOT_AVAILABLE, order=LEADER_NOT_AVAILABLE}
+[2023-12-26 11:42:10.613] [] [79]  INFO localhost --- [ad | producer-1] o.a.k.c.p.i.TransactionManager           : [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+[2023-12-26 11:42:10.649] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:42:10.649] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:42:10.651] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] (Re-)joining group
+[2023-12-26 11:42:10.651] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] (Re-)joining group
+[2023-12-26 11:42:10.677] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Request joining group due to: need to re-join with the given member-id: consumer-backgroundverificationdriveronboard-5-09e81bc6-cd47-4901-91a1-562d7286c776
+[2023-12-26 11:42:10.677] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Request joining group due to: need to re-join with the given member-id: consumer-driver-6-759130a2-1f0c-4584-b24a-e6f3d2c75505
+[2023-12-26 11:42:10.677] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:42:10.678] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] (Re-)joining group
+[2023-12-26 11:42:10.678] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:42:10.678] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] (Re-)joining group
+[2023-12-26 11:42:10.695] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:42:10.696] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:42:10.696] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] (Re-)joining group
+[2023-12-26 11:42:10.697] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] (Re-)joining group
+[2023-12-26 11:42:10.699] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Request joining group due to: need to re-join with the given member-id: consumer-productorderdriveronboard-3-854bf035-c39f-4b76-a1b0-26b065885299
+[2023-12-26 11:42:10.699] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:42:10.699] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] (Re-)joining group
+[2023-12-26 11:42:10.700] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Request joining group due to: need to re-join with the given member-id: consumer-shipmentorder-4-62c260b6-f498-41f3-9a04-a91f50262d8a
+[2023-12-26 11:42:10.700] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:42:10.700] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] (Re-)joining group
+[2023-12-26 11:42:10.706] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:42:10.707] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] (Re-)joining group
+[2023-12-26 11:42:10.719] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Request joining group due to: need to re-join with the given member-id: consumer-order-2-c2994098-bc44-4d3f-8ee6-d753e3a32bc9
+[2023-12-26 11:42:10.720] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:42:10.721] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] (Re-)joining group
+[2023-12-26 11:42:10.722] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+[2023-12-26 11:42:10.723] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] (Re-)joining group
+[2023-12-26 11:42:10.733] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Request joining group due to: need to re-join with the given member-id: consumer-driveronboard-1-0255cba2-ba81-4e59-932d-967bc1993e10
+[2023-12-26 11:42:10.734] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2023-12-26 11:42:10.734] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] (Re-)joining group
+[2023-12-26 11:42:10.772] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2023-12-26 11:42:10.777] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ServiceResponse(statusCode=200, data=BackgroundVerification(applicantId=b2dca92b-fe74-47f6-a369-8940 (truncated)...]
+[2023-12-26 11:42:10.824] [] [1]  INFO localhost --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+[2023-12-26 11:42:10.824] [] [1]  INFO localhost --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+[2023-12-26 11:42:10.825] [] [1]  INFO localhost --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 1 ms
+[2023-12-26 11:42:10.888] [] [1] DEBUG localhost --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationController#updateStatus(UpdateBackgroundVerificationStatusRequest)
+[2023-12-26 11:42:10.889] [] [1] DEBUG localhost --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [UpdateBackgroundVerificationStatusRequest(clientReferenceId=a2dca92b-fe74-47f6-a369-8940f6291e72, co (truncated)...]
+[2023-12-26 11:42:10.896] [] [1] DEBUG localhost --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler code.shubham.commons.exceptions.RestResponseEntityExceptionHandler#handleInvalidRequestException(InvalidRequestException, WebRequest)
+[2023-12-26 11:42:10.897] [] [1] ERROR localhost --- [    Test worker] s.c.e.RestResponseEntityExceptionHandler : null
+[
+]
+
+	at code.shubham.craft.backgroundverification.services.BackgroundVerificationService.lambda$updateStatus$0(BackgroundVerificationService.java:61)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at code.shubham.craft.backgroundverification.services.BackgroundVerificationService.updateStatus(BackgroundVerificationService.java:61)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at code.shubham.craft.backgroundverification.services.BackgroundVerificationService$$SpringCGLIB$$0.updateStatus(<generated>)
+	at code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationController.updateStatus(BackgroundVerificationController.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at code.shubham.commons.aspects.RoleAspect.process(RoleAspect.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationController$$SpringCGLIB$$0.updateStatus(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:888)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
+	at code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationControllerTest.updateStatus_background_verification_not_initiated(BackgroundVerificationControllerTest.java:74)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+[2023-12-26 11:42:10.901] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2023-12-26 11:42:10.901] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ServiceResponse(statusCode=400, data=null, error=[{clientReferenceId=[No background verification ini (truncated)...]
+[2023-12-26 11:42:10.907] [] [1] DEBUG localhost --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [[<EOL>{<EOL>?"clientReferenceId": [<EOL>??"No background verification initiated with clientReferenceId: a2dca92b-fe74-47f6-a369-8940f6291e72"<EOL>?]<EOL><EOL>},]<EOL>]
+[2023-12-26 11:42:10.922] [] [1]  INFO localhost --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+[2023-12-26 11:42:10.922] [] [1]  INFO localhost --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+[2023-12-26 11:42:10.923] [] [1]  INFO localhost --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 1 ms
+[2023-12-26 11:42:10.983] [] [1] DEBUG localhost --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationController#updateStatus(UpdateBackgroundVerificationStatusRequest)
+[2023-12-26 11:42:10.984] [] [1] DEBUG localhost --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [UpdateBackgroundVerificationStatusRequest(clientReferenceId=a2dca92b-fe74-47f6-a369-8940f6291e72, co (truncated)...]
+[2023-12-26 11:42:10.985] [] [1] DEBUG localhost --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler code.shubham.commons.exceptions.RestResponseEntityExceptionHandler#handleAccessDeniedException(Exception, WebRequest)
+[2023-12-26 11:42:10.985] [] [1] ERROR localhost --- [    Test worker] s.c.e.RestResponseEntityExceptionHandler : 
+code.shubham.commons.exceptions.UnauthorizedException
+	at code.shubham.commons.aspects.RoleAspect.validateAccess(RoleAspect.java:27)
+	at code.shubham.commons.aspects.RoleAspect.process(RoleAspect.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationController$$SpringCGLIB$$0.updateStatus(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:888)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
+	at code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationControllerTest.updateStatus_forbidden(BackgroundVerificationControllerTest.java:59)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+[2023-12-26 11:42:10.987] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2023-12-26 11:42:10.988] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ServiceResponse(statusCode=403, data=null, error=Access denied)]
+[2023-12-26 11:42:10.989] [] [1] DEBUG localhost --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [code.shubham.commons.exceptions.UnauthorizedException]
+[2023-12-26 11:42:10.994] [] [1]  INFO localhost --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+[2023-12-26 11:42:10.994] [] [1]  INFO localhost --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+[2023-12-26 11:42:10.995] [] [1]  INFO localhost --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 1 ms
+[2023-12-26 11:42:11.055] [] [1] DEBUG localhost --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationController#updateStatus(UpdateBackgroundVerificationStatusRequest)
+[2023-12-26 11:42:11.056] [] [1] DEBUG localhost --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [UpdateBackgroundVerificationStatusRequest(clientReferenceId=a2dca92b-fe74-47f6-a369-8940f6291e72, co (truncated)...]
+[2023-12-26 11:42:11.060] [] [1] DEBUG localhost --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler code.shubham.commons.exceptions.RestResponseEntityExceptionHandler#handleInvalidRequestException(InvalidRequestException, WebRequest)
+[2023-12-26 11:42:11.060] [] [1] ERROR localhost --- [    Test worker] s.c.e.RestResponseEntityExceptionHandler : null
+[
+]
+
+	at code.shubham.craft.backgroundverification.services.BackgroundVerificationService.updateStatus(BackgroundVerificationService.java:65)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at code.shubham.craft.backgroundverification.services.BackgroundVerificationService$$SpringCGLIB$$0.updateStatus(<generated>)
+	at code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationController.updateStatus(BackgroundVerificationController.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at code.shubham.commons.aspects.RoleAspect.process(RoleAspect.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationController$$SpringCGLIB$$0.updateStatus(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:888)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
+	at code.shubham.craft.backgroundverification.web.v1.controllers.BackgroundVerificationControllerTest.updateStatus_already_completed(BackgroundVerificationControllerTest.java:100)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+[2023-12-26 11:42:11.062] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2023-12-26 11:42:11.062] [] [1] DEBUG localhost --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ServiceResponse(statusCode=400, data=null, error=[{clientReferenceId=[background verification comple (truncated)...]
+[2023-12-26 11:42:11.063] [] [1] DEBUG localhost --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [[<EOL>{<EOL>?"clientReferenceId": [<EOL>??"background verification completed for clientReferenceId: a2dca92b-fe74-47f6-a369-8940f6291e72"<EOL>?]<EOL><EOL>},]<EOL>]
+[2023-12-26 11:42:11.071] [] [51] DEBUG localhost --- [ionShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7f3e9acc, started on Tue Dec 26 11:41:48 IST 2023
+[2023-12-26 11:42:11.190] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Member consumer-driveronboard-1-0255cba2-ba81-4e59-932d-967bc1993e10 sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:42:11.190] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Member consumer-driver-6-759130a2-1f0c-4584-b24a-e6f3d2c75505 sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:42:11.190] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Member consumer-order-2-c2994098-bc44-4d3f-8ee6-d753e3a32bc9 sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:42:11.190] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Member consumer-shipmentorder-4-62c260b6-f498-41f3-9a04-a91f50262d8a sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:42:11.190] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Member consumer-productorderdriveronboard-3-854bf035-c39f-4b76-a1b0-26b065885299 sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:42:11.190] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Member consumer-backgroundverificationdriveronboard-5-09e81bc6-cd47-4901-91a1-562d7286c776 sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[2023-12-26 11:42:11.191] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.191] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.191] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.191] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.191] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.191] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.191] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.191] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.192] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.192] [] [61]  INFO localhost --- [ntainer#2-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:42:11.192] [] [67]  INFO localhost --- [ntainer#4-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:42:11.192] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.192] [] [64]  INFO localhost --- [ntainer#3-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-order-2, groupId=order] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:42:11.192] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.192] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.192] [] [73]  INFO localhost --- [ntainer#0-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:42:11.192] [] [76]  INFO localhost --- [ntainer#1-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-driver-6, groupId=driver] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:42:11.192] [] [70]  INFO localhost --- [ntainer#5-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Unsubscribed all topics or patterns and assigned partitions
+[2023-12-26 11:42:11.193] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.193] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.193] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.193] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.193] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.193] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-productorderdriveronboard-3, groupId=productorderdriveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.193] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Resetting generation and member id due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.193] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-shipmentorder-4, groupId=shipmentorder] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.193] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driveronboard-1, groupId=driveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.193] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-order-2, groupId=order] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.193] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-driver-6, groupId=driver] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:11.193] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-backgroundverificationdriveronboard-5, groupId=backgroundverificationdriveronboard] Request joining group due to: consumer pro-actively leaving the group
+[2023-12-26 11:42:13.719] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:42:13.720] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:42:13.719] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:42:13.720] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:42:13.720] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:42:13.720] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:42:13.720] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:42:13.720] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:42:13.720] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:42:13.720] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:42:13.720] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:42:13.720] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:42:13.727] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-productorderdriveronboard-3 unregistered
+[2023-12-26 11:42:13.729] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-shipmentorder-4 unregistered
+[2023-12-26 11:42:13.729] [] [67]  INFO localhost --- [ntainer#4-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : productorderdriveronboard: Consumer stopped
+[2023-12-26 11:42:13.730] [] [70]  INFO localhost --- [ntainer#5-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : shipmentorder: Consumer stopped
+[2023-12-26 11:42:13.731] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-driver-6 unregistered
+[2023-12-26 11:42:13.731] [] [76]  INFO localhost --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : driver: Consumer stopped
+[2023-12-26 11:42:13.732] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:42:13.732] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:42:13.732] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-backgroundverificationdriveronboard-5 unregistered
+[2023-12-26 11:42:13.732] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:42:13.732] [] [73]  INFO localhost --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : backgroundverificationdriveronboard: Consumer stopped
+[2023-12-26 11:42:13.735] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-order-2 unregistered
+[2023-12-26 11:42:13.736] [] [64]  INFO localhost --- [ntainer#3-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : order: Consumer stopped
+[2023-12-26 11:42:13.741] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:42:13.741] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:42:13.741] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:42:13.744] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.a.k.c.u.AppInfoParser                  : App info kafka.consumer for consumer-driveronboard-1 unregistered
+[2023-12-26 11:42:13.744] [] [61]  INFO localhost --- [ntainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : driveronboard: Consumer stopped
+[2023-12-26 11:42:13.745] [] [51]  INFO localhost --- [ionShutdownHook] o.a.k.c.p.KafkaProducer                  : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+[2023-12-26 11:42:13.748] [] [51]  INFO localhost --- [ionShutdownHook] o.a.k.c.m.Metrics                        : Metrics scheduler closed
+[2023-12-26 11:42:13.748] [] [51]  INFO localhost --- [ionShutdownHook] o.a.k.c.m.Metrics                        : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-12-26 11:42:13.748] [] [51]  INFO localhost --- [ionShutdownHook] o.a.k.c.m.Metrics                        : Metrics reporters closed
+[2023-12-26 11:42:13.748] [] [51]  INFO localhost --- [ionShutdownHook] o.a.k.c.u.AppInfoParser                  : App info kafka.producer for producer-1 unregistered
+[2023-12-26 11:42:13.761] [] [51]  INFO localhost --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-26 11:42:13.763] [] [51]  INFO localhost --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+[2023-12-26 11:42:13.766] [] [51]  INFO localhost --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
