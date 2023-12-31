@@ -1,0 +1,114 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: craft
+  labels:
+    name: craft
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: craft
+  namespace: craft
+  labels:
+    app: craft
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: craft
+#  updateStrategy:
+#    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: craft
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "/actuator/prometheus"
+    spec:
+      containers:
+        - name: craft
+          image: shubham01/craft:latest
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 180
+            timeoutSeconds: 120
+            successThreshold: 1
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 180
+            timeoutSeconds: 90
+            successThreshold: 1
+            failureThreshold: 3
+          env:
+            - name: spring.datasource.url
+              value: jdbc:mysql://mysql.craft-mysql.svc:3306/craft?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false&autoReconnect=true&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+            - name: spring.datasource.username
+              value: root
+            - name: spring.datasource.password
+              value: root1234
+            - name: spring.kafka.bootstrap-servers
+              value: kafka-cluster.kafka.svc:9092
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: craft
+  namespace: craft
+spec:
+  selector:
+    app: craft
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8080
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: craft
+  namespace: craft
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /craft/*
+            pathType: Prefix
+            backend:
+              service:
+                name: craft
+                port:
+                  number: 80
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: craft-monitor
+  namespace: craft
+  labels:
+    release: prometheus-operator
+spec:
+  selector:
+    matchLabels:
+      app: craft
+  endpoints:
+    - port: http-traffic
+      path: "/actuator/prometheus"
+---
