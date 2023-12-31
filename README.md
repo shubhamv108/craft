@@ -163,4 +163,5 @@ Istio (With kubernetes, exploring)
 
 # Images
 #### Generate Google OAuth2 Bearer Token
+![Screenshot from 2023-12-31 13-02-34](https://github.com/shubhamv108/craft/assets/16763337/a6f293dc-40d0-4712-bdf7-63839ab0bb75)
 
