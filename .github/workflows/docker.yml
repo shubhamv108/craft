@@ -53,8 +53,6 @@ jobs:
         run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/craft:latest
-      - name: Build the Fluentbit Docker image
-        run: docker build . --file Fluentbit-Dockerfile --tag ${{secrets.DOCKER_USER}}/craft-fluentbit:latest
 #      - name: Prisma Cloud image scan
 #        id: scan
 #        uses: PaloAltoNetworks/prisma-cloud-scan@v1.5
@@ -73,5 +71,3 @@ jobs:
 #          image_name: craft:latest
       - name: Docker Push To DockerHub
         run: docker push ${{secrets.DOCKER_USER}}/craft
-      - name: Docker Push Fluentbit To DockerHub
-        run: docker push ${{secrets.DOCKER_USER}}/craft-fluentbit

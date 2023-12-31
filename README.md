@@ -55,7 +55,7 @@ Instructions to the Candidate:
    - Github Action (format, build, sonarqube static code analysis, test, test coverage, create image, push image to registry)
    - Jfrog artifact code repository (Dependency repository with vulnerability check) (exploring)
    - AWS ECR - Image Repository
-   - Checkmarx - Image Scan (exploring)
+   - Prisma Cloud - Image Scan (exploring)
    - AWS Cloudformation (IaC)
    - AWS Codepipeline (Env - DEV, QA, Pre-Prod, Prod (full auto on approval in pre prod )) (Stages - Source (AutoTrigger on commit), setup infra, test, deploy, approve for next env (Manual))
 
