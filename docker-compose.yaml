@@ -21,11 +21,8 @@ services:
     restart: 'on-failure'
 
     depends_on:
-      - fluentbit
       - db
       - kafka
-      - elasticsearch
-      - prometheus
 
     logging:
       driver: fluentd
