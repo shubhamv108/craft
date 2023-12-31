@@ -32,8 +32,8 @@ Instructions to the Candidate:
 
 # Setup
 ### Local
-   make local-setup
-   make local-app
+      make local-setup
+      make local-app
 
 
 # [API Documentation](http://localhost:8080/craft/swagger-ui/index.html#/)
