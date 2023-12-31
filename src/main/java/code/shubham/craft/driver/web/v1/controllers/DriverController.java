@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/drivers/v1")
+@RequestMapping("/v1/drivers")
 @SecurityRequirement(name = "BearerAuth")
 @Tag(name = "Driver")
 public class DriverController {

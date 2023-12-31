@@ -10,7 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "shipments")
+@Table(name = "shipments", indexes = { @Index(name = "index_shipments_orderId", columnList = "orderId") })
 public class Shipment extends BaseAbstractAuditableEntity {
 
 	@Column(nullable = false)

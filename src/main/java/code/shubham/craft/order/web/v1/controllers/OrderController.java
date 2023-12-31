@@ -15,7 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/orders/v1")
+@RequestMapping("/v1/orders")
 @SecurityRequirement(name = "BearerAuth")
 @Tag(name = "Order")
 public class OrderController {

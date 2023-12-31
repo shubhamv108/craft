@@ -14,7 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/shipments/v1")
+@RequestMapping("/v1/shipments")
 @Role("ADMIN")
 @SecurityRequirement(name = "BearerAuth")
 @Tag(name = "Shipment")

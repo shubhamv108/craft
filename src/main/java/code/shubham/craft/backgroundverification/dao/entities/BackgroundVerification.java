@@ -1,8 +1,17 @@
 package code.shubham.craft.backgroundverification.dao.entities;
 
 import code.shubham.commons.dao.entities.base.BaseAbstractAuditableEntity;
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Index;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @Builder
 @Data
@@ -10,10 +19,11 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "background_verification")
+@Table(name = "background_verification",
+		indexes = { @Index(name = "index_background_verification_user_id", columnList = "userId") })
 public class BackgroundVerification extends BaseAbstractAuditableEntity {
 
-	@Column(unique = true, nullable = false)
+	@Column(nullable = false)
 	private String applicantId;
 
 	@Column(nullable = false)

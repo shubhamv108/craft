@@ -1,14 +1,14 @@
 package code.shubham.core.iam.web.v1.controllers;
 
-import code.shubham.commons.AbstractTest;
-import code.shubham.commons.TestConstants;
+import code.shubham.commons.AbstractMVCTest;
+import code.shubham.commons.CommonTestConstants;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class UserControllerTest extends AbstractTest {
+class UserControllerTest extends AbstractMVCTest {
 
-	private String baseUri = TestConstants.LOCALHOST + "/users";
+	private String baseUri = CommonTestConstants.LOCALHOST + "/users";
 
 	@BeforeEach
 	public void setUp() {

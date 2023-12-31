@@ -15,7 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/backgroundVerification/v1")
+@RequestMapping("/v1/backgroundVerification")
 @Role("ADMIN")
 @SecurityRequirement(name = "BearerAuth")
 @Tag(name = "Background Verification")

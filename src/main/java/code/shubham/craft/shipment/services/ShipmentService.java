@@ -13,7 +13,7 @@ import code.shubham.craft.constants.EventType;
 import code.shubham.craft.ordermodels.OrderProductDTO;
 import code.shubham.craft.shipment.dao.entities.Shipment;
 import code.shubham.craft.shipment.dao.entities.ShipmentStatus;
-import code.shubham.craft.shipment.dao.repositories.ShipmentTrackingRepository;
+import code.shubham.craft.shipment.dao.repositories.ShipmentRepository;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,14 +35,14 @@ public class ShipmentService {
 	@Value("${shipment.kafka.topic.name}")
 	private String topicName;
 
-	private final ShipmentTrackingRepository repository;
+	private final ShipmentRepository repository;
 
 	private final Publisher publisher;
 
 	private final UserProfileService profileService;
 
 	@Autowired
-	public ShipmentService(final ShipmentTrackingRepository repository, final Publisher publisher,
+	public ShipmentService(final ShipmentRepository repository, final Publisher publisher,
 			final UserProfileService profileService) {
 		this.repository = repository;
 		this.publisher = publisher;

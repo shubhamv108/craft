@@ -24,8 +24,143 @@ Instructions to the Candidate:
    process.
 
 ## Github Secrets
-DOCKER_USER
-DOCKER_PASSWORD
+      DOCKER_USER
+      DOCKER_PASSWORD
+      AWS_ACCES_KEY_ID
+      AWS_SECRET_ACCESS_KEY
+      AWS_DEFAULT_REGION
+
+# Setup
+### Local
+   make local-setup
+   make local-app
 
 
 # [API Documentation](http://localhost:8080/craft/swagger-ui/index.html#/)
+
+
+# Tech Stack
+##### Code Repository
+   - Github
+
+#### Configuration
+   - AWS Param Store  
+##### Secure Config
+   - AWS KMS - Encryption keys
+   - AWS Secret manager: Database keys 
+
+(Alternative centralized Spring Config Server (git branch support), Vault for secured keys]
+
+#### Deployment
+   - Github Action (format, build, sonarqube static code analysis, test, test coverage, create image, push image to registry)
+   - Jfrog artifact code repository (Dependency repository with vulnerability check) (exploring)
+   - AWS ECR - Image Repository
+   - Checkmarx - Image Scan (exploring)
+   - AWS Cloudformation (IaC)
+   - AWS Codepipeline (Env - DEV, QA, Pre-Prod, Prod (full auto on approval in pre prod )) (Stages - Source (AutoTrigger on commit), setup infra, test, deploy, approve for next env (Manual))
+
+
+#### DNS
+   - Route 53
+
+#### CDN
+   - AWS Cloudfront
+
+#### DFS
+   - AWS S3
+
+
+#### API Gateway
+   - AWS API Gateway (Routing, Rate Limiting)
+
+
+##### Auth
+   - OAuth2 Google with Role in IAM service for eahc email.  (RBAC Keycloak when allowing self registration)
+   - AWS Lambda Authorizer
+
+
+#### VPC 
+   - VPC with private Subnet
+   - VPC Link (connect AWS Api Gateway to ELB (on VPC with private subnet))
+
+
+#### Load Balancing
+   - AWS ELB (ALB) - Round Robin
+
+#### Service Host - Stateless
+   - AWS ECS (Auto Scaling on CPU (AWS Cloudwatch Alarm on CPU Metric))
+(Alternative Kubernetes with Horizontal Pod Autoscaling (not clear on metrics collection in kubernetes))
+
+#### Programming Language
+   - Java
+
+#### Framework
+   - Spring Boot
+
+#### Circuit Breaker
+   - Resilience4j
+
+#### Test
+   - JaCoCo - Code Coverage
+   - Mockito
+   - Junit
+   - Docker Compose
+
+#### Static code analysis
+   - Sonarqube
+
+#### Firewall
+   - AWS Security group
+
+#### Cache
+- AWS Elasticache (Redis)
+
+
+#### Databases
+   - Postgres (AWS RDS (Multi AZ with Read Replica), RDS Proxy(ConnectionPool)) - Driver, Driver Onboard, Document, Background Verification, Order, OrderProduct, IAM, UserProfile
+   - AWS DynamoDB - Blob
+
+#### Queue
+   - AWS SQS
+
+#### PubSub
+   - AWS SNS
+
+#### Logging
+   - FlunetBit (Sidecar/Daemon Set in Kubernetes)
+   - AWS Cloudwatch Logs
+   - AWS Opensearch
+
+#### Metrics & Alarms
+##### Push
+   - FlunetBit (Sidecar/Daemon Set in Kubernetes)
+   - AWS Cloudwatch Logs
+   - AWS Cloudwatch Metrics - Dashboard, Alarms
+##### Pull
+   - Prometheus, InfluxDB (when needed)
+
+#### Error
+   - Sentry, Slack
+
+#### Jump Host
+   - AWS Session Manager
+
+#### Cron
+   - AWS Eventbridge
+
+#### Analytic Report
+   - eventbridge
+   - sns
+   - sqs
+   - Schema - AWS Glue 
+   - job within service or aws emr
+   - S3
+
+# ServiceMesh
+Istio (With kubernetes, exploring)
+
+
+
+# Images
+#### Generate Google OAuth2 Bearer Token
+

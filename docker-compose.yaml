@@ -42,6 +42,9 @@ services:
       - spring.kafka.bootstrap-servers=kafka:9092
       - spring.security.oauth2.client.registration.google.client-id=809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com
       - spring.security.oauth2.client.registration.google.client-secret=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
+      - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+      - AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
   sonar:
     image: sonarqube:7.9.5-community
     container_name: sonar
@@ -108,75 +111,6 @@ services:
       - 'MYSQL_USER=test'
     ports:
       - '3306:3306'
-
-  keycloak:
-    image: 'keycloak/keycloak:22.0'
-    container_name: keycloak
-    command: [ 'start-dev' ]
-    depends_on:
-      - keycloak-db
-    environment:
-      JAVA_OPTS_APPEND: -Dkeycloak.profile.feature.upload_scripts=enabled
-      TZ: '...'
-      DB: postgres
-      DB_URL: jdbc:postgresql://keycloak-db:5432/keycloak?user=postgres
-      DB_PASSWORD: postgres
-      LOG_LEVEL: warn
-      HOSTNAME: localhost
-#      KC_HOSTNAME: localhost
-      KC_HOSTNAME_PORT: 8180
-      KC_HOSTNAME_URL: http://127.0.0.1:8180
-      KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: password
-      KC_DB: postgres
-      KC_DB_URL: jdbc:postgresql://keycloak-db:5432/keycloak?user=postgres
-      KC_DB_USERNAME: postgres
-      KC_DB_PASSWORD: postgres
-      KC_DB_ADDR: localhost
-      KC_DB_DATABASE: keycloak
-      KC_HEALTH_ENABLED: 'true'
-      KC_HTTP_ENABLED: 'true'
-      KC_METRICS_ENABLED: 'true'
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: password
-      KC_LOG_LEVEL: info
-    ports:
-      - "8180:8080"
-      - "8787:8787" # debug port
-    healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:8080/health/ready" ]
-      interval: 15s
-      timeout: 2s
-      retries: 15
-
-  pgadmin:
-    container_name: pgadmin
-    image: "dpage/pgadmin4:5.1"
-    environment:
-      PGADMIN_DEFAULT_EMAIL: postgres@domain.local
-      PGADMIN_DEFAULT_PASSWORD: postgres
-    ports:
-      - "5050:80"
-
-  keycloak-db:
-    container_name: keycloak-db
-    image: "postgres:14.4"
-    healthcheck:
-      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "root" ]
-      timeout: 45s
-      interval: 10s
-      retries: 10
-    volumes:
-      - keycloak_postgresql:/var/lib/postgresql
-      - keycloak_postgresql_data:/var/lib/postgresql/data
-#        - ./sql:/docker-entrypoint-initdb.d/:ro # turn it on, if you need run init DB
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: keycloak
-      POSTGRES_HOST: postgres
-    ports:
-      - "5432:5432"
 
   zookeeper:
     container_name: zookeeper

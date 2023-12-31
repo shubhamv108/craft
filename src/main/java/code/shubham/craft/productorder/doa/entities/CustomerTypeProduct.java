@@ -13,7 +13,7 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "customer_type__product_mapping", indexes = { @Index(columnList = "customerType") })
+@Table(name = "customer_type__product_mapping")
 public class CustomerTypeProduct extends BaseAbstractAuditableEntity {
 
 	@Column(nullable = false)

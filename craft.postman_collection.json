@@ -76,7 +76,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/drivers/v1/register",
+					"raw": "http://localhost:8080/craft/v1/drivers/register",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -84,8 +84,8 @@
 					"port": "8080",
 					"path": [
 						"craft",
-						"drivers",
 						"v1",
+						"drivers",
 						"register"
 					]
 				}
@@ -165,7 +165,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/drivers/v1/{{driverId}}?userId={{userId}}",
+					"raw": "http://localhost:8080/craft/v1/drivers/{{driverId}}?userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -173,8 +173,8 @@
 					"port": "8080",
 					"path": [
 						"craft",
-						"drivers",
 						"v1",
+						"drivers",
 						"{{driverId}}"
 					],
 					"query": [
@@ -248,7 +248,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/craft/documents/v1/uploadURL",
+					"raw": "http://localhost:8080/craft/v1/documents/uploadURL",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -256,8 +256,8 @@
 					"port": "8080",
 					"path": [
 						"craft",
-						"documents",
 						"v1",
+						"documents",
 						"uploadURL"
 					]
 				}
@@ -326,7 +326,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"test\",\n    \"blobId\": \"{{blobId}}\"\n}",
+					"raw": "{\n    \"name\": \"test\",\n    \"blobId\": \"{{blobId}}\",\n    \"userId\": \"{{userId]}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -334,7 +334,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/documents/v1",
+					"raw": "http://localhost:8080/craft/v1/documents",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -342,8 +342,8 @@
 					"port": "8080",
 					"path": [
 						"craft",
-						"documents",
-						"v1"
+						"v1",
+						"documents"
 					]
 				}
 			},
@@ -410,7 +410,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/craft/drivers/onboard/v1/all?driverId={{driverId}}&userId={{userId}}",
+					"raw": "http://localhost:8080/craft/v1/drivers/onboard/all?driverId={{driverId}}&userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -418,9 +418,9 @@
 					"port": "8080",
 					"path": [
 						"craft",
+						"v1",
 						"drivers",
 						"onboard",
-						"v1",
 						"all"
 					],
 					"query": [
@@ -507,7 +507,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/drivers/onboard/v1/updateStatus",
+					"raw": "http://localhost:8080/craft/v1/drivers/onboard/updateStatus",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -515,9 +515,9 @@
 					"port": "8080",
 					"path": [
 						"craft",
+						"v1",
 						"drivers",
 						"onboard",
-						"v1",
 						"updateStatus"
 					]
 				}
@@ -594,7 +594,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/users/profiles/v1/update",
+					"raw": "http://localhost:8080/craft/v1/users/profiles/update",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -602,9 +602,9 @@
 					"port": "8080",
 					"path": [
 						"craft",
+						"v1",
 						"users",
 						"profiles",
-						"v1",
 						"update"
 					]
 				}
@@ -684,7 +684,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/users/profiles/v1?userId={{userId}}",
+					"raw": "http://localhost:8080/craft/v1/users/profiles?userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -692,9 +692,9 @@
 					"port": "8080",
 					"path": [
 						"craft",
+						"v1",
 						"users",
-						"profiles",
-						"v1"
+						"profiles"
 					],
 					"query": [
 						{
@@ -767,7 +767,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/craft/backgroundVerification/v1/all?userId={{userId}}",
+					"raw": "http://localhost:8080/craft/v1/backgroundVerification/all?userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -775,8 +775,8 @@
 					"port": "8080",
 					"path": [
 						"craft",
-						"backgroundVerification",
 						"v1",
+						"backgroundVerification",
 						"all"
 					],
 					"query": [
@@ -859,7 +859,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/backgroundVerification/v1/updateStatus",
+					"raw": "http://localhost:8080/craft/v1/backgroundVerification/updateStatus",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -867,8 +867,8 @@
 					"port": "8080",
 					"path": [
 						"craft",
-						"backgroundVerification",
 						"v1",
+						"backgroundVerification",
 						"updateStatus"
 					]
 				}
@@ -936,7 +936,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/craft/orders/v1?userId={{userId}}",
+					"raw": "http://localhost:8080/craft/v1/orders?userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -944,8 +944,8 @@
 					"port": "8080",
 					"path": [
 						"craft",
-						"orders",
-						"v1"
+						"v1",
+						"orders"
 					],
 					"query": [
 						{
@@ -1111,7 +1111,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/shipments/v1/updateStatus",
+					"raw": "http://localhost:8080/craft/v1/shipments/updateStatus",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1119,8 +1119,8 @@
 					"port": "8080",
 					"path": [
 						"craft",
-						"shipments",
 						"v1",
+						"shipments",
 						"updateStatus"
 					]
 				}
@@ -1275,7 +1275,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"driverId\": \"{{driverId}}\",\n    \"userId\": \"{{userId}}\"\n}",
+					"raw": "{\n    \"driverId\": \"{{driverId}}\",\n    \"userId\": \"{{userId}}\",\n    \"vehicleRegistrationNumber\": \"up32jx9749\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1283,7 +1283,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://{{ip}}:{{port}}/craft/drivers/v1/availableForRide",
+					"raw": "http://{{ip}}:{{port}}/craft/v1/drivers/availableForRide",
 					"protocol": "http",
 					"host": [
 						"{{ip}}"
@@ -1291,8 +1291,8 @@
 					"port": "{{port}}",
 					"path": [
 						"craft",
-						"drivers",
 						"v1",
+						"drivers",
 						"availableForRide"
 					]
 				}

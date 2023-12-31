@@ -14,6 +14,8 @@ public class SaveDocumentRequestValidator extends AbstractRequestValidator<SaveD
 			this.putMessage("name", MUST_NOT_BE_EMPTY, "name");
 		if (StringUtils.isEmpty(request.getBlobId()))
 			this.putMessage("blobId", MUST_NOT_BE_EMPTY, "blobId");
+		if (StringUtils.isEmpty(request.getBlobId()))
+			this.putMessage("userId", MUST_NOT_BE_EMPTY, "userId");
 		return this;
 	}
 

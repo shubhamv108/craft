@@ -16,7 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/drivers/onboard/v1")
+@RequestMapping("/v1/drivers/onboard")
 @SecurityRequirement(name = "BearerAuth")
 @Tag(name = "Driver Onboard")
 public class DriverOnboardController {
@@ -40,7 +40,8 @@ public class DriverOnboardController {
 	}
 
 	@GetMapping("/all")
-	public ResponseEntity<?> getAll(@RequestParam("driverId") String driverId, @RequestParam("userId") String userId) {
+	public ResponseEntity<?> getAll(@RequestParam("driverId") final String driverId,
+			@RequestParam("userId") final String userId) {
 		return ResponseUtils.getDataResponseEntity(HttpStatus.FOUND,
 				GetDriverOnboardStatusResponse.builder()
 					.onboards(this.service.fetchAllByDriverIdAndUserId(driverId, userId)

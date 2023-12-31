@@ -3,8 +3,8 @@ package code.shubham.craft.driver.cab.dao.entities;
 import code.shubham.commons.dao.entities.base.BaseAbstractAuditableEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Index;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Builder
@@ -13,7 +13,8 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "cabs")
+@Table(name = "cabs", indexes = { @Index(name = "index_cabs_driver_id", columnList = "driverId"),
+		@Index(name = "index_cabs_user_id", columnList = "userId") })
 public class Cab extends BaseAbstractAuditableEntity {
 
 	@Column(nullable = false, unique = true)

@@ -30,7 +30,7 @@ public abstract class BaseIdEntity implements Serializable {
 	@Id
 	@GeneratedValue(generator = "uuid")
 	@GenericGenerator(name = "uuid", strategy = "uuid2")
-	@Column(name = "id")
+	@Column(name = "id", columnDefinition = "VARCHAR(36)", length = 36)
 	private String id;
 
 	@Override

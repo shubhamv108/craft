@@ -22,4 +22,10 @@ public class SaveDocumentRequest {
 	@Max(36)
 	private String blobId;
 
+	@NotNull
+	@NotEmpty
+	@Min(36)
+	@Max(36)
+	private String userId;
+
 }

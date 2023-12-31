@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.print.Doc;
+import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -39,6 +41,10 @@ public class DocumentService {
 			return this.repository.save(existing.get());
 		}
 		return this.repository.save(document);
+	}
+
+	public List<Document> fetchByOwner(final String owner) {
+		return this.repository.findAllByOwner(owner);
 	}
 
 }

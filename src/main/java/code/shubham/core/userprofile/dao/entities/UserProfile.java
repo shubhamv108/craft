@@ -15,7 +15,7 @@ import lombok.*;
 @Table(name = "user_profiles")
 public class UserProfile extends BaseAbstractAuditableEntity {
 
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String userId;
 
 	private String address;

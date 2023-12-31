@@ -11,6 +11,8 @@ import code.shubham.commons.utils.UUIDUtils;
 import code.shubham.commons.utils.Utils;
 import code.shubham.craft.constants.EventName;
 import code.shubham.craft.constants.EventType;
+import code.shubham.craft.documentstore.dao.entities.Document;
+import code.shubham.craft.documentstore.services.DocumentService;
 import code.shubham.craft.driveronboard.dao.entities.DriverOnboardBackgroundVerification;
 import code.shubham.craft.driveronboard.dao.entities.DriverOnboardOrder;
 import code.shubham.craft.driveronboard.dao.entities.DriverOnboardStatus;
@@ -55,17 +57,20 @@ public class DriverOnboardService {
 
 	private final DriverOnboardBackgroundVerificationRepository driverOnboardBackgroundVerificationRepository;
 
+	private final DocumentService documentService;
+
 	private final DriverOnboardOrderRepository driverOnboardOrderRepository;
 
 	@Autowired
 	public DriverOnboardService(final DriverOnboardRepository repository, final KafkaPublisher kafkaPublisher,
 			final DriverService driverService,
 			final DriverOnboardBackgroundVerificationRepository driverOnboardBackgroundVerificationRepository,
-			final DriverOnboardOrderRepository driverOnboardOrderRepository) {
+			final DocumentService documentService, final DriverOnboardOrderRepository driverOnboardOrderRepository) {
 		this.repository = repository;
 		this.kafkaPublisher = kafkaPublisher;
 		this.driverService = driverService;
 		this.driverOnboardBackgroundVerificationRepository = driverOnboardBackgroundVerificationRepository;
+		this.documentService = documentService;
 		this.driverOnboardOrderRepository = driverOnboardOrderRepository;
 	}
 
@@ -115,6 +120,11 @@ public class DriverOnboardService {
 		if (!completedStatus.equals(onboard.getStatus()))
 			throw new InvalidRequestException("status", "Invalid onboard status in request: %s",
 					completedStatus.name());
+
+		if (DriverOnboardStatus.DOCUMENT_COLLECTION.equals(onboard.getStatus()))
+			if (this.documentService.fetchByOwner(onboard.getUserId()).isEmpty())
+				throw new InvalidRequestException("driverId", "no documents uploaded by driver: %s",
+						onboard.getDriverId());
 
 		onboard.setStatus(Utils.getNextInSequence(this.onboardingSequence, completedStatus));
 		return this.updateStatus(onboard);
@@ -178,7 +188,7 @@ public class DriverOnboardService {
 				return this.driverOnboardOrderRepository.findByOrderReferenceId(uniqueReferenceId)
 					.map(DriverOnboardOrder::getDriverOnboardId)
 					.orElseThrow(() -> new InvalidRequestException("uniqueReferenceId",
-							"No order with %s found for any diverOnboarding", uniqueReferenceId));
+							"No order with %s found for any driverOnboarding", uniqueReferenceId));
 			default:
 				throw new InvalidRequestException("completedStatus", "No support for updating completedStatus: %s",
 						completedStatus.name());

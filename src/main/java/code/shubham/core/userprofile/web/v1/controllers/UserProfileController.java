@@ -16,7 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/users/profiles/v1")
+@RequestMapping("/v1/users/profiles")
 @SecurityRequirement(name = "BearerAuth")
 @Tag(name = "User Profiles")
 public class UserProfileController {

@@ -1,10 +1,7 @@
 package code.shubham.craft.documentstore.dao.entities;
 
 import code.shubham.commons.dao.entities.base.BaseAbstractAuditableEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Builder
@@ -14,10 +11,11 @@ import lombok.*;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "documents",
-		uniqueConstraints = { @UniqueConstraint(name = "UniqueOwnerAndName", columnNames = { "owner", "name" }) })
+		uniqueConstraints = { @UniqueConstraint(name = "UniqueOwnerAndName", columnNames = { "owner", "name" }) },
+		indexes = { @Index(name = "index_documents_owner", columnList = "owner") })
 public class Document extends BaseAbstractAuditableEntity {
 
-	@Column(nullable = false)
+	@Column(nullable = false, length = 24)
 	private String name;
 
 	@Column(nullable = false)

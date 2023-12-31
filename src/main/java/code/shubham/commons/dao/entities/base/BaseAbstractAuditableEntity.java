@@ -53,12 +53,12 @@ public abstract class BaseAbstractAuditableEntity extends BaseIdEntity {
 	private Integer version = 0;
 
 	@JsonIgnore
-	@Column(name = "created_by", updatable = false)
+	@Column(name = "created_by", updatable = false, columnDefinition = "VARCHAR(36)", length = 36)
 	@CreatedBy
 	private String createdBy;
 
 	@JsonIgnore
-	@Column(name = "updated_by")
+	@Column(name = "updated_by", columnDefinition = "VARCHAR(36)", length = 36)
 	@LastModifiedBy
 	private String updatedBy;
 

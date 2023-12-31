@@ -2,6 +2,7 @@ package code.shubham.craft.documentstore.web.v1.controllers;
 
 import code.shubham.commons.contexts.UserIDContextHolder;
 import code.shubham.commons.utils.ResponseUtils;
+import code.shubham.commons.utils.Utils;
 import code.shubham.core.blobstore.services.BlobService;
 import code.shubham.craft.documentstore.web.v1.validators.SaveDocumentRequestValidator;
 import code.shubham.craft.documentstore.services.DocumentService;
@@ -18,7 +19,7 @@ import software.amazon.awssdk.http.HttpStatusCode;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/documents/v1")
+@RequestMapping("/v1/documents")
 @SecurityRequirement(name = "BearerAuth")
 @Tag(name = "Document Store")
 public class DocumentStoreController {
@@ -44,12 +45,13 @@ public class DocumentStoreController {
 
 	@PostMapping
 	public ResponseEntity<?> save(@RequestBody final SaveDocumentRequest request) {
-		final SaveDocumentRequestValidator validator = new SaveDocumentRequestValidator();
-		validator.validateOrThrowException(request);
+		new SaveDocumentRequestValidator().validateOrThrowException(request);
+
+		Utils.validateUserOrThrowException(request.getUserId());
 
 		return ResponseUtils.getDataResponseEntity(HttpStatusCode.CREATED,
 				this.service.save(Document.builder()
-					.owner(UserIDContextHolder.get())
+					.owner(request.getUserId())
 					.name(request.getName())
 					.blobId(request.getBlobId())
 					.build()));

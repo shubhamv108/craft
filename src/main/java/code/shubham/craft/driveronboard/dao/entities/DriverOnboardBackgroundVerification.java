@@ -12,7 +12,7 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "driver_onboard__orders_mapping")
+@Table(name = "driver_onboard__background_verifications_mapping")
 public class DriverOnboardBackgroundVerification extends BaseAbstractAuditableEntity {
 
 	@Column(nullable = false)

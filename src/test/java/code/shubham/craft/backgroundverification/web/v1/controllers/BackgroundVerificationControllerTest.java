@@ -1,17 +1,13 @@
 package code.shubham.craft.backgroundverification.web.v1.controllers;
 
-import code.shubham.commons.AbstractTest;
-import code.shubham.commons.TestConstants;
+import code.shubham.commons.AbstractMVCTest;
+import code.shubham.commons.CommonTestConstants;
 import code.shubham.commons.contexts.RoleContextHolder;
-import code.shubham.commons.models.Event;
-import code.shubham.commons.utils.JsonUtils;
 import code.shubham.craft.CraftTestConstants;
 import code.shubham.craft.backgroundverification.dao.entities.BackgroundVerification;
 import code.shubham.craft.backgroundverification.dao.entities.BackgroundVerificationStatus;
 import code.shubham.craft.backgroundverification.dao.repositories.BackgroundVerificationRepository;
 import code.shubham.craft.backgroundverificatonmodels.UpdateBackgroundVerificationStatusRequest;
-import code.shubham.craft.constants.EventName;
-import code.shubham.craft.constants.EventType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -26,9 +22,9 @@ import java.util.Set;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-class BackgroundVerificationControllerTest extends AbstractTest {
+class BackgroundVerificationControllerTest extends AbstractMVCTest {
 
-	private final String baseURL = "/backgroundVerification/v1";
+	private final String baseURL = "/v1/backgroundVerification";
 
 	@Value("${background.verification.kafka.topic.name}")
 	private String topicName;
@@ -51,7 +47,7 @@ class BackgroundVerificationControllerTest extends AbstractTest {
 	@Test
 	void updateStatus_forbidden() throws Exception {
 		final UpdateBackgroundVerificationStatusRequest request = UpdateBackgroundVerificationStatusRequest.builder()
-			.clientReferenceId(CraftTestConstants.CLIENT_REFERENCE_ID)
+			.clientReferenceId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID)
 			.completedStatus("ONGOING")
 			.build();
 
@@ -67,7 +63,7 @@ class BackgroundVerificationControllerTest extends AbstractTest {
 		RoleContextHolder.set(Set.of("ADMIN"));
 
 		final UpdateBackgroundVerificationStatusRequest request = UpdateBackgroundVerificationStatusRequest.builder()
-			.clientReferenceId(CraftTestConstants.CLIENT_REFERENCE_ID)
+			.clientReferenceId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID)
 			.completedStatus("ONGOING")
 			.build();
 		this.mockMvc
@@ -84,16 +80,16 @@ class BackgroundVerificationControllerTest extends AbstractTest {
 	@Test
 	void updateStatus_already_completed() throws Exception {
 		this.repository.save(BackgroundVerification.builder()
-			.userId(TestConstants.USER_ID)
+			.userId(CommonTestConstants.USER_ID)
 			.applicantId(CraftTestConstants.DRIVER_ID)
 			.applicantType(CraftTestConstants.APPLICANT_TYPE_DRIVER)
-			.clientReferenceId(CraftTestConstants.CLIENT_REFERENCE_ID)
+			.clientReferenceId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID)
 			.status(BackgroundVerificationStatus.COMPLETED)
 			.build());
 		RoleContextHolder.set(Set.of("ADMIN"));
 
 		final UpdateBackgroundVerificationStatusRequest request = UpdateBackgroundVerificationStatusRequest.builder()
-			.clientReferenceId(CraftTestConstants.CLIENT_REFERENCE_ID)
+			.clientReferenceId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID)
 			.completedStatus("ONGOING")
 			.build();
 		this.mockMvc
@@ -110,16 +106,16 @@ class BackgroundVerificationControllerTest extends AbstractTest {
 	@Test
 	void updateStatus_success() throws Exception {
 		final BackgroundVerification backgroundVerification = this.repository.save(BackgroundVerification.builder()
-			.userId(TestConstants.USER_ID)
+			.userId(CommonTestConstants.USER_ID)
 			.applicantId(CraftTestConstants.DRIVER_ID)
 			.applicantType(CraftTestConstants.APPLICANT_TYPE_DRIVER)
-			.clientReferenceId(CraftTestConstants.CLIENT_REFERENCE_ID)
+			.clientReferenceId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID)
 			.status(BackgroundVerificationStatus.ONGOING)
 			.build());
 		RoleContextHolder.set(Set.of("ADMIN"));
 
 		final UpdateBackgroundVerificationStatusRequest request = UpdateBackgroundVerificationStatusRequest.builder()
-			.clientReferenceId(CraftTestConstants.CLIENT_REFERENCE_ID)
+			.clientReferenceId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID)
 			.completedStatus("ONGOING")
 			.build();
 		this.mockMvc
@@ -128,7 +124,8 @@ class BackgroundVerificationControllerTest extends AbstractTest {
 				.content(as(request)))
 			.andExpect(status().isOk());
 
-		final var updated = this.repository.findByClientReferenceId(CraftTestConstants.CLIENT_REFERENCE_ID);
+		final var updated = this.repository
+			.findByClientReferenceId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID);
 		Assertions.assertTrue(updated.isPresent());
 		Assertions.assertEquals(updated.get().getStatus().name(), BackgroundVerificationStatus.COMPLETED.name());
 
