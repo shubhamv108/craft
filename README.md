@@ -166,9 +166,11 @@ Instructions to the Candidate:
    - job within service or aws emr
    - S3
 
-# ServiceMesh
+#### ServiceMesh
 Istio (With kubernetes, exploring)
 
+# Architecture
+![HIghLevelDesign](https://github.com/shubhamv108/craft/assets/16763337/2c653f9a-59b1-4643-9ac8-62e117ab4441)
 
 
 # Images
