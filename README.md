@@ -100,6 +100,16 @@ Instructions to the Candidate:
 #### Circuit Breaker
    - Resilience4j
 
+#### Event Sourcing
+   - Eventuate (exploring)
+
+#### Transactional outbox with AWS DynamoDB backed Services
+   - DynamoDB Stream
+   - Kinesis (Dynamo event stream persisted here for more than 24 hours)
+   - AWS Lambda (Consumer)
+   - SNS
+   - DynamoDB (for offset)
+
 #### Test
    - JaCoCo - Code Coverage
    - Mockito
@@ -117,8 +127,8 @@ Instructions to the Candidate:
 
 
 #### Databases
-   - Postgres (AWS RDS (Multi AZ with Read Replica), RDS Proxy(ConnectionPool)) - Driver, Driver Onboard, Document, Background Verification, Order, OrderProduct, IAM, UserProfile
-   - AWS DynamoDB - Blob
+   - Postgres (AWS RDS (Multi AZ with Read Replica), RDS Proxy(ConnectionPool)) - Driver, Driver Onboard, Document, Order, OrderProduct, IAM, UserProfile
+   - AWS DynamoDB - Blob, Background Verification, Shipment
 
 #### Queue
    - AWS SQS
@@ -139,8 +149,8 @@ Instructions to the Candidate:
 ##### Pull
    - Prometheus, InfluxDB (when needed)
 
-#### Error
-   - Sentry, Slack
+#### Exception tracking & Error De-Duplication
+   - Sentry
 
 #### Jump Host
    - AWS Session Manager

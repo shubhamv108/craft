@@ -20,7 +20,11 @@ public class TestKafkaConsumer {
 	@Value(value = "${spring.kafka.bootstrap-servers}")
 	private String bootstrapServers;
 
-	public List<Event> poll(String topic, int count) {
+	public List<Event> poll(final String topic, final int count) {
+		return this.poll(topic, count);
+	}
+
+	public List<Event> poll(final String topic, final int count, final long timeout) {
 		final Properties properties = new Properties();
 		properties.put("bootstrap.servers", this.bootstrapServers);
 		properties.put("group.id", "test");
@@ -35,7 +39,7 @@ public class TestKafkaConsumer {
 
 		final List<Event> events = new ArrayList<>();
 		while (events.size() < count) {
-			final ConsumerRecords<String, String> records = consumer.poll(100);
+			final ConsumerRecords<String, String> records = consumer.poll(timeout);
 			for (final ConsumerRecord<String, String> record : records)
 				events.add(JsonUtils.as(record.value().toString(), Event.class));
 		}

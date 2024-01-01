@@ -4,6 +4,8 @@ import code.shubham.commons.AbstractMVCTest;
 import code.shubham.commons.CommonTestConstants;
 import code.shubham.commons.contexts.RoleContextHolder;
 import code.shubham.commons.contexts.UserIDContextHolder;
+import code.shubham.commons.kafka.KafkaPublisher;
+import code.shubham.commons.models.Event;
 import code.shubham.craft.CraftTestConstants;
 import code.shubham.craft.documentstore.dao.entities.Document;
 import code.shubham.craft.documentstore.dao.repositories.DocumentRepository;
@@ -12,14 +14,22 @@ import code.shubham.craft.driveronboard.dao.entities.DriverOnboard;
 import code.shubham.craft.driveronboard.dao.entities.DriverOnboardStatus;
 import code.shubham.craft.driveronboard.dao.repositories.DriverOnboardRepository;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
+import java.util.List;
 import java.util.Set;
 
+import static io.restassured.RestAssured.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -169,6 +179,7 @@ class DriverOnboardControllerTest extends AbstractMVCTest {
 			.completedOnboardStatus(DriverOnboardStatus.DOCUMENT_COLLECTION.name())
 			.userId(CommonTestConstants.USER_ID)
 			.build();
+
 		this.mockMvc
 			.perform(MockMvcRequestBuilders.patch(this.baseURL + "/updateStatus")
 				.contentType(MediaType.APPLICATION_JSON)

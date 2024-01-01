@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-31T07:10:08.883Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="CEggfcFbnGrTCgqjX_Ly" version="22.1.15" type="device">
+<mxfile host="app.diagrams.net" modified="2023-12-31T16:16:24.144Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="BLAfvwT42g3JROJZNJQ0" version="22.1.15" type="device">
   <diagram name="Page-1" id="AxLVSAYq3zboFlNSM6wu">
     <mxGraphModel dx="2191" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -447,37 +447,37 @@
           <mxGeometry x="1060" y="595" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-231" value="LB (ALB)" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="39" y="1690" width="80" height="80" as="geometry" />
+          <mxGeometry x="39" y="1670" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-232" value="LB (ALB)" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="49" y="1700" width="80" height="80" as="geometry" />
+          <mxGeometry x="49" y="1680" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-233" value="LB (ALB, Service Discovery)" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="59" y="1710" width="80" height="80" as="geometry" />
+          <mxGeometry x="59" y="1690" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-235" value="Driver SVC" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="229" y="1710" width="120" height="60" as="geometry" />
+          <mxGeometry x="229" y="1690" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-236" value="Driver SVC" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="239" y="1720" width="120" height="60" as="geometry" />
+          <mxGeometry x="239" y="1700" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-237" value="Blob SVC" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="249" y="1730" width="120" height="60" as="geometry" />
+          <mxGeometry x="249" y="1710" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-238" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.869;exitY=0.35;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="x3QHFxx95bnm12phx4dT-233" target="x3QHFxx95bnm12phx4dT-235" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="129.5" y="1915" as="sourcePoint" />
-            <mxPoint x="179.5" y="1865" as="targetPoint" />
+            <mxPoint x="129.5" y="1895" as="sourcePoint" />
+            <mxPoint x="179.5" y="1845" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-239" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.004;exitY=0.4;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="x3QHFxx95bnm12phx4dT-237" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="749.5" y="1875" as="sourcePoint" />
-            <mxPoint x="479" y="1752.5" as="targetPoint" />
+            <mxPoint x="749.5" y="1855" as="sourcePoint" />
+            <mxPoint x="479" y="1732.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-240" value="DynamoDB (Key-Value/Disk based)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
-          <mxGeometry x="479.5" y="1705" width="80.5" height="90" as="geometry" />
+          <mxGeometry x="479.5" y="1685" width="80.5" height="90" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-241" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.092;entryY=1.038;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -491,36 +491,36 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-243" value="LB (ALB)" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="38.5" y="1470" width="80" height="80" as="geometry" />
+          <mxGeometry x="38.5" y="1450" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-244" value="LB (ALB)" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="48.5" y="1480" width="80" height="80" as="geometry" />
+          <mxGeometry x="48.5" y="1460" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-245" value="LB (ALB, Service Discovery)" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="58.5" y="1490" width="80" height="80" as="geometry" />
+          <mxGeometry x="58.5" y="1470" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-246" value="Driver SVC" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="228.5" y="1490" width="120" height="60" as="geometry" />
+          <mxGeometry x="228.5" y="1470" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-247" value="Driver SVC" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="238.5" y="1500" width="120" height="60" as="geometry" />
+          <mxGeometry x="238.5" y="1480" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-248" value="Document SVC" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="248.5" y="1510" width="131.5" height="80" as="geometry" />
+          <mxGeometry x="248.5" y="1490" width="131.5" height="80" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-249" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.869;exitY=0.35;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="x3QHFxx95bnm12phx4dT-245" target="x3QHFxx95bnm12phx4dT-246" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="129" y="1695" as="sourcePoint" />
-            <mxPoint x="179" y="1645" as="targetPoint" />
+            <mxPoint x="129" y="1675" as="sourcePoint" />
+            <mxPoint x="179" y="1625" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-252" value="PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
-          <mxGeometry x="480" y="1550" width="60" height="80" as="geometry" />
+          <mxGeometry x="480" y="1530" width="60" height="80" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-253" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="x3QHFxx95bnm12phx4dT-232" target="x3QHFxx95bnm12phx4dT-256" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="230" y="1500" as="sourcePoint" />
-            <mxPoint x="280" y="1450" as="targetPoint" />
+            <mxPoint x="230" y="1480" as="sourcePoint" />
+            <mxPoint x="280" y="1430" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-254" value="getpreSignerUploadURLAndBlobID" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="x3QHFxx95bnm12phx4dT-253" vertex="1" connectable="0">
@@ -532,7 +532,7 @@
           <mxGeometry x="-740" y="400" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-256" value="CB" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="248.5" y="1565" width="36" height="25" as="geometry" />
+          <mxGeometry x="248.5" y="1545" width="36" height="25" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-257" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" parent="1" source="x3QHFxx95bnm12phx4dT-255" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -547,8 +547,8 @@
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-259" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=-15;entryPerimeter=0;" parent="1" source="x3QHFxx95bnm12phx4dT-248" target="x3QHFxx95bnm12phx4dT-252" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="670" y="1560" as="sourcePoint" />
-            <mxPoint x="720" y="1510" as="targetPoint" />
+            <mxPoint x="670" y="1540" as="sourcePoint" />
+            <mxPoint x="720" y="1490" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-261" value="LB (ALB)" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -575,8 +575,8 @@
             <mxPoint x="479" y="1962.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="x3QHFxx95bnm12phx4dT-269" value="PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
-          <mxGeometry x="469.5" y="1860" width="80.5" height="90" as="geometry" />
+        <mxCell id="x3QHFxx95bnm12phx4dT-269" value="AWS DynamoDB (PK - userId, SK - clientRefId)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+          <mxGeometry x="419.75" y="1840" width="80.5" height="90" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-270" value="Backgroung Verification SVC" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="239" y="1930" width="120" height="60" as="geometry" />
@@ -585,7 +585,7 @@
           <mxGeometry x="249" y="1940" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-272" value="SNS" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-          <mxGeometry x="544" y="2010" width="120" height="60" as="geometry" />
+          <mxGeometry x="554" y="2010" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-273" value="SQS" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="29" y="2010" width="120" height="60" as="geometry" />
@@ -596,7 +596,7 @@
             <mxPoint x="250" y="1910" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="x3QHFxx95bnm12phx4dT-277" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=-0.05;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="x3QHFxx95bnm12phx4dT-271" target="x3QHFxx95bnm12phx4dT-272" edge="1">
+        <mxCell id="x3QHFxx95bnm12phx4dT-277" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="NFJOzEZMsUfpYNyDSEcR-10" target="x3QHFxx95bnm12phx4dT-272" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="200" y="1960" as="sourcePoint" />
             <mxPoint x="250" y="1910" as="targetPoint" />
@@ -713,7 +713,7 @@
             <mxPoint x="453" y="2872.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="x3QHFxx95bnm12phx4dT-311" value="PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+        <mxCell id="x3QHFxx95bnm12phx4dT-311" value="AWS DynamoDB (PK - OrderId,&amp;nbsp; SK - &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;uniqueRefId)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
           <mxGeometry x="443.5" y="2770" width="80.5" height="90" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-312" value="Backgroung Verification SVC" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -723,18 +723,12 @@
           <mxGeometry x="223" y="2850" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-314" value="SNS" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-          <mxGeometry x="469.5" y="2900" width="120" height="60" as="geometry" />
+          <mxGeometry x="469.5" y="3090" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-315" value="SQS" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="3" y="2920" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-316" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.383;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="x3QHFxx95bnm12phx4dT-315" target="x3QHFxx95bnm12phx4dT-312" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="174" y="2870" as="sourcePoint" />
-            <mxPoint x="224" y="2820" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="x3QHFxx95bnm12phx4dT-317" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=-0.05;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="x3QHFxx95bnm12phx4dT-313" target="x3QHFxx95bnm12phx4dT-314" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="174" y="2870" as="sourcePoint" />
             <mxPoint x="224" y="2820" as="targetPoint" />
@@ -767,7 +761,9 @@
             <mxPoint x="100" y="2710" as="sourcePoint" />
             <mxPoint x="90" y="2990" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="610" y="3110" />
+              <mxPoint x="610" y="3240" />
+              <mxPoint x="340" y="3240" />
+              <mxPoint x="55" y="3240" />
               <mxPoint x="55" y="3110" />
             </Array>
           </mxGeometry>
@@ -776,7 +772,7 @@
           <mxGeometry x="-31" y="3010" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-329" value="ShipmentStatusUpdatedEvent" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="358" y="2920" width="60" height="30" as="geometry" />
+          <mxGeometry x="430" y="3020" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-331" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.871;exitY=-0.067;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="x3QHFxx95bnm12phx4dT-314" target="x3QHFxx95bnm12phx4dT-302" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -844,13 +840,15 @@
           <mxGeometry x="79" y="905" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-349" value="BackgoundVerificationStatusUpdated" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="389.5" y="2010" width="60" height="30" as="geometry" />
+          <mxGeometry x="554" y="1955" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-350" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="x3QHFxx95bnm12phx4dT-272" target="x3QHFxx95bnm12phx4dT-351" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="730" y="1890" as="sourcePoint" />
             <mxPoint x="310" y="960" as="targetPoint" />
             <Array as="points">
+              <mxPoint x="830" y="2030" />
+              <mxPoint x="830" y="1330" />
               <mxPoint x="670" y="1330" />
               <mxPoint x="10" y="1330" />
               <mxPoint y="900" />
@@ -869,6 +867,57 @@
         </mxCell>
         <mxCell id="x3QHFxx95bnm12phx4dT-354" value="BackgrondVerificationStatusUpdated" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="49" y="875" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NFJOzEZMsUfpYNyDSEcR-1" value="CreateOrderCommand" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="2630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NFJOzEZMsUfpYNyDSEcR-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.776;exitY=1.011;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.692;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="NFJOzEZMsUfpYNyDSEcR-5" target="NFJOzEZMsUfpYNyDSEcR-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="2940" as="sourcePoint" />
+            <mxPoint x="506" y="2920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NFJOzEZMsUfpYNyDSEcR-4" value="AWS Lambda" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="419" y="2940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NFJOzEZMsUfpYNyDSEcR-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.776;exitY=1.011;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.692;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="x3QHFxx95bnm12phx4dT-311" target="NFJOzEZMsUfpYNyDSEcR-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="506" y="2861" as="sourcePoint" />
+            <mxPoint x="502" y="2937" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NFJOzEZMsUfpYNyDSEcR-5" value="DynamoDB stream" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="458.5" y="2890" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NFJOzEZMsUfpYNyDSEcR-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.358;exitY=1.05;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NFJOzEZMsUfpYNyDSEcR-4" target="x3QHFxx95bnm12phx4dT-314">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="2940" as="sourcePoint" />
+            <mxPoint x="290" y="2890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NFJOzEZMsUfpYNyDSEcR-8" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="x3QHFxx95bnm12phx4dT-288" target="x3QHFxx95bnm12phx4dT-272">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="2180" as="sourcePoint" />
+            <mxPoint x="290" y="2130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NFJOzEZMsUfpYNyDSEcR-10" value="AWS Lambda" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="1855" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NFJOzEZMsUfpYNyDSEcR-12" value="DynamoDB Stream" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1870" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NFJOzEZMsUfpYNyDSEcR-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="x3QHFxx95bnm12phx4dT-269" target="NFJOzEZMsUfpYNyDSEcR-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="2000" as="sourcePoint" />
+            <mxPoint x="290" y="1950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NFJOzEZMsUfpYNyDSEcR-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="NFJOzEZMsUfpYNyDSEcR-12" target="NFJOzEZMsUfpYNyDSEcR-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="2000" as="sourcePoint" />
+            <mxPoint x="290" y="1950" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>

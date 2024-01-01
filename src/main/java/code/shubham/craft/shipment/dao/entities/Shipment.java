@@ -14,7 +14,7 @@ import lombok.*;
 public class Shipment extends BaseAbstractAuditableEntity {
 
 	@Column(nullable = false)
-	private String orderId;
+	private String orderId; // partition key
 
 	private String deliveryAddress;
 
@@ -28,6 +28,6 @@ public class Shipment extends BaseAbstractAuditableEntity {
 	private ShipmentStatus status;
 
 	@Column(nullable = false, unique = true)
-	private String uniqueReferenceId;
+	private String uniqueReferenceId; // Sort key
 
 }

@@ -33,9 +33,9 @@ public class BackgroundVerification extends BaseAbstractAuditableEntity {
 	private BackgroundVerificationStatus status;
 
 	@Column(nullable = false)
-	private String userId;
+	private String userId; // Partition Key - DynamoDB
 
 	@Column(nullable = false, unique = true)
-	private String clientReferenceId;
+	private String clientReferenceId; // Sort Key - DynamoDB
 
 }
