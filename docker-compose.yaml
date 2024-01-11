@@ -39,9 +39,7 @@ services:
       - spring.kafka.bootstrap-servers=kafka:9092
       - spring.security.oauth2.client.registration.google.client-id=809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com
       - spring.security.oauth2.client.registration.google.client-secret=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
-      - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-      - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-      - AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
+
   sonar:
     image: sonarqube:7.9.5-community
     container_name: sonar
