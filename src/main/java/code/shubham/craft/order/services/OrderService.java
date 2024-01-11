@@ -16,11 +16,11 @@ import code.shubham.craft.ordermodels.CreateOrderCommand;
 import code.shubham.craft.ordermodels.OrderDTO;
 import code.shubham.craft.ordermodels.OrderEventData;
 import code.shubham.craft.ordermodels.OrderProductDTO;
-import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
@@ -54,7 +54,7 @@ public class OrderService {
 		return this.repository.findAllByUserId(userId);
 	}
 
-	@Transactional(rollbackOn = Exception.class)
+	@Transactional(rollbackFor = Exception.class)
 	public Order create(final CreateOrderCommand command) {
 		final Order order = Order.builder()
 			.userId(command.getUserId())
@@ -69,6 +69,7 @@ public class OrderService {
 		return persisted;
 	}
 
+	@Transactional(rollbackFor = Exception.class)
 	public Order updateStatus(final String orderId, final OrderStatus completedStatus) {
 		final Order order = this.repository.findById(orderId)
 			.orElseThrow(() -> new InvalidRequestException("orderId", "No order found for orderId: %s", orderId));
@@ -83,8 +84,7 @@ public class OrderService {
 		return this.setNextStatus(order);
 	}
 
-	@Transactional(rollbackOn = Exception.class)
-	private Order setNextStatus(final Order order) {
+	public Order setNextStatus(final Order order) {
 		order.setStatus(Utils.getNextInSequence(this.statusSequence, order.getStatus()));
 		Order updated = this.save(order);
 		this.publishEvent(updated, List.of(), EventName.OrderStatusUpdated);

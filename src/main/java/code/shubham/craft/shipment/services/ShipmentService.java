@@ -14,12 +14,12 @@ import code.shubham.craft.ordermodels.OrderProductDTO;
 import code.shubham.craft.shipment.dao.entities.Shipment;
 import code.shubham.craft.shipment.dao.entities.ShipmentStatus;
 import code.shubham.craft.shipment.dao.repositories.ShipmentRepository;
-import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
@@ -49,6 +49,7 @@ public class ShipmentService {
 		this.profileService = profileService;
 	}
 
+	@Transactional(rollbackFor = Exception.class)
 	public List<Shipment> create(final String orderId, final List<OrderProductDTO> products,
 			final String trackingNumber, final String carrier, final String userId) {
 		return products.stream()
@@ -65,6 +66,7 @@ public class ShipmentService {
 			.toList();
 	}
 
+	@Transactional(rollbackFor = Exception.class)
 	public Shipment updateStatus(final String uniqueReferenceId, final ShipmentStatus completedStatus) {
 		final Shipment shipment = this.repository.findByUniqueReferenceId(uniqueReferenceId)
 			.orElseThrow(() -> new InvalidRequestException("uniqueReferenceId",
@@ -82,8 +84,7 @@ public class ShipmentService {
 		return this.save(shipment);
 	}
 
-	@Transactional(rollbackOn = Exception.class)
-	private Shipment save(final Shipment shipment) {
+	public Shipment save(final Shipment shipment) {
 		Shipment updated = null;
 		try {
 			updated = this.repository.save(shipment);

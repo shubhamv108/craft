@@ -6,13 +6,13 @@ import code.shubham.core.iamcommons.IUserService;
 import code.shubham.core.iammodels.GetOrCreateUser;
 import code.shubham.core.iammodels.GetUserResponse;
 import code.shubham.core.iammodels.UserDTO;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
+@Transactional
 @Service
 public class UserService implements IUserService {
 
@@ -41,7 +41,6 @@ public class UserService implements IUserService {
 			.build();
 	}
 
-	@Transactional(rollbackOn = { RuntimeException.class })
 	private User create(final User user) {
 		final User persisted = this.repository.save(user);
 		this.userRoleService.setRoleToUser("USER", user.getId());

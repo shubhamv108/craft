@@ -108,7 +108,6 @@ Instructions to the Candidate:
    - Kinesis (Dynamo event stream persisted here for more than 24 hours)
    - AWS Lambda (Consumer)
    - SNS
-   - DynamoDB (for offset)
 
 #### Test
    - JaCoCo - Code Coverage
@@ -133,7 +132,12 @@ Instructions to the Candidate:
 #### Queue
    - AWS SQS
 
-#### PubSub
+#### InterService Communication
+##### Synchronous
+   - Rest API
+
+##### Asynchronous
+###### PubSub
    - AWS SNS
 
 #### Logging

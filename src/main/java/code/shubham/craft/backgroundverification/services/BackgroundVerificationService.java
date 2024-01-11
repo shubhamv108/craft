@@ -11,14 +11,13 @@ import code.shubham.craft.backgroundverification.dao.entities.BackgroundVerifica
 import code.shubham.craft.backgroundverification.dao.repositories.BackgroundVerificationRepository;
 import code.shubham.craft.constants.EventName;
 import code.shubham.craft.constants.EventType;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class BackgroundVerificationService {
@@ -43,6 +42,7 @@ public class BackgroundVerificationService {
 		return this.repository.findAllByUserId(userId);
 	}
 
+	@Transactional
 	public BackgroundVerification getOrCreate(final String applicantId, final String applicantType, final String userId,
 			final String clientReferenceId) {
 		return this.repository.findByClientReferenceId(clientReferenceId)
@@ -55,6 +55,7 @@ public class BackgroundVerificationService {
 				.build()));
 	}
 
+	@Transactional
 	public BackgroundVerification updateStatus(final String clientReferenceId,
 			final BackgroundVerificationStatus completedStatus) {
 		final BackgroundVerification backgroundVerification = this.repository.findByClientReferenceId(clientReferenceId)
@@ -73,8 +74,7 @@ public class BackgroundVerificationService {
 		return this.save(backgroundVerification);
 	}
 
-	@Transactional(rollbackOn = Exception.class)
-	private BackgroundVerification save(final BackgroundVerification backgroundVerification) {
+	public BackgroundVerification save(final BackgroundVerification backgroundVerification) {
 		final BackgroundVerification updated = this.repository.save(backgroundVerification);
 		this.publisher.send(topicName,
 				Event.builder()

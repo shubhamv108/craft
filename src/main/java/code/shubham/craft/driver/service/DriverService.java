@@ -18,10 +18,10 @@ import code.shubham.craft.constants.EventType;
 import code.shubham.craft.driver.dao.entities.Driver;
 import code.shubham.craft.driver.dao.entities.DriverStatus;
 import code.shubham.craft.driver.dao.repositories.DriverRepository;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -49,7 +49,7 @@ public class DriverService {
 		this.cabService = cabService;
 	}
 
-	@Transactional(rollbackOn = Exception.class)
+	@Transactional(rollbackFor = Exception.class)
 	public Driver register(final Driver driver, final CabDTO cab) {
 		driver.setStatus(DriverStatus.ONBOARDING);
 		final Optional<Driver> existing = this.getByUserId(driver.getUserId());
@@ -111,8 +111,8 @@ public class DriverService {
 		return this.repository.findByUserId(userId);
 	}
 
-	@Transactional(rollbackOn = Exception.class)
-	private Driver createOrUpdateStatus(final Driver driver, final Cab cab) {
+	@Transactional(rollbackFor = Exception.class)
+	public Driver createOrUpdateStatus(final Driver driver, final Cab cab) {
 		final Driver persisted = this.repository.save(driver);
 		this.publishEvent(driver);
 		return persisted;
