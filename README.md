@@ -26,9 +26,6 @@ Instructions to the Candidate:
 ## Github Secrets
       DOCKER_USER
       DOCKER_PASSWORD
-      AWS_ACCES_KEY_ID
-      AWS_SECRET_ACCESS_KEY
-      AWS_DEFAULT_REGION
 
 # Setup
 ### Local
