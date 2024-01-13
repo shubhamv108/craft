@@ -13,7 +13,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
 				contact = @Contact(name = "Shubham Varshney", email = "thread.shubham@gmail.com",
 						url = "http://github.com/shubhamv108"),
 				description = "OpenAPI documentation for application", title = "CraftApplication", version = "1.0"),
-		servers = { @Server(description = "Local", url = "http://localhost:8080/craft") })
+		servers = { @Server(description = "Local", url = "http://localhost:8080/api") })
 @SecurityScheme(name = "BearerAuth", description = "JWTAuthDescription", scheme = "Bearer",
 		type = SecuritySchemeType.HTTP, bearerFormat = "JWT", in = SecuritySchemeIn.HEADER)
 public class OpenAPIConfiguration {
