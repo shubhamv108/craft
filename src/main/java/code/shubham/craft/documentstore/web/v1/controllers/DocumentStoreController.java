@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import software.amazon.awssdk.http.HttpStatusCode;
@@ -22,6 +23,7 @@ import java.util.Map;
 @RequestMapping("/v1/documents")
 @SecurityRequirement(name = "BearerAuth")
 @Tag(name = "Document Store")
+@ConditionalOnProperty(prefix = "service", name = "module", havingValue = "web")
 public class DocumentStoreController {
 
 	@Value("${documentstore.bucket.name}")

@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.Acknowledgment;
 import org.springframework.stereotype.Component;
@@ -26,6 +27,7 @@ import java.util.Set;
 
 @Slf4j
 @Component
+@ConditionalOnProperty(prefix = "service", name = "module", havingValue = "worker")
 public class ProductOrderWorker extends AbstractWorker {
 
 	@Value("${product.order.worker.event.filters.eventname}")

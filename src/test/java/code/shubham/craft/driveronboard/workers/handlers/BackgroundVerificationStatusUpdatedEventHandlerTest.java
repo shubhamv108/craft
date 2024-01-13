@@ -1,8 +1,8 @@
 package code.shubham.craft.driveronboard.workers.handlers;
 
 import code.shubham.craft.TestEventUtils;
-import code.shubham.commons.AbstractTest;
-import code.shubham.commons.CommonTestConstants;
+import code.shubham.commons.AbstractSpringBootTest;
+import code.shubham.commons.TestCommonConstants;
 import code.shubham.craft.CraftTestConstants;
 import code.shubham.craft.backgroundverification.dao.entities.BackgroundVerification;
 import code.shubham.craft.backgroundverification.dao.entities.BackgroundVerificationStatus;
@@ -17,7 +17,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-class BackgroundVerificationStatusUpdatedEventHandlerTest extends AbstractTest {
+class BackgroundVerificationStatusUpdatedEventHandlerTest extends AbstractSpringBootTest {
 
 	@Autowired
 	private BackgroundVerificationStatusUpdatedEventHandler handler;
@@ -46,7 +46,7 @@ class BackgroundVerificationStatusUpdatedEventHandlerTest extends AbstractTest {
 		final DriverOnboard driverOnboard = this.repository.save(DriverOnboard.builder()
 			.driverId(CraftTestConstants.DRIVER_ID)
 			.status(DriverOnboardStatus.BACKGROUND_VERIFICATION)
-			.userId(CommonTestConstants.USER_ID)
+			.userId(TestCommonConstants.USER_ID)
 			.clientReferenceId(CraftTestConstants.DRIVER_ONBOARD_CLIENT_REFERENCE_ID)
 			.build());
 		this.backgroundVerificationRepository.save(DriverOnboardBackgroundVerification.builder()
@@ -57,7 +57,7 @@ class BackgroundVerificationStatusUpdatedEventHandlerTest extends AbstractTest {
 			.status(BackgroundVerificationStatus.COMPLETED)
 			.clientReferenceId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID)
 			.applicantType(CraftTestConstants.APPLICANT_TYPE_DRIVER)
-			.userId(CommonTestConstants.USER_ID)
+			.userId(TestCommonConstants.USER_ID)
 			.build();
 		DriverOnboard updated = (DriverOnboard) this.handler
 			.handle(TestEventUtils.getBackgoundVerificationStatusUpdatedEvent(backgroundVerification));

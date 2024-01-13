@@ -1,13 +1,11 @@
 package code.shubham.craft.driveronboard.workers.handlers;
 
-import code.shubham.commons.AbstractTest;
-import code.shubham.commons.CommonTestConstants;
+import code.shubham.commons.AbstractSpringBootTest;
+import code.shubham.commons.TestCommonConstants;
 import code.shubham.commons.models.Event;
 import code.shubham.craft.CraftTestConstants;
 import code.shubham.craft.TestEventUtils;
 import code.shubham.craft.constants.EventName;
-import code.shubham.craft.driver.dao.entities.Driver;
-import code.shubham.craft.driver.dao.entities.DriverStatus;
 import code.shubham.craft.driveronboard.dao.entities.DriverOnboard;
 import code.shubham.craft.driveronboard.dao.entities.DriverOnboardOrder;
 import code.shubham.craft.driveronboard.dao.entities.DriverOnboardStatus;
@@ -21,9 +19,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class OrderStatusUpdatedEventHandlerTest extends AbstractTest {
+class OrderStatusUpdatedEventHandlerTest extends AbstractSpringBootTest {
 
 	@Autowired
 	private OrderStatusUpdatedEventHandler handler;
@@ -52,7 +48,7 @@ class OrderStatusUpdatedEventHandlerTest extends AbstractTest {
 		final DriverOnboard driverOnboard = this.repository.save(DriverOnboard.builder()
 			.driverId(CraftTestConstants.DRIVER_ID)
 			.status(DriverOnboardStatus.SHIPPING_OF_TRACKING_DEVICE)
-			.userId(CommonTestConstants.USER_ID)
+			.userId(TestCommonConstants.USER_ID)
 			.clientReferenceId(CraftTestConstants.DRIVER_ONBOARD_CLIENT_REFERENCE_ID)
 			.build());
 
@@ -64,7 +60,7 @@ class OrderStatusUpdatedEventHandlerTest extends AbstractTest {
 		final Event event = TestEventUtils.getOrderEvent(Order.builder()
 			.uniqueReferenceId(CraftTestConstants.ORDER_UNIQUE_REFERENCE_ID)
 			.customerType("DRIVER")
-			.userId(CommonTestConstants.USER_ID)
+			.userId(TestCommonConstants.USER_ID)
 			.status(OrderStatus.COMPLETED)
 			.build(), EventName.OrderStatusUpdated);
 
@@ -80,7 +76,7 @@ class OrderStatusUpdatedEventHandlerTest extends AbstractTest {
 		final Event event = TestEventUtils.getOrderEvent(Order.builder()
 			.uniqueReferenceId(CraftTestConstants.ORDER_UNIQUE_REFERENCE_ID)
 			.customerType("DRIVER")
-			.userId(CommonTestConstants.USER_ID)
+			.userId(TestCommonConstants.USER_ID)
 			.status(OrderStatus.CREATED)
 			.build(), EventName.OrderStatusUpdated);
 

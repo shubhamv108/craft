@@ -3,6 +3,7 @@ package code.shubham.craft.driveronboard.workers;
 import code.shubham.commons.workers.AbstractEventHandlerWorker;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.Acknowledgment;
 import org.springframework.stereotype.Component;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.Set;
 
 @Component
+@ConditionalOnProperty(prefix = "service", name = "module", havingValue = "worker")
 public class DriverOnboardEventHandlerWorker extends AbstractEventHandlerWorker {
 
 	@Value("${driver.onboard.worker.events.filters.eventname}")

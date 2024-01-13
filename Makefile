@@ -10,7 +10,7 @@ define check
 endef
 
 define start-app
-	@docker compose -f docker-compose.yaml up -d app
+	@docker compose -f docker-compose.yaml up -d web worker
 endef
 
 define teardown
@@ -115,13 +115,11 @@ build-local: clean
 	./gradlew build
 
 rm-images: clean
-	docker image rm shubham01/craft-fluentbit
 	docker image rm shubham01/craft
 	docker image rm craft
 
 docker-build:
 	docker build -t shubham01/craft:latest .
-	docker build -t shubham01/craft-fluentbit:latest fluentbit
 
 build: clean build-local docker-build
 
@@ -132,7 +130,6 @@ run-local: build-local
 
 run: build
 	docker run -p 8080:8080 shubham01/craft:latest --network="host"
-	docker run -p 24224:24224 shubham01/craft-fluentbit:latest --network="host"
 
 k8s-apply:
 	$(call k8s-apply)

@@ -1,18 +1,27 @@
 package code.shubham.craft.shipment.web.v1.controllers;
 
-import code.shubham.commons.AbstractMVCTest;
-import code.shubham.commons.CommonTestConstants;
+import code.shubham.commons.AbstractSpringBootMVCTest;
+import code.shubham.commons.TestCommonConstants;
+import code.shubham.commons.TestKafkaConsumer;
 import code.shubham.commons.contexts.RoleContextHolder;
 import code.shubham.commons.contexts.UserIDContextHolder;
+import code.shubham.commons.models.Event;
+import code.shubham.commons.utils.JsonUtils;
 import code.shubham.craft.CraftTestConstants;
+import code.shubham.craft.constants.EventName;
+import code.shubham.craft.constants.EventType;
+import code.shubham.craft.driveronboard.dao.entities.DriverOnboardStatus;
+import code.shubham.craft.driveronboardmodels.DriverOnboardStatusUpdatedEventData;
 import code.shubham.craft.shipment.dao.entities.Shipment;
 import code.shubham.craft.shipment.dao.entities.ShipmentStatus;
 import code.shubham.craft.shipment.dao.repositories.ShipmentRepository;
 import code.shubham.craft.shipmentmodels.UpdateShipmentStatusRequest;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import org.apache.kafka.clients.admin.KafkaAdminClient;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
@@ -22,22 +31,39 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.util.StringUtils.truncate;
 
-class ShipmentControllerTest extends AbstractMVCTest {
+class ShipmentControllerTest extends AbstractSpringBootMVCTest {
+
+	@Value("${shipment.kafka.topic.name}")
+	private String topicName;
 
 	private final String baseURL = "/v1/shipments";
 
 	@Autowired
 	private ShipmentRepository repository;
 
+	private TestKafkaConsumer kafkaConsumer;
+
+	@PostConstruct
+	public void allSetUp() {
+		this.kafkaConsumer = new TestKafkaConsumer(this.topicName);
+	}
+
+	@PreDestroy
+	public void tearDownAll() {
+		this.kafkaConsumer.destroy();
+	}
+
 	@BeforeEach
 	protected void setUp() {
 		super.setUp();
 		truncate("shipments");
+		this.kafkaConsumer.purge(this.topicName);
 	}
 
 	@AfterEach
 	void tearDown() {
 		truncate("shipments");
+		this.kafkaConsumer.purge(this.topicName);
 	}
 
 	@Test
@@ -46,7 +72,7 @@ class ShipmentControllerTest extends AbstractMVCTest {
 			.completedStatus(ShipmentStatus.PREPARE_TO_DISPATCH.name())
 			.uniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID)
 			.build();
-		UserIDContextHolder.set(CommonTestConstants.USER_ID);
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
 
 		this.mockMvc
 			.perform(MockMvcRequestBuilders.patch(this.baseURL + "/updateStatus")
@@ -63,7 +89,7 @@ class ShipmentControllerTest extends AbstractMVCTest {
 			.completedStatus(ShipmentStatus.PREPARE_TO_DISPATCH.name())
 			.uniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID)
 			.build();
-		UserIDContextHolder.set(CommonTestConstants.USER_ID);
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
 		RoleContextHolder.set(Set.of("ADMIN"));
 		this.mockMvc
 			.perform(MockMvcRequestBuilders.patch(this.baseURL + "/updateStatus")
@@ -83,7 +109,7 @@ class ShipmentControllerTest extends AbstractMVCTest {
 			.completedStatus(ShipmentStatus.PREPARE_TO_DISPATCH.name())
 			.uniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID)
 			.build();
-		UserIDContextHolder.set(CommonTestConstants.USER_ID);
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
 		RoleContextHolder.set(Set.of("ADMIN"));
 		this.mockMvc
 			.perform(MockMvcRequestBuilders.patch(this.baseURL + "/updateStatus")
@@ -109,7 +135,7 @@ class ShipmentControllerTest extends AbstractMVCTest {
 			.completedStatus(ShipmentStatus.DISPATCHED.name())
 			.uniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID)
 			.build();
-		UserIDContextHolder.set(CommonTestConstants.USER_ID);
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
 		RoleContextHolder.set(Set.of("ADMIN"));
 
 		this.mockMvc
@@ -135,7 +161,7 @@ class ShipmentControllerTest extends AbstractMVCTest {
 			.completedStatus(ShipmentStatus.PREPARE_TO_DISPATCH.name())
 			.uniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID)
 			.build();
-		UserIDContextHolder.set(CommonTestConstants.USER_ID);
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
 		RoleContextHolder.set(Set.of("ADMIN"));
 
 		this.mockMvc
@@ -143,6 +169,19 @@ class ShipmentControllerTest extends AbstractMVCTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(as(request)))
 			.andExpect(status().isOk());
+
+		final var updated = this.repository.findByUniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID);
+		Assertions.assertTrue(updated.isPresent());
+		Assertions.assertEquals(ShipmentStatus.DISPATCHED.name(), updated.get().getStatus().name());
+
+		final Event event = this.kafkaConsumer.poll(1).get(0);
+		Assertions.assertEquals(event.getUserId(), TestCommonConstants.USER_ID);
+		Assertions.assertNotNull(event.getCreatedAt());
+		Assertions.assertNotNull(event.getCorrelationId());
+		Assertions.assertEquals(event.getEventName(), EventName.ShipmentStatusUpdated.name());
+		Assertions.assertEquals(event.getEventType(), EventType.SHIPMENT.name());
+		final Shipment data = JsonUtils.as(event.getData(), Shipment.class);
+		Assertions.assertEquals(updated.get().getStatus().name(), data.getStatus().name());
 	}
 
 	@Test
@@ -157,7 +196,7 @@ class ShipmentControllerTest extends AbstractMVCTest {
 			.completedStatus(ShipmentStatus.DISPATCHED.name())
 			.uniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID)
 			.build();
-		UserIDContextHolder.set(CommonTestConstants.USER_ID);
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
 		RoleContextHolder.set(Set.of("ADMIN"));
 
 		this.mockMvc
@@ -165,6 +204,19 @@ class ShipmentControllerTest extends AbstractMVCTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(as(request)))
 			.andExpect(status().isOk());
+
+		final var updated = this.repository.findByUniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID);
+		Assertions.assertTrue(updated.isPresent());
+		Assertions.assertEquals(ShipmentStatus.ENROUTE.name(), updated.get().getStatus().name());
+
+		final Event event = this.kafkaConsumer.poll(1).get(0);
+		Assertions.assertEquals(event.getUserId(), TestCommonConstants.USER_ID);
+		Assertions.assertNotNull(event.getCreatedAt());
+		Assertions.assertNotNull(event.getCorrelationId());
+		Assertions.assertEquals(event.getEventName(), EventName.ShipmentStatusUpdated.name());
+		Assertions.assertEquals(event.getEventType(), EventType.SHIPMENT.name());
+		final Shipment data = JsonUtils.as(event.getData(), Shipment.class);
+		Assertions.assertEquals(data.getStatus().name(), updated.get().getStatus().name());
 	}
 
 	@Test
@@ -179,7 +231,7 @@ class ShipmentControllerTest extends AbstractMVCTest {
 			.completedStatus(ShipmentStatus.ENROUTE.name())
 			.uniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID)
 			.build();
-		UserIDContextHolder.set(CommonTestConstants.USER_ID);
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
 		RoleContextHolder.set(Set.of("ADMIN"));
 
 		this.mockMvc
@@ -187,6 +239,19 @@ class ShipmentControllerTest extends AbstractMVCTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(as(request)))
 			.andExpect(status().isOk());
+
+		final var updated = this.repository.findByUniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID);
+		Assertions.assertTrue(updated.isPresent());
+		Assertions.assertEquals(ShipmentStatus.DELIVERED.name(), updated.get().getStatus().name());
+
+		final Event event = this.kafkaConsumer.poll(1).get(0);
+		Assertions.assertEquals(event.getUserId(), TestCommonConstants.USER_ID);
+		Assertions.assertNotNull(event.getCreatedAt());
+		Assertions.assertNotNull(event.getCorrelationId());
+		Assertions.assertEquals(event.getEventName(), EventName.ShipmentStatusUpdated.name());
+		Assertions.assertEquals(event.getEventType(), EventType.SHIPMENT.name());
+		final Shipment data = JsonUtils.as(event.getData(), Shipment.class);
+		Assertions.assertEquals(updated.get().getStatus().name(), data.getStatus().name());
 	}
 
 	@Test
@@ -201,7 +266,7 @@ class ShipmentControllerTest extends AbstractMVCTest {
 			.completedStatus(ShipmentStatus.ENROUTE.name())
 			.uniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID)
 			.build();
-		UserIDContextHolder.set(CommonTestConstants.USER_ID);
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
 		RoleContextHolder.set(Set.of("ADMIN"));
 
 		this.mockMvc

@@ -76,14 +76,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/drivers/register",
+					"raw": "http://localhost:8080/api/v1/drivers/register",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"drivers",
 						"register"
@@ -165,14 +165,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/drivers/{{driverId}}?userId={{userId}}",
+					"raw": "http://localhost:8080/api/v1/drivers/{{driverId}}?userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"drivers",
 						"{{driverId}}"
@@ -189,6 +189,9 @@
 		},
 		{
 			"name": "[GET] Document-UploadURL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"auth": {
 					"type": "oauth2",
@@ -247,15 +250,19 @@
 				},
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/documents/uploadURL",
+					"raw": "http://localhost:8080/api/v1/documents/uploadURL",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"documents",
 						"uploadURL"
@@ -326,7 +333,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"test\",\n    \"blobId\": \"{{blobId}}\",\n    \"userId\": \"{{userId]}\"\n}",
+					"raw": "{\n    \"name\": \"test\",\n    \"blobId\": \"{{blobId}}\",\n    \"userId\": \"{{userId}}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -334,14 +341,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/documents",
+					"raw": "http://localhost:8080/api/v1/documents",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"documents"
 					]
@@ -410,14 +417,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/drivers/onboard/all?driverId={{driverId}}&userId={{userId}}",
+					"raw": "http://localhost:8080/api/v1/drivers/onboard/all?driverId={{driverId}}&userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"drivers",
 						"onboard",
@@ -507,14 +514,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/drivers/onboard/updateStatus",
+					"raw": "http://localhost:8080/api/v1/drivers/onboard/updateStatus",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"drivers",
 						"onboard",
@@ -594,14 +601,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/users/profiles/update",
+					"raw": "http://localhost:8080/api/v1/users/profiles/update",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"users",
 						"profiles",
@@ -684,14 +691,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/users/profiles?userId={{userId}}",
+					"raw": "http://localhost:8080/api/v1/users/profiles?userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"users",
 						"profiles"
@@ -767,14 +774,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/backgroundVerification/all?userId={{userId}}",
+					"raw": "http://localhost:8080/api/v1/backgroundVerification/all?userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"backgroundVerification",
 						"all"
@@ -859,14 +866,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/backgroundVerification/updateStatus",
+					"raw": "http://localhost:8080/api/v1/backgroundVerification/updateStatus",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"backgroundVerification",
 						"updateStatus"
@@ -936,14 +943,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/orders?userId={{userId}}",
+					"raw": "http://localhost:8080/api/v1/orders?userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"orders"
 					],
@@ -1018,14 +1025,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/craft/orders/v1/{{orderId}}/products?userId={{userId}}",
+					"raw": "http://localhost:8080/api/orders/v1/{{orderId}}/products?userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"orders",
 						"v1",
 						"{{orderId}}",
@@ -1103,7 +1110,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"completedStatus\": \"PREPARE_TO_DISPATCH\",\n    \"uniqueReferenceId\": \"{{orderProductReferenceId}}\"\n}",
+					"raw": "{\n    \"completedStatus\": \"ENROUTE\",\n    \"uniqueReferenceId\": \"{{orderProductReferenceId}}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1111,14 +1118,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/craft/v1/shipments/updateStatus",
+					"raw": "http://localhost:8080/api/v1/shipments/updateStatus",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"shipments",
 						"updateStatus"
@@ -1188,14 +1195,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://{{ip}}:{{port}}/craft/cabs/v1?driverId={{driverId}}&userId={{userId}}",
+					"raw": "http://{{ip}}:{{port}}/api/cabs/v1?driverId={{driverId}}&userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"{{ip}}"
 					],
 					"port": "{{port}}",
 					"path": [
-						"craft",
+						"api",
 						"cabs",
 						"v1"
 					],
@@ -1283,14 +1290,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://{{ip}}:{{port}}/craft/v1/drivers/availableForRide",
+					"raw": "http://{{ip}}:{{port}}/api/v1/drivers/availableForRide",
 					"protocol": "http",
 					"host": [
 						"{{ip}}"
 					],
 					"port": "{{port}}",
 					"path": [
-						"craft",
+						"api",
 						"v1",
 						"drivers",
 						"availableForRide"

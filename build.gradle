@@ -86,12 +86,10 @@ dependencies {
 	testImplementation (
 		'io.rest-assured:rest-assured:5.4.0',
 		'org.springframework.boot:spring-boot-starter-test',
-//		'org.junit.jupiter:junit-jupiter-api:5.10.1',
+		'org.springframework.security:spring-security-test',
+
 //		'io.projectreactor:reactor-test',
 		'org.springframework.kafka:spring-kafka-test',
-		'org.springframework.security:spring-security-test',
-		 'org.springframework.boot:spring-boot-starter-test',
-		 'org.springframework.kafka:spring-kafka-test',
 	)
 }
 

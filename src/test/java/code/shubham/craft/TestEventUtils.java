@@ -1,6 +1,5 @@
 package code.shubham.craft;
 
-import code.shubham.commons.CommonTestConstants;
 import code.shubham.commons.contexts.CorrelationIDContext;
 import code.shubham.commons.models.Event;
 import code.shubham.commons.utils.JsonUtils;
@@ -9,11 +8,9 @@ import code.shubham.craft.constants.EventName;
 import code.shubham.craft.constants.EventType;
 import code.shubham.craft.driver.dao.entities.Driver;
 import code.shubham.craft.driveronboard.dao.entities.DriverOnboard;
-import code.shubham.craft.driveronboard.dao.entities.DriverOnboardStatus;
 import code.shubham.craft.driveronboardmodels.DriverOnboardDTO;
 import code.shubham.craft.driveronboardmodels.DriverOnboardStatusUpdatedEventData;
 import code.shubham.craft.order.dao.entities.Order;
-import code.shubham.craft.order.dao.entities.OrderProduct;
 import code.shubham.craft.order.dao.entities.OrderProductStatus;
 import code.shubham.craft.ordermodels.OrderDTO;
 import code.shubham.craft.ordermodels.OrderEventData;
@@ -21,7 +18,6 @@ import code.shubham.craft.ordermodels.OrderProductDTO;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 public class TestEventUtils {
 

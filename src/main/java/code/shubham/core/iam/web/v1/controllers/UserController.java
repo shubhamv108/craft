@@ -4,6 +4,7 @@ import code.shubham.commons.utils.ResponseUtils;
 import code.shubham.core.iam.services.UserService;
 import code.shubham.core.iammodels.GetOrCreateUser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/v1/users")
+@ConditionalOnProperty(prefix = "service", name = "module", havingValue = "web")
 public class UserController {
 
 	private final UserService userService;

@@ -6,11 +6,12 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-public abstract class AbstractMVCTest extends AbstractTest {
+public abstract class AbstractWebMVCTest {
 
 	@Autowired
 	private WebApplicationContext applicationContext;
 
+	@Autowired
 	protected MockMvc mockMvc;
 
 	private static final Gson GSON = new Gson();
@@ -20,8 +21,7 @@ public abstract class AbstractMVCTest extends AbstractTest {
 	}
 
 	protected void setUp() {
-		super.setUp();
-		this.mockMvc = MockMvcBuilders.webAppContextSetup(this.applicationContext).build();
+
 	}
 
 }

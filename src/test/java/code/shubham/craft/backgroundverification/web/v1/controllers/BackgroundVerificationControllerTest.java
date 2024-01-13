@@ -1,17 +1,21 @@
 package code.shubham.craft.backgroundverification.web.v1.controllers;
 
-import code.shubham.commons.AbstractMVCTest;
-import code.shubham.commons.CommonTestConstants;
+import code.shubham.commons.AbstractSpringBootMVCTest;
+import code.shubham.commons.TestCommonConstants;
+import code.shubham.commons.TestKafkaConsumer;
 import code.shubham.commons.contexts.RoleContextHolder;
+import code.shubham.commons.models.Event;
+import code.shubham.commons.utils.JsonUtils;
 import code.shubham.craft.CraftTestConstants;
 import code.shubham.craft.backgroundverification.dao.entities.BackgroundVerification;
 import code.shubham.craft.backgroundverification.dao.entities.BackgroundVerificationStatus;
 import code.shubham.craft.backgroundverification.dao.repositories.BackgroundVerificationRepository;
 import code.shubham.craft.backgroundverificatonmodels.UpdateBackgroundVerificationStatusRequest;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import code.shubham.craft.constants.EventName;
+import code.shubham.craft.constants.EventType;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
@@ -22,7 +26,7 @@ import java.util.Set;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-class BackgroundVerificationControllerTest extends AbstractMVCTest {
+class BackgroundVerificationControllerTest extends AbstractSpringBootMVCTest {
 
 	private final String baseURL = "/v1/backgroundVerification";
 
@@ -32,16 +36,29 @@ class BackgroundVerificationControllerTest extends AbstractMVCTest {
 	@Autowired
 	private BackgroundVerificationRepository repository;
 
-	@Override
+	private TestKafkaConsumer kafkaConsumer;
+
+	@PostConstruct
+	public void allSetUp() {
+		this.kafkaConsumer = new TestKafkaConsumer(this.topicName);
+	}
+
+	@PreDestroy
+	public void tearDownAll() {
+		this.kafkaConsumer.destroy();
+	}
+
 	@BeforeEach
 	public void setUp() {
 		super.setUp();
 		truncate("background_verification");
+		this.kafkaConsumer.purge(this.topicName);
 	}
 
 	@AfterEach
 	void tearDown() {
 		RoleContextHolder.clear();
+		this.kafkaConsumer.purge(this.topicName);
 	}
 
 	@Test
@@ -80,7 +97,7 @@ class BackgroundVerificationControllerTest extends AbstractMVCTest {
 	@Test
 	void updateStatus_already_completed() throws Exception {
 		this.repository.save(BackgroundVerification.builder()
-			.userId(CommonTestConstants.USER_ID)
+			.userId(TestCommonConstants.USER_ID)
 			.applicantId(CraftTestConstants.DRIVER_ID)
 			.applicantType(CraftTestConstants.APPLICANT_TYPE_DRIVER)
 			.clientReferenceId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID)
@@ -106,7 +123,7 @@ class BackgroundVerificationControllerTest extends AbstractMVCTest {
 	@Test
 	void updateStatus_success() throws Exception {
 		final BackgroundVerification backgroundVerification = this.repository.save(BackgroundVerification.builder()
-			.userId(CommonTestConstants.USER_ID)
+			.userId(TestCommonConstants.USER_ID)
 			.applicantId(CraftTestConstants.DRIVER_ID)
 			.applicantType(CraftTestConstants.APPLICANT_TYPE_DRIVER)
 			.clientReferenceId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID)
@@ -129,19 +146,15 @@ class BackgroundVerificationControllerTest extends AbstractMVCTest {
 		Assertions.assertTrue(updated.isPresent());
 		Assertions.assertEquals(updated.get().getStatus().name(), BackgroundVerificationStatus.COMPLETED.name());
 
-		// final Event event = this.kafkaConsumer.poll(topicName, 1).get(0);
-		// Assertions.assertEquals(event.getUserId(), TestConstants.USER_ID);
-		// Assertions.assertNotNull(event.getCreatedAt());
-		// Assertions.assertNotNull(event.getCorrelationId());
-		// Assertions.assertEquals(event.getEventName(),
-		// EventName.BackgroundVerificationStatusUpdated.name());
-		// Assertions.assertEquals(event.getEventType(),
-		// EventType.BACKGROUND_VERIFICATION.name());
-		// BackgroundVerification backgroundVerificationFromEvent =
-		// JsonUtils.as(event.getData(),
-		// BackgroundVerification.class);
-		// Assertions.assertEquals(backgroundVerificationFromEvent.getStatus().name(),
-		// updated.get().getStatus().name());
+		final Event event = this.kafkaConsumer.poll(1).get(0);
+		Assertions.assertEquals(event.getUserId(), TestCommonConstants.USER_ID);
+		Assertions.assertNotNull(event.getCreatedAt());
+		Assertions.assertNotNull(event.getCorrelationId());
+		Assertions.assertEquals(event.getEventName(), EventName.BackgroundVerificationStatusUpdated.name());
+		Assertions.assertEquals(event.getEventType(), EventType.BACKGROUND_VERIFICATION.name());
+		BackgroundVerification backgroundVerificationFromEvent = JsonUtils.as(event.getData(),
+				BackgroundVerification.class);
+		Assertions.assertEquals(backgroundVerificationFromEvent.getStatus().name(), updated.get().getStatus().name());
 	}
 
 }

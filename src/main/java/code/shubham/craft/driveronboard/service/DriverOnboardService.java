@@ -40,7 +40,7 @@ import static code.shubham.craft.driveronboard.dao.entities.DriverOnboardStatus.
 @Service
 public class DriverOnboardService {
 
-	@Value("${kafka.topic.name}")
+	@Value("${driver.onboard.kafka.topic.name}")
 	private String topicName;
 
 	@Value("${driver.onboard.sequence}")

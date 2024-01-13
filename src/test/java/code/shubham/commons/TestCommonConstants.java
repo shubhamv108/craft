@@ -1,6 +1,6 @@
 package code.shubham.commons;
 
-public interface CommonTestConstants {
+public interface TestCommonConstants {
 
 	String LOCALHOST = "http://localhost:8080";
 

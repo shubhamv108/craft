@@ -1,7 +1,7 @@
 package code.shubham.craft.driveronboard.workers.handlers;
 
-import code.shubham.commons.AbstractTest;
-import code.shubham.commons.CommonTestConstants;
+import code.shubham.commons.AbstractSpringBootTest;
+import code.shubham.commons.TestCommonConstants;
 import code.shubham.commons.models.Event;
 import code.shubham.craft.CraftTestConstants;
 import code.shubham.craft.TestEventUtils;
@@ -16,7 +16,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-class DriverStatusUpdatedEventHandlerTest extends AbstractTest {
+class DriverStatusUpdatedEventHandlerTest extends AbstractSpringBootTest {
 
 	@Autowired
 	private DriverStatusUpdatedEventHandler handler;
@@ -40,13 +40,13 @@ class DriverStatusUpdatedEventHandlerTest extends AbstractTest {
 		final DriverOnboard driverOnboard = this.repository.save(DriverOnboard.builder()
 			.driverId(CraftTestConstants.DRIVER_ID)
 			.status(DriverOnboardStatus.BACKGROUND_VERIFICATION)
-			.userId(CommonTestConstants.USER_ID)
+			.userId(TestCommonConstants.USER_ID)
 			.clientReferenceId(CraftTestConstants.DRIVER_ONBOARD_CLIENT_REFERENCE_ID)
 			.build());
 		final Event event = TestEventUtils.getDriverStatusUpdatedEvent(Driver.builder()
 			.id(CraftTestConstants.DRIVER_ID)
 			.status(DriverStatus.ONBOARDING)
-			.userId(CommonTestConstants.USER_ID)
+			.userId(TestCommonConstants.USER_ID)
 			.build());
 
 		final DriverOnboard response = (DriverOnboard) this.handler.handle(event);
