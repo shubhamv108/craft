@@ -23,13 +23,14 @@ services:
     depends_on:
       - db
       - kafka
+      - fluentbit
 
-#    logging:
-#      driver: fluentd
-#      options:
-#        fluentd-address: fluentbit:24224
-#        fluentd-async-connect: "true"
-#        tag: 'containerssh.{{.ID}}'
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: fluentbit:24224
+        fluentd-async-connect: "true"
+        tag: 'containerssh.{{.ID}}'
 
     environment:
       - SLEEP_LENGTH=5
@@ -42,7 +43,6 @@ services:
       - service.module=web
       - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
       - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-      - AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
 
   worker:
     container_name: craft-worker
@@ -66,13 +66,14 @@ services:
     depends_on:
       - db
       - kafka
+      - fluentbit
 
-    #    logging:
-    #      driver: fluentd
-    #      options:
-    #        fluentd-address: fluentbit:24224
-    #        fluentd-async-connect: "true"
-    #        tag: 'containerssh.{{.ID}}'
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: fluentbit:24224
+        fluentd-async-connect: "true"
+        tag: 'containerssh.{{.ID}}'
 
     environment:
       - SLEEP_LENGTH=5
@@ -86,7 +87,6 @@ services:
       - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
       - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
       - AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
-      - AWS_ENDPOINT=http://localstack:4566
 
 
   sonar:
@@ -180,6 +180,26 @@ services:
       JVM_OPTS: "-Xms16M -Xmx48M -Xss256K -XX:-TieredCompilation -XX:+UseStringDeduplication -noverify"
     depends_on:
       - "kafka"
+
+  fluentbit:
+    image: 'shubham01/fluentbit:latest'
+    container_name: fluentbit
+    hostname: fluentbit
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    volumes:
+      - ./fluentbit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+#      - ./fluentbit/parsers.conf:/fluent-bit/etc/parsers.conf
+      - ./log/:/etc/data
+
+  cloudwatch-agent:
+    container_name: cloudwatch-agent
+    image: amazon/cloudwatch-agent
+    environment:
+      - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+      - AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
 
 volumes:
   grafana_data: { }

@@ -2,7 +2,7 @@ SHELL := /bin/bash
 OS := $(shell uname)
 
 define start-services
-	@docker compose -f docker-compose.yaml up --force-recreate -d --remove-orphans db kafka kafdrop sonar-db sonar
+	@docker compose -f docker-compose.yaml up --force-recreate -d --remove-orphans sonar db kafka kafdrop sonar-db sonar fluentbit cloudwatch-agent
 endef
 
 define start-check
@@ -33,10 +33,6 @@ endef
 
 define setup
 	@docker compose -f docker-compose.yaml up -d --build --force-recreate --remove-orphans
-endef
-
-define k8s-delete-app
-    @kubectl delete -f ./k8s/app.yaml
 endef
 
 define del-local-app
@@ -143,8 +139,3 @@ tests: local-setup
 
 pipeline-build: local-setup
 	./gradlew build
-
-
-
-# condb:
-#     mysql -h 127.0.0.1 -P 3306 -u test craft -p
