@@ -64,7 +64,7 @@ public class ProductOrderWorker extends AbstractWorker {
 				.productId(customerTypeProduct.getProductId())
 				.quantity(customerTypeProduct.getQuantity())
 				.clientReferenceId(
-						UUIDUtils.uuid4(data.getOrderReferenceId() + "_" + customerTypeProduct.getProductId()))
+						UUIDUtils.uuid5(data.getOrderReferenceId() + "_" + customerTypeProduct.getProductId()))
 				.build())
 			.toList();
 		if (orderProducts.isEmpty()) {

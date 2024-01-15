@@ -23,6 +23,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -66,10 +67,10 @@ public class DriverService {
 		driver.setUserId(UserIDContextHolder.get());
 		final Driver persisted = this.repository.save(driver);
 
-		registerCabRequest.setDriverId(driver.getId());
+		registerCabRequest.setDriverId(persisted.getId());
 		this.cabService.add(registerCabRequest);
 
-		this.publishEvent(driver);
+		this.publishEvent(persisted);
 
 		return persisted;
 	}
@@ -124,9 +125,10 @@ public class DriverService {
 					.eventName(EventName.DriverStatusUpdated.name())
 					.eventType(EventType.DRIVER.name())
 					.data(JsonUtils.get(driver))
-					.uniqueReferenceId(UUIDUtils.uuid4(driver.getId() + "_" + driver.getUpdatedAt()))
+					.uniqueReferenceId(UUIDUtils.uuid5(driver.getId() + "_" + driver.getUpdatedAt().getTime()))
 					.userId(driver.getUserId())
 					.correlationId(CorrelationIDContext.get())
+					.createdAt(new Date())
 					.build()); // use eventuate for event sourcing
 	}
 

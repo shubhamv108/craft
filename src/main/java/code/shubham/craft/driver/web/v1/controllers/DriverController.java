@@ -64,8 +64,8 @@ public class DriverController {
 	}
 
 	@PatchMapping("/availableForRide")
-	public ResponseEntity<?> markAvailableForRide(@RequestBody MarkAvailableForRideRequest request) {
-		new MarkAvailableForRideRequestValidator().validate(request);
+	public ResponseEntity<?> markAvailableForRide(@RequestBody final MarkAvailableForRideRequest request) {
+		new MarkAvailableForRideRequestValidator().validateOrThrowException(request);
 		Utils.validateUserOrThrowException(request.getUserId());
 		return ResponseUtils.getDataResponseEntity(HttpStatus.OK, this.service.markReadyForRide(request.getDriverId(),
 				request.getUserId(), request.getVehicleRegistrationNumber()));
