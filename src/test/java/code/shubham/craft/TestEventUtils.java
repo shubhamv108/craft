@@ -1,8 +1,11 @@
 package code.shubham.craft;
 
+import code.shubham.commons.TestCommonConstants;
 import code.shubham.commons.contexts.CorrelationIDContext;
+import code.shubham.commons.contexts.UserIDContextHolder;
 import code.shubham.commons.models.Event;
 import code.shubham.commons.utils.JsonUtils;
+import code.shubham.commons.utils.UUIDUtils;
 import code.shubham.craft.backgroundverification.dao.entities.BackgroundVerification;
 import code.shubham.craft.constants.EventName;
 import code.shubham.craft.constants.EventType;
@@ -12,9 +15,12 @@ import code.shubham.craft.driveronboardmodels.DriverOnboardDTO;
 import code.shubham.craft.driveronboardmodels.DriverOnboardStatusUpdatedEventData;
 import code.shubham.craft.order.dao.entities.Order;
 import code.shubham.craft.order.dao.entities.OrderProductStatus;
+import code.shubham.craft.ordermodels.CreateOrderCommand;
 import code.shubham.craft.ordermodels.OrderDTO;
 import code.shubham.craft.ordermodels.OrderEventData;
 import code.shubham.craft.ordermodels.OrderProductDTO;
+import code.shubham.craft.shipment.dao.entities.Shipment;
+import code.shubham.craft.shipment.dao.entities.ShipmentStatus;
 
 import java.util.Date;
 import java.util.List;
@@ -47,12 +53,6 @@ public class TestEventUtils {
 	}
 
 	public static Event getDriverOnboardStatusUpdatedEvent(final DriverOnboard driverOnboard) {
-		// DriverOnboard driverOnboard = this.repository.save(DriverOnboard.builder()
-		// .driverId(CraftTestConstants.DRIVER_ID)
-		// .userId(CommonTestConstants.USER_ID)
-		// .clientReferenceId(CraftTestConstants.DRIVER_ONBOARD_CLIENT_REFERENCE_ID)
-		// .status(DriverOnboardStatus.SHIPPING_OF_TRACKING_DEVICE)
-		// .build());
 		final DriverOnboardStatusUpdatedEventData event = DriverOnboardStatusUpdatedEventData.builder()
 			.driverOnboard(DriverOnboardDTO.builder()
 				.driverId(driverOnboard.getDriverId())
@@ -61,6 +61,8 @@ public class TestEventUtils {
 				.userId(driverOnboard.getUserId())
 				.build())
 			.build();
+		event.setBackgroundVerificationId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID);
+		event.setOrderReferenceId(CraftTestConstants.ORDER_UNIQUE_REFERENCE_ID);
 		return Event.builder()
 			.eventName(EventName.DriverOnboardStatusUpdated.name())
 			.eventType(EventType.DRIVER_ONBOARD.name())
@@ -95,6 +97,49 @@ public class TestEventUtils {
 			.createdAt(new Date())
 			.userId(order.getUserId())
 			.uniqueReferenceId(order.getUniqueReferenceId())
+			.correlationId(CorrelationIDContext.get())
+			.build();
+	}
+
+	public static Event getEmptyEvent() {
+		return Event.builder().eventName("empty").build();
+	}
+
+	public static Event getCreateOrderCommandEvent() {
+		return Event.builder()
+			.eventName(EventName.CreateOrderCommand.name())
+			.eventType(EventType.ORDER.name())
+			.data(JsonUtils.get(CreateOrderCommand.builder()
+				.products(List.of(OrderProductDTO.builder()
+					.productId(CraftTestConstants.PRODUCT_ID)
+					.quantity(1)
+					.clientReferenceId(UUIDUtils
+						.uuid5(CraftTestConstants.ORDER_UNIQUE_REFERENCE_ID + "_" + CraftTestConstants.PRODUCT_ID))
+					.build()))
+				.userId(TestCommonConstants.USER_ID)
+				.customerId(CraftTestConstants.DRIVER_ID)
+				.customerType("DRIVER")
+				.clientReferenceId(CraftTestConstants.ORDER_UNIQUE_REFERENCE_ID)
+				.build()))
+			.uniqueReferenceId(CraftTestConstants.ORDER_UNIQUE_REFERENCE_ID)
+			.userId(TestCommonConstants.USER_ID)
+			.createdAt(new Date())
+			.correlationId(CorrelationIDContext.get())
+			.build();
+	}
+
+	public static Event getShipmentStatusUpdatedEvent(ShipmentStatus status, String orderId) {
+		return Event.builder()
+			.eventName(EventName.ShipmentStatusUpdated.name())
+			.eventType(EventType.SHIPMENT.name())
+			.data(JsonUtils.get(Shipment.builder()
+				.uniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID)
+				.orderId(orderId)
+				.status(status)
+				.build()))
+			.createdAt(new Date())
+			.userId(UserIDContextHolder.get())
+			.uniqueReferenceId(CraftTestConstants.SHIPMENT_UNIQUE_REFERENCE_ID)
 			.correlationId(CorrelationIDContext.get())
 			.build();
 	}

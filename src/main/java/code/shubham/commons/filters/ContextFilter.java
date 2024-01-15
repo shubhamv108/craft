@@ -3,13 +3,11 @@ package code.shubham.commons.filters;
 import code.shubham.commons.contexts.TenantContextHolder;
 import code.shubham.commons.contexts.UserContextHolder;
 import code.shubham.commons.contexts.UserIDContextHolder;
-import code.shubham.core.iam.dao.entities.User;
 import code.shubham.core.iam.services.UserService;
 import code.shubham.core.iammodels.UserDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
-//import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.stereotype.Component;
 
 import jakarta.servlet.Filter;
@@ -45,7 +43,7 @@ public class ContextFilter implements Filter {
 
 			final String tenantId = request.getHeader("tenantId");
 			if (tenantId != null)
-				TenantContextHolder.setTenant(tenantId);
+				TenantContextHolder.set(tenantId);
 
 			final String userEmail = Optional.ofNullable(request.getHeader("userEmail"))
 				.orElse((String) request.getAttribute("userEmail"));

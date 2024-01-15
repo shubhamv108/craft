@@ -2,10 +2,10 @@ SHELL := /bin/bash
 OS := $(shell uname)
 
 define start-services
-	@docker compose -f docker-compose.yaml up --force-recreate -d --remove-orphans sonar db kafka kafdrop
+	@docker compose -f docker-compose.yaml up --force-recreate -d --remove-orphans db kafka kafdrop sonar-db sonar
 endef
 
-define check
+define start-check
 	@docker compose -f sonar-compose.yaml up --force-recreate -d --remove-orphans sonar-db sonar
 endef
 
@@ -35,31 +35,17 @@ define setup
 	@docker compose -f docker-compose.yaml up -d --build --force-recreate --remove-orphans
 endef
 
-define k8s-apply
-	kubectl create namespace argocd
-    kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.0/deploy/static/provider/cloud/deploy.yaml
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.0/deploy/static/provider/baremetal/deploy.yaml
-    kubectl apply -f k8s/mysql.yaml
-    kubectl apply -f k8s/kafka.yaml
-    kubectl apply -f k8s/kafdrop.yaml
-    kubectl create -f https://download.elastic.co/downloads/eck/2.9.0/crds.yaml
-    kubectl apply -f https://download.elastic.co/downloads/eck/2.9.0/operator.yaml
-    kubectl apply -f k8s/es.yaml
-    kubectl create namespace prometheus
-    helm repo add bitnami https://charts.bitnami.com/bitnami
-    helm install prometheus bitnami/kube-prometheus -n prometheus
-    kubectl apply -f k8s/app.yaml
-    kubectl apply -f k8s/grafana.yaml
-endef
-
 define k8s-delete-app
     @kubectl delete -f ./k8s/app.yaml
 endef
 
 define del-local-app
-    @docker stop craft
-    @docker rm craft
+    @docker stop craft-worker
+    @docker stop craft-web
+    @docker rm craft-worker
+    @docker rm craft-web
+    @docker image rm craft
+    @docker image rm shubham01/craft
 endef
 
 
@@ -79,11 +65,14 @@ help:
 	@echo "run-test: Run specific test"
 	@echo "############################"
 
-check:
-	./gradlew sonar
+start-check:
+	$(call start-check)
 
 check-teardown:
 	$(call check-teardown)
+
+check:
+	sudo ./gradlew sonar
 
 local-setup: teardown
 	$(call local-setup)
@@ -146,7 +135,7 @@ local-app: format build
 local-app-re: del-local-app local-app
 
 coverage:
-	./gradlew jacocoTestCoverageVerification
+	sudo ./gradlew jacocoTestCoverageVerification
 
 tests: local-setup
 	sudo ./gradlew test

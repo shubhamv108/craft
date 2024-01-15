@@ -189,10 +189,8 @@ public class DriverOnboardService {
 					.map(DriverOnboardOrder::getDriverOnboardId)
 					.orElseThrow(() -> new InvalidRequestException("uniqueReferenceId",
 							"No order with %s found for any driverOnboarding", uniqueReferenceId));
-			default:
-				throw new InvalidRequestException("completedStatus", "No support for updating completedStatus: %s",
-						completedStatus.name());
 		}
+		return null;
 	}
 
 }

@@ -2,18 +2,18 @@ package code.shubham.commons.contexts;
 
 public class TenantContextHolder {
 
-	private static final ThreadLocal<String> CURRENT_TENANT = new ThreadLocal<>();
+	private static final ThreadLocal<String> CONTEXT = new ThreadLocal<>();
 
-	public static void setTenant(String userId) {
-		CURRENT_TENANT.set(userId);
+	public static void set(String id) {
+		CONTEXT.set(id);
 	}
 
-	public static String getTenant() {
-		return CURRENT_TENANT.get();
+	public static String get() {
+		return CONTEXT.get();
 	}
 
 	public static void clear() {
-		CURRENT_TENANT.remove();
+		CONTEXT.remove();
 	}
 
 }

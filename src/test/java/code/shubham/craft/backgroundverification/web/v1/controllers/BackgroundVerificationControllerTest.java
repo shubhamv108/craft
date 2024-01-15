@@ -76,6 +76,28 @@ class BackgroundVerificationControllerTest extends AbstractSpringBootMVCTest {
 	}
 
 	@Test
+	void updateStatus_with_invalid_fields_in_request() throws Exception {
+		final UpdateBackgroundVerificationStatusRequest request = UpdateBackgroundVerificationStatusRequest.builder()
+			.clientReferenceId("")
+			.completedStatus("")
+			.build();
+
+		RoleContextHolder.set(Set.of("ADMIN"));
+		this.mockMvc
+			.perform(MockMvcRequestBuilders.patch(this.baseURL + "/updateStatus")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(as(request)))
+			.andExpect(status().is(400))
+			.andExpect(content().json("{\n" + "    \"statusCode\": 400,\n" + "    \"data\": null,\n"
+					+ "    \"error\": [\n" + "        {\n" + "            \"clientReferenceId\": [\n"
+					+ "                \"clientReferenceId must not be empty.\"\n" + "            ],\n"
+					+ "            \"completedStatus\": [\n"
+					+ "                \"completedStatus must not be empty.\",\n"
+					+ "                \"invalid value for completedStatus: \"\n" + "            ]\n" + "        }\n"
+					+ "    ]\n" + "}"));
+	}
+
+	@Test
 	void updateStatus_background_verification_not_initiated() throws Exception {
 		RoleContextHolder.set(Set.of("ADMIN"));
 

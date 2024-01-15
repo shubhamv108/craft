@@ -44,41 +44,44 @@ public class S3Utils {
 	}
 
 	/* Create a pre-signed URL to download an object in a subsequent GET request. */
-	public static String createPresignedGetUrl(String bucketName, String keyName) {
-		try (S3Presigner presigner = S3Presigner.create()) {
+	// public static String createPresignedGetUrl(String bucketName, String keyName) {
+	// try (S3Presigner presigner = S3Presigner.create()) {
+	//
+	// GetObjectRequest objectRequest =
+	// GetObjectRequest.builder().bucket(bucketName).key(keyName).build();
+	//
+	// GetObjectPresignRequest presignRequest = GetObjectPresignRequest.builder()
+	// .signatureDuration(Duration.ofMinutes(10)) // The URL will expire in 10
+	// // minutes.
+	// .getObjectRequest(objectRequest)
+	// .build();
+	//
+	// PresignedGetObjectRequest presignedRequest =
+	// presigner.presignGetObject(presignRequest);
+	// log.info("Presigned URL: [{}]", presignedRequest.url().toString());
+	// log.info("HTTP method: [{}]", presignedRequest.httpRequest().method());
+	//
+	// return presignedRequest.url().toExternalForm();
+	// }
+	// }
 
-			GetObjectRequest objectRequest = GetObjectRequest.builder().bucket(bucketName).key(keyName).build();
-
-			GetObjectPresignRequest presignRequest = GetObjectPresignRequest.builder()
-				.signatureDuration(Duration.ofMinutes(10)) // The URL will expire in 10
-															// minutes.
-				.getObjectRequest(objectRequest)
-				.build();
-
-			PresignedGetObjectRequest presignedRequest = presigner.presignGetObject(presignRequest);
-			log.info("Presigned URL: [{}]", presignedRequest.url().toString());
-			log.info("HTTP method: [{}]", presignedRequest.httpRequest().method());
-
-			return presignedRequest.url().toExternalForm();
-		}
-	}
-
-	public static boolean doesObjectExist(final String region, final String bucket, final String key) {
-		try {
-			final S3Client s3 = S3Client.builder().region(Region.of(region)).build();
-
-			final GetObjectAttributesResponse response = s3
-				.getObjectAttributes(GetObjectAttributesRequest.builder().bucket(bucket).key(key).build());
-		}
-		catch (NoSuchKeyException exception) {
-			log.error("No such key!!!", exception);
-			return false;
-		}
-		catch (SdkException exception) {
-			log.error("Exception while invoking S3::getObjectAttributes", exception);
-			throw new InternalServerException("Something went wrong");
-		}
-		return true;
-	}
+	// public static boolean doesObjectExist(final String region, final String bucket,
+	// final String key) {
+	// try {
+	// final S3Client s3 = S3Client.builder().region(Region.of(region)).build();
+	//
+	// final GetObjectAttributesResponse response = s3
+	// .getObjectAttributes(GetObjectAttributesRequest.builder().bucket(bucket).key(key).build());
+	// }
+	// catch (NoSuchKeyException exception) {
+	// log.error("No such key!!!", exception);
+	// return false;
+	// }
+	// catch (SdkException exception) {
+	// log.error("Exception while invoking S3::getObjectAttributes", exception);
+	// throw new InternalServerException("Something went wrong");
+	// }
+	// return true;
+	// }
 
 }

@@ -44,8 +44,4 @@ public class CabService {
 		return this.repository.findAllByDriverIdAndUserIdAndRegistrationNumber(driverId, userId, registrationNumber);
 	}
 
-	public Optional<Cab> fetchByRegistrationNumber(final String registrationNumber) {
-		return this.repository.findByRegistrationNumber(registrationNumber);
-	}
-
 }

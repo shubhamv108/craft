@@ -28,10 +28,14 @@ public class TestKafkaConsumer {
 	}
 
 	public List<Event> poll(final int count) {
-		return this.poll(count, 10);
+		return this.poll(count, 10, Event.class);
 	}
 
-	public List<Event> poll(final int count, final long timeout) {
+	public <T> List<T> poll(final int count, final Class<T> clazz) {
+		return this.poll(count, 10, clazz);
+	}
+
+	public <T> List<T> poll(final int count, final long timeout, Class<T> clazz) {
 		final Properties properties = new Properties();
 		properties.put("bootstrap.servers", "localhost:29092");
 		properties.put("group.id", "test");
@@ -43,11 +47,11 @@ public class TestKafkaConsumer {
 		properties.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
 		final KafkaConsumer consumer = new KafkaConsumer<>(properties);
 		consumer.subscribe(Arrays.asList(topic));
-		final List<Event> events = new ArrayList<>();
+		final List<T> events = new ArrayList<>();
 		while (events.size() < count) {
 			final ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(timeout));
 			for (ConsumerRecord<String, String> record : records)
-				events.add(JsonUtils.as(record.value().toString(), Event.class));
+				events.add(JsonUtils.as(record.value().toString(), clazz));
 		}
 		// consumer.commitSync();
 		consumer.unsubscribe();

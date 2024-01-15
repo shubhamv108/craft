@@ -31,6 +31,7 @@ public class OrderProductService {
 		final List<OrderProduct> orderProducts = products.stream()
 			.map(productOrder -> OrderProduct.builder()
 				.orderId(orderId)
+				.quantity(productOrder.getQuantity())
 				.status(OrderProductStatus.CREATED)
 				.productId(productOrder.getProductId())
 				.uniqueReferenceId(productOrder.getClientReferenceId())
@@ -45,8 +46,8 @@ public class OrderProductService {
 
 	public OrderProduct updateStatus(final OrderProductStatus completedStatus, final String uniqueReferenceId) {
 		final OrderProduct orderProduct = this.repository.findByUniqueReferenceId(uniqueReferenceId)
-			.orElseThrow(
-					() -> new InvalidRequestException("uniqueReferenceId", "no product with id %s found for order"));
+			.orElseThrow(() -> new InvalidRequestException("uniqueReferenceId",
+					"no product with uniqueReferenceId %s found for order", uniqueReferenceId));
 		if (OrderProductStatus.COMPLETED.name().equals(orderProduct.getStatus().name()))
 			throw new InvalidRequestException("uniqueReferenceId", "order for product already completed");
 		if (!completedStatus.name().equals(orderProduct.getStatus().name()))

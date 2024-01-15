@@ -48,8 +48,6 @@ class DriverOnboardControllerTest extends AbstractSpringBootMVCTest {
 	@Autowired
 	private DocumentRepository documentRepository;
 
-	private TestKafkaConsumer kafkaConsumer;
-
 	@PostConstruct
 	public void allSetUp() {
 		this.kafkaConsumer = new TestKafkaConsumer(this.topicName);
@@ -64,12 +62,12 @@ class DriverOnboardControllerTest extends AbstractSpringBootMVCTest {
 	public void setUp() {
 		super.setUp();
 		truncate("documents");
+		truncate("driver_onboard");
 		this.documentRepository.save(Document.builder()
 			.blobId(TestCommonConstants.BLOB_ID)
 			.owner(TestCommonConstants.USER_ID)
 			.name("test")
 			.build());
-		truncate("driver_onboard");
 		this.kafkaConsumer.purge(this.topicName);
 	}
 
@@ -105,6 +103,29 @@ class DriverOnboardControllerTest extends AbstractSpringBootMVCTest {
 							+ "        {\n" + "            \"userId\": [\n" + "                \"User with userId: "
 							+ TestCommonConstants.USER_ID + " not allowed to perform the operation\"\n"
 							+ "            ]\n" + "        }\n" + "    ]\n" + "}"));
+	}
+
+	@Test
+	void updateStatus_with_invalid_fields_in_request() throws Exception {
+		final CompleteOnboardStageRequest request = CompleteOnboardStageRequest.builder()
+			.driverOnboardId("")
+			.completedOnboardStatus("")
+			.userId("")
+			.build();
+
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
+		this.mockMvc
+			.perform(MockMvcRequestBuilders.patch(this.baseURL + "/updateStatus")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(as(request)))
+			.andExpect(status().is4xxClientError())
+			.andExpect(content().json("{\n" + "    \"statusCode\": 400,\n" + "    \"data\": null,\n"
+					+ "    \"error\": [\n" + "        {\n" + "            \"completedOnboardStatus\": [\n"
+					+ "                \"no onboarding status with name:  found\"\n" + "            ],\n"
+					+ "            \"driverOnboardId\": [\n"
+					+ "                \"driverOnboardId must not be empty.\"\n" + "            ],\n"
+					+ "            \"userId\": [\n" + "                \"userId must not be empty.\"\n"
+					+ "            ]\n" + "        }\n" + "    ]\n" + "}"));
 	}
 
 	@Test
@@ -318,14 +339,14 @@ class DriverOnboardControllerTest extends AbstractSpringBootMVCTest {
 			.userId(TestCommonConstants.USER_ID)
 			.clientReferenceId(CraftTestConstants.DRIVER_ONBOARD_CLIENT_REFERENCE_ID)
 			.build());
-		UserIDContextHolder.set(TestCommonConstants.USER_ID);
-		RoleContextHolder.set(Set.of("ADMIN"));
-
 		final CompleteOnboardStageRequest request = CompleteOnboardStageRequest.builder()
 			.driverOnboardId(created.getId())
 			.completedOnboardStatus(DriverOnboardStatus.BACKGROUND_VERIFICATION.name())
 			.userId(TestCommonConstants.USER_ID)
 			.build();
+
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
+		RoleContextHolder.set(Set.of("ADMIN"));
 		this.mockMvc
 			.perform(MockMvcRequestBuilders.patch(this.baseURL + "/updateStatus")
 				.contentType(MediaType.APPLICATION_JSON)
@@ -338,11 +359,12 @@ class DriverOnboardControllerTest extends AbstractSpringBootMVCTest {
 					+ "\n" + "    },\n" + "    \"error\": null\n" + "}"));
 
 		final var updated = this.repository.findByDriverId(CraftTestConstants.DRIVER_ID);
+		final Event event = this.kafkaConsumer.poll(1).get(0);
+
 		Assertions.assertTrue(updated.isPresent());
 		Assertions.assertEquals(DriverOnboardStatus.SHIPPING_OF_TRACKING_DEVICE.name(),
 				updated.get().getStatus().name());
 
-		final Event event = this.kafkaConsumer.poll(1).get(0);
 		Assertions.assertEquals(event.getUserId(), TestCommonConstants.USER_ID);
 		Assertions.assertNotNull(event.getCreatedAt());
 		Assertions.assertNotNull(event.getCorrelationId());

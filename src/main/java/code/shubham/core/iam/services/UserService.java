@@ -28,16 +28,11 @@ public class UserService implements IUserService {
 
 	@Override
 	public GetUserResponse getOrCreate(final GetOrCreateUser.Request request) {
-		final Optional<User> existing = this.repository.findByEmail(request.getEmail());
-
-		User persisted = null;
-		if (existing.isPresent())
-			persisted = existing.get();
-		else
-			persisted = this.create(User.builder().name(request.getName()).email(request.getEmail()).build());
+		final User user = this.repository.findByEmail(request.getEmail())
+			.orElseGet(() -> this.create(User.builder().name(request.getName()).email(request.getEmail()).build()));
 		return GetUserResponse.builder()
-			.user(new UserDTO(persisted.getId(), persisted.getEmail()))
-			.roles(this.userRoleService.getAllRoles(persisted.getId()))
+			.user(new UserDTO(user.getId(), user.getEmail()))
+			.roles(this.userRoleService.getAllRoles(user.getId()))
 			.build();
 	}
 
@@ -45,16 +40,6 @@ public class UserService implements IUserService {
 		final User persisted = this.repository.save(user);
 		this.userRoleService.setRoleToUser("USER", user.getId());
 		return persisted;
-	}
-
-	@Override
-	public GetUserResponse getById(final String userId) {
-		return this.repository.findById(userId)
-			.map(user -> GetUserResponse.builder()
-				.user(new UserDTO(userId, user.getEmail()))
-				.roles(this.userRoleService.getAllRoles(userId))
-				.build())
-			.orElse(null);
 	}
 
 }

@@ -5,11 +5,14 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 public class GetOrCreateUser {
 
 	@Builder
-	@Data
+	@Getter
+	@Setter
 	public static class Request {
 
 		@NotEmpty

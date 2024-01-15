@@ -48,8 +48,6 @@ class DriverControllerTest extends AbstractSpringBootMVCTest {
 	@Autowired
 	private CabRepository cabRepository;
 
-	private TestKafkaConsumer kafkaConsumer;
-
 	private String registrationNumber;
 
 	private String color;

@@ -1,17 +1,18 @@
 package code.shubham.commons.validators;
 
-public interface IValidator<OBJECT> {
+import java.util.Collection;
+import java.util.Map;
 
-	String IS_EMPTY = "%s is empty.";
+public interface IValidator<OBJECT> {
 
 	String MUST_NOT_BE_EMPTY = "%s must not be empty.";
 
-	code.shubham.commons.validators.IValidator<OBJECT> validate(OBJECT object);
+	IValidator<OBJECT> validate(OBJECT object);
 
-	code.shubham.commons.validators.IValidator<OBJECT> validateOrThrowException(OBJECT object);
+	IValidator<OBJECT> validateOrThrowException(OBJECT object);
 
 	boolean hasMessages();
 
-	java.util.Map<String, java.util.Collection<String>> getResult();
+	Map<String, Collection<String>> getResult();
 
 }

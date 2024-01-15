@@ -84,6 +84,29 @@ class ShipmentControllerTest extends AbstractSpringBootMVCTest {
 	}
 
 	@Test
+	void updateStatus_with_invalid_fields_in_request() throws Exception {
+		final UpdateShipmentStatusRequest request = UpdateShipmentStatusRequest.builder()
+			.completedStatus("")
+			.uniqueReferenceId("")
+			.build();
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
+		RoleContextHolder.set(Set.of("ADMIN"));
+		this.mockMvc
+			.perform(MockMvcRequestBuilders.patch(this.baseURL + "/updateStatus")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(as(request)))
+			.andExpect(status().is4xxClientError())
+			.andExpect(content().json("{\n" + "    \"statusCode\": 400,\n" + "    \"data\": null,\n"
+					+ "    \"error\": [\n" + "        {\n" + "            \"uniqueReferenceId\": [\n"
+					+ "                \"uniqueReferenceId must not be empty.\"\n" + "            ],\n"
+					+ "            \"completedStatus\": [\n"
+					+ "                \"completedStatus must not be empty.\",\n"
+					+ "                \"invalid value for completedStatus: \"\n" + "            ]\n" + "        }\n"
+					+ "    ]\n" + "}"));
+
+	}
+
+	@Test
 	void updateStatus_without_existing_shipment() throws Exception {
 		final UpdateShipmentStatusRequest request = UpdateShipmentStatusRequest.builder()
 			.completedStatus(ShipmentStatus.PREPARE_TO_DISPATCH.name())

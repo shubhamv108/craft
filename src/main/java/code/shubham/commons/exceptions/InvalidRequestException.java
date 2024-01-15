@@ -78,6 +78,7 @@ public class InvalidRequestException extends ClientException {
 
 	@Override
 	public String toString() {
+		this.getOriginalErrors();
 		StringBuilder builder = new StringBuilder("[\n");
 		this.errorMessagesList.stream().map(errorMessagesMap -> {
 			StringBuilder mapBBuilder = new StringBuilder("{\n");

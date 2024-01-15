@@ -68,7 +68,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"drivingLicenseName\": \"Shubham\",\n    \"drivingLicense\": \"asdsadadsad9087\",\n    \"cab\": {\n        \"registrationNumber\": \"up32jx9749\",\n        \"color\": \"marsh grey\"\n    }\n}",
+					"raw": "{\n    \"drivingLicenseName\": \"Shubham\",\n    \"drivingLicense\": \"asdsadadsad987\",\n    \"cab\": {\n        \"registrationNumber\": \"up32jx9749\",\n        \"color\": \"marsh grey\"\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -99,56 +99,11 @@
 			},
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -194,56 +149,11 @@
 			},
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -275,56 +185,11 @@
 			"name": "[POST] Document-Save",
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -360,56 +225,11 @@
 			"name": "[GET] DriverOnboard-GetAllByDriverId",
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -448,56 +268,11 @@
 			"name": "[PATCH] DriverOnboard-UpdateStatus",
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -535,56 +310,11 @@
 			"name": "[PUT] UserProfile-Update",
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -625,56 +355,11 @@
 			},
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -800,56 +485,11 @@
 			"name": "[PATCH] BackgroundVerification-UpdateStattus",
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "useBrowser",
-							"value": false,
-							"type": "boolean"
-						},
-						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{adminToken}}",
 							"type": "string"
 						}
 					]
@@ -886,56 +526,11 @@
 			"name": "[GET] Order-GetAll",
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -968,56 +563,11 @@
 			"name": "[GET] OrderProduct-GetByOrderID",
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -1025,7 +575,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/orders/v1/{{orderId}}/products?userId={{userId}}",
+					"raw": "http://localhost:8080/api/v1/orders/{{orderId}}/products?userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1033,8 +583,8 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"orders",
 						"v1",
+						"orders",
 						"{{orderId}}",
 						"products"
 					],
@@ -1052,56 +602,11 @@
 			"name": "[PATCH] Shipment-UpdateStatus",
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "useBrowser",
-							"value": false,
-							"type": "boolean"
-						},
-						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{adminToken}}",
 							"type": "string"
 						}
 					]
@@ -1110,7 +615,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"completedStatus\": \"ENROUTE\",\n    \"uniqueReferenceId\": \"{{orderProductReferenceId}}\"\n}",
+					"raw": "{\n    \"completedStatus\": \"PREPARE_TO_DISPATCH\",\n    \"uniqueReferenceId\": \"{{orderProductReferenceId}}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1138,56 +643,11 @@
 			"name": "[GET] Cab-GetAllByDriverUser",
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -1195,7 +655,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://{{ip}}:{{port}}/api/cabs/v1?driverId={{driverId}}&userId={{userId}}",
+					"raw": "http://{{ip}}:{{port}}/api/v1/drivers/{{driverId}}/cabs?userId={{userId}}",
 					"protocol": "http",
 					"host": [
 						"{{ip}}"
@@ -1203,14 +663,12 @@
 					"port": "{{port}}",
 					"path": [
 						"api",
-						"cabs",
-						"v1"
+						"v1",
+						"drivers",
+						"{{driverId}}",
+						"cabs"
 					],
 					"query": [
-						{
-							"key": "driverId",
-							"value": "{{driverId}}"
-						},
 						{
 							"key": "userId",
 							"value": "{{userId}}"
@@ -1224,56 +682,11 @@
 			"name": "[PATCH] Driver-MarkAvailableForRide",
 			"request": {
 				"auth": {
-					"type": "oauth2",
-					"oauth2": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "accessTokenUrl",
-							"value": "https://oauth2.googleapis.com/token",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Googlw OAuth2",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://accounts.google.com/o/oauth2/auth",
-							"type": "string"
-						},
-						{
-							"key": "scope",
-							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
-							"type": "string"
-						},
-						{
-							"key": "grant_type",
-							"value": "authorization_code",
-							"type": "string"
-						},
-						{
-							"key": "redirect_uri",
-							"value": "https://oauth.pstmn.io/v1/callback",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "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",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "809236032393-ms8jl2qt0v6uu0gakv0339ekoq5iva26.apps.googleusercontent.com",
+							"key": "token",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]

@@ -3,9 +3,7 @@ package code.shubham.craft.driver.cab.web.v1.controllers;
 import code.shubham.commons.exceptions.InvalidRequestException;
 import code.shubham.commons.utils.ResponseUtils;
 import code.shubham.commons.utils.Utils;
-import code.shubham.craft.driver.cabmodels.RegisterCabRequest;
 import code.shubham.craft.driver.cab.services.CabService;
-import code.shubham.craft.driver.cab.web.v1.validation.RegisterCabRequestValidator;
 import code.shubham.craft.driver.service.DriverService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -15,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/cabs/v1")
+@RequestMapping("/v1/drivers/{driverId}/cabs")
 @SecurityRequirement(name = "BearerAuth")
 @Tag(name = "Cab")
 public class CabController {
@@ -30,15 +28,8 @@ public class CabController {
 		this.driverService = driverService;
 	}
 
-	@PostMapping("/register")
-	public ResponseEntity<?> register(@RequestBody final RegisterCabRequest request) {
-		new RegisterCabRequestValidator().validateOrThrowException(request);
-		this.validateDriver(request.getDriverId(), request.getUserId());
-		return ResponseUtils.getDataResponseEntity(HttpStatus.CREATED, this.service.add(request));
-	}
-
 	@GetMapping
-	public ResponseEntity<?> getAll(@RequestParam("driverId") final String driverId,
+	public ResponseEntity<?> getAll(@PathVariable("driverId") final String driverId,
 			@RequestParam("userId") final String userId) {
 		this.validateDriver(driverId, userId);
 		return ResponseUtils.getDataResponseEntity(HttpStatus.FOUND,

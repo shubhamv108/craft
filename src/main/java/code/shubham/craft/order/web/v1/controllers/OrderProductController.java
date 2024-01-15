@@ -19,7 +19,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/orders/v1/{orderId}/products")
+@RequestMapping("/v1/orders/{orderId}/products")
 @SecurityRequirement(name = "BearerAuth")
 @Tag(name = "Order Product")
 @ConditionalOnProperty(prefix = "service", name = "module", havingValue = "web")
