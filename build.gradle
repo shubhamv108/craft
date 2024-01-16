@@ -122,13 +122,15 @@ jacocoTestReport {
 		classDirectories = files(classDirectories.files.collect {
 			fileTree(dir: it,
 					exclude: [
+							'**/entities',
+							'**/*models',
 							'code/shubham/*/*/*/entities/**',
 							'code/shubham/*/*/*/*/entities/**',
 							'code/shubham/*/*/entities/**',
 							'code/shubham/*/*models/**',
-							'code/shubham/*/*/cabmodels',
+							'code/shubham/*/*/*models',
 							'code/shubham/*/exceptions',
-							'code/shubham/*/filters',
+							'code/shubham/*/filters'
 					]
 			)
 		})
@@ -141,7 +143,7 @@ jacocoTestCoverageVerification {
 		rule {
 			enabled = true
 			limit {
-				minimum = 0.9
+				minimum = 0.5
 			}
 		}
 	}

@@ -39,8 +39,7 @@ public class BackgroundVerificationController {
 
 	@GetMapping("/all")
 	public ResponseEntity<?> getAll(@RequestParam final String userId) {
-		Utils.validateUserOrThrowException(userId);
-		return ResponseUtils.getDataResponseEntity(HttpStatus.OK, this.service.fetchAllByUserId(userId));
+		return ResponseUtils.getDataResponseEntity(HttpStatus.FOUND, this.service.fetchAllByUserId(userId));
 	}
 
 }

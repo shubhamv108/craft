@@ -6,10 +6,7 @@ import code.shubham.commons.contexts.UserIDContextHolder;
 import code.shubham.core.userprofile.dao.entities.UserProfile;
 import code.shubham.core.userprofile.dao.repositories.UserProfileRepository;
 import code.shubham.core.userprofilemodels.UpdateUserProfileRequest;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -34,6 +31,22 @@ class UserProfileControllerTest extends AbstractSpringBootMVCTest {
 	@AfterEach
 	void tearDown() {
 		truncate("user_profiles");
+	}
+
+	@Test
+	void update_with_invalid_params_request() throws Exception {
+		final UpdateUserProfileRequest request = new UpdateUserProfileRequest();
+		request.setAddress("");
+
+		this.mockMvc
+			.perform(MockMvcRequestBuilders.put(this.baseURL + "/update")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(as(request)))
+			.andExpect(status().is(400))
+			.andExpect(content().json("{\n" + "    \"statusCode\": 400,\n" + "    \"data\": null,\n"
+					+ "    \"error\": [\n" + "        {\n" + "            \"address\": [\n"
+					+ "                \"address must not be empty.\"\n" + "            ]\n" + "        }\n" + "    ]\n"
+					+ "}"));
 	}
 
 	@Test

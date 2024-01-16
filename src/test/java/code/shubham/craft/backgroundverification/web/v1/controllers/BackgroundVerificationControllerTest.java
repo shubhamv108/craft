@@ -4,6 +4,7 @@ import code.shubham.commons.AbstractSpringBootMVCTest;
 import code.shubham.commons.TestCommonConstants;
 import code.shubham.commons.TestKafkaConsumer;
 import code.shubham.commons.contexts.RoleContextHolder;
+import code.shubham.commons.contexts.UserIDContextHolder;
 import code.shubham.commons.models.Event;
 import code.shubham.commons.utils.JsonUtils;
 import code.shubham.craft.CraftTestConstants;
@@ -13,6 +14,8 @@ import code.shubham.craft.backgroundverification.dao.repositories.BackgroundVeri
 import code.shubham.craft.backgroundverificatonmodels.UpdateBackgroundVerificationStatusRequest;
 import code.shubham.craft.constants.EventName;
 import code.shubham.craft.constants.EventType;
+import code.shubham.craft.driveronboard.dao.entities.DriverOnboard;
+import code.shubham.craft.driveronboard.dao.entities.DriverOnboardStatus;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.junit.jupiter.api.*;
@@ -177,6 +180,41 @@ class BackgroundVerificationControllerTest extends AbstractSpringBootMVCTest {
 		BackgroundVerification backgroundVerificationFromEvent = JsonUtils.as(event.getData(),
 				BackgroundVerification.class);
 		Assertions.assertEquals(backgroundVerificationFromEvent.getStatus().name(), updated.get().getStatus().name());
+	}
+
+	@Test
+	void get_without_userId_request_param() throws Exception {
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
+		this.mockMvc.perform(MockMvcRequestBuilders.get(this.baseURL + "/all").contentType(MediaType.APPLICATION_JSON))
+			.andExpect(status().is(400))
+			.andExpect(content().json("{\n" + "    \"type\": \"about:blank\",\n" + "    \"title\": \"Bad Request\",\n"
+					+ "    \"status\": 400,\n" + "    \"detail\": \"Required parameter 'userId' is not present.\",\n"
+					+ "    \"instance\": \"/v1/backgroundVerification/all\"\n" + "}"));
+	}
+
+	@Test
+	void get_all_Success() throws Exception {
+		UserIDContextHolder.set(TestCommonConstants.USER_ID);
+		RoleContextHolder.set(Set.of("ADMIN"));
+		this.repository.save(BackgroundVerification.builder()
+			.status(BackgroundVerificationStatus.COMPLETED)
+			.userId(TestCommonConstants.USER_ID)
+			.applicantId(CraftTestConstants.DRIVER_ID)
+			.applicantType(CraftTestConstants.APPLICANT_TYPE_DRIVER)
+			.clientReferenceId(CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID)
+			.build());
+		this.mockMvc
+			.perform(MockMvcRequestBuilders.get(this.baseURL + "/all")
+				.param("userId", TestCommonConstants.USER_ID)
+				.contentType(MediaType.APPLICATION_JSON))
+			.andExpect(status().is(302))
+			.andExpect(content().json("{\n" + "    \"statusCode\": 302,\n" + "    \"data\": [\n" + "        {\n"
+					+ "            \"applicantId\": \"" + CraftTestConstants.DRIVER_ID + "\",\n"
+					+ "            \"applicantType\": \"DRIVER\",\n" + "            \"status\": \"COMPLETED\",\n"
+					+ "            \"userId\": \"" + TestCommonConstants.USER_ID + "\",\n"
+					+ "            \"clientReferenceId\": \""
+					+ CraftTestConstants.BACKGROUND_VERIFICATION_CLIENT_REFERENCE_ID + "\"\n" + "        }\n"
+					+ "    ],\n" + "    \"error\": null\n" + "}"));
 	}
 
 }
