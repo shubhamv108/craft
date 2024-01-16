@@ -33,7 +33,7 @@ Instructions to the Candidate:
       make local-app
 
 
-# [API Documentation](http://localhost:8080/craft/swagger-ui/index.html#/)
+# [API Documentation](http://localhost:8080/api/swagger-ui/index.html#/)
 
 
 # Tech Stack
@@ -95,7 +95,7 @@ Instructions to the Candidate:
    - Spring Boot
 
 #### Circuit Breaker
-   - Resilience4j
+   - Hystrix
 
 #### Event Sourcing
    - Eventuate (exploring)
