@@ -5,8 +5,6 @@ import code.shubham.commons.contexts.UserIDContextHolder;
 import code.shubham.commons.exceptions.SentryCaptureException;
 import code.shubham.commons.kafka.KafkaPublisher;
 import code.shubham.commons.models.Event;
-import code.shubham.commons.models.Label;
-import code.shubham.commons.models.MetricEvent;
 import code.shubham.commons.utils.JsonUtils;
 import code.shubham.commons.utils.MetricsLogger;
 import io.sentry.Sentry;
@@ -21,12 +19,6 @@ import java.util.Set;
 
 @Slf4j
 public abstract class AbstractWorker {
-
-	@Value("${service.name}")
-	private String serviceName;
-
-	@Value("${service.module}")
-	private String serviceModule;
 
 	@Autowired
 	protected ApplicationContext applicationContext;

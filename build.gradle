@@ -60,22 +60,28 @@ dependencies {
 	)
 	implementation(
 		'org.springframework.boot:spring-boot-starter-actuator',
+
 		'org.springframework.boot:spring-boot-starter-log4j2',
 		'com.lmax:disruptor:3.3.6',
+
 		'io.sentry:sentry-spring-boot-starter-jakarta:6.28.0',
-		'com.google.code.gson:gson:2.8.9',
 		'org.springframework.boot:spring-boot-starter-data-jpa',
 		'org.flywaydb:flyway-core',
 		'org.flywaydb:flyway-mysql',
+
+		'com.google.code.gson:gson:2.8.9',
 		'org.springframework.boot:spring-boot-starter-web',
-		'org.springframework.kafka:spring-kafka',
+		'org.springframework.boot:spring-boot-starter-validation',
+		'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0',
 
 		'org.springframework.boot:spring-boot-starter-oauth2-resource-server',
 		'org.springframework.boot:spring-boot-starter-security',
-		'software.amazon.awssdk:s3:2.22.1',
+
 		'org.apache.commons:commons-lang3:3.14.0',
-		'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0',
-		'org.springframework.boot:spring-boot-starter-validation',
+
+		'org.springframework.kafka:spring-kafka',
+
+		'software.amazon.awssdk:s3:2.22.1',
 	)
 	runtimeOnly (
 		'com.mysql:mysql-connector-j',

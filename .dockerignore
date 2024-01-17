@@ -12,5 +12,5 @@ scripts/
 
 .github/
 
-/log
-/logs
+log/
+logs/

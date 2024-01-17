@@ -1,9 +1,9 @@
 package code.shubham.commons.kafka;
 
-import code.shubham.commons.AbstractSpringBootTest;
-import code.shubham.commons.TestKafkaConsumer;
+import code.shubham.commons.CommonTestEventUtils;
+import code.shubham.test.AbstractSpringBootTest;
+import code.shubham.test.TestKafkaConsumer;
 import code.shubham.commons.models.Event;
-import code.shubham.craft.TestEventUtils;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.junit.jupiter.api.AfterEach;
@@ -12,8 +12,6 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.TestPropertySource;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -49,7 +47,7 @@ class KafkaPublisherTest extends AbstractSpringBootTest {
 	@Disabled
 	@Test
 	void test_send() {
-		final Event event = TestEventUtils.getEmptyEvent();
+		final Event event = CommonTestEventUtils.getEmptyEvent();
 
 		this.publisher.send(event);
 

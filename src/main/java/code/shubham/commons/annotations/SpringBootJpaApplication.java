@@ -14,7 +14,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @SpringBootApplication
 @ComponentScan("code.shubham")
-@EnableJpaAuditing(auditorAwareRef = "auditorProvider")
 public @interface SpringBootJpaApplication {
 
 }

@@ -87,8 +87,11 @@ run-test:
 
 migrations:
 
+checkformat:
+	sudo ./gradlew checkformat
+
 format:
-	./gradlew format
+	sudo ./gradlew format
 
 install: setup
 
@@ -118,12 +121,6 @@ run-local: build-local
 
 run: build
 	docker run -p 8080:8080 shubham01/craft:latest --network="host"
-
-k8s-apply:
-	$(call k8s-apply)
-
-k8s-delete-app:
-	$(call k8s-delete-app)
 
 del-local-app:
 	$(call del-local-app)

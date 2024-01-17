@@ -1,6 +1,6 @@
 package code.shubham.core.userprofile.web.v1.controllers;
 
-import code.shubham.commons.AbstractSpringBootMVCTest;
+import code.shubham.test.AbstractSpringBootMVCTest;
 import code.shubham.commons.TestCommonConstants;
 import code.shubham.commons.contexts.UserIDContextHolder;
 import code.shubham.core.userprofile.dao.entities.UserProfile;

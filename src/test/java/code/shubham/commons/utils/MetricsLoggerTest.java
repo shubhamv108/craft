@@ -1,15 +1,13 @@
 package code.shubham.commons.utils;
 
-import code.shubham.commons.AbstractSpringBootTest;
+import code.shubham.commons.CommonTestEventUtils;
+import code.shubham.test.AbstractSpringBootTest;
 import code.shubham.commons.workers.AbstractWorker;
-import code.shubham.craft.TestEventUtils;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mock.web.MockHttpServletRequest;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MetricsLoggerTest extends AbstractSpringBootTest {
 
@@ -30,7 +28,7 @@ class MetricsLoggerTest extends AbstractSpringBootTest {
 
 	@Test
 	void test_Log_event() {
-		this.metricsLogger.log(TestEventUtils.getEmptyEvent(), System.currentTimeMillis(), AbstractWorker.class);
+		this.metricsLogger.log(CommonTestEventUtils.getEmptyEvent(), System.currentTimeMillis(), AbstractWorker.class);
 
 		final String output = outContent.toString();
 		assertTrue(output.contains(

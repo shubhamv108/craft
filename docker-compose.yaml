@@ -23,7 +23,6 @@ services:
     depends_on:
       - db
       - kafka
-      - fluentbit
 
     logging:
       driver: fluentd
@@ -66,7 +65,6 @@ services:
     depends_on:
       - db
       - kafka
-      - fluentbit
 
     logging:
       driver: fluentd

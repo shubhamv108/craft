@@ -1,6 +1,6 @@
 package code.shubham.core.iam.services;
 
-import code.shubham.commons.AbstractSpringBootTest;
+import code.shubham.test.AbstractSpringBootTest;
 import code.shubham.commons.TestCommonConstants;
 import code.shubham.core.iam.dao.repositories.UserRepository;
 import code.shubham.core.iam.dao.repositories.UserRoleRepository;
@@ -9,9 +9,6 @@ import code.shubham.core.iammodels.GetUserResponse;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class UserServiceTest extends AbstractSpringBootTest {
 

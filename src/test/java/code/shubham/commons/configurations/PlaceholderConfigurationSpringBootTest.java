@@ -1,6 +1,6 @@
 package code.shubham.commons.configurations;
 
-import code.shubham.commons.AbstractSpringBootTest;
+import code.shubham.test.AbstractSpringBootTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
