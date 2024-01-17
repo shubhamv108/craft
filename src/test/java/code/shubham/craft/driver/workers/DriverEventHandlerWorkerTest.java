@@ -36,8 +36,8 @@ public class DriverEventHandlerWorkerTest extends AbstractTest {
 		final Event event = TestEventUtils.getDriverOnboardStatusUpdatedEvent(onboard);
 
 		this.worker.process(event);
-		String output = outContent.toString();
 
+		final String output = outContent.toString();
 		assertTrue(output.endsWith(String.format("[SKIP] Event: %s\n", event)));
 	}
 

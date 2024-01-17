@@ -2,7 +2,7 @@ SHELL := /bin/bash
 OS := $(shell uname)
 
 define start-services
-	@docker compose -f docker-compose.yaml up --force-recreate -d --remove-orphans sonar db kafka kafdrop sonar-db sonar fluentbit cloudwatch-agent
+	@docker compose -f docker-compose.yaml up --force-recreate -d --remove-orphans sonar db kafka kafdrop sonar-db sonar fluentbit
 endef
 
 define start-check

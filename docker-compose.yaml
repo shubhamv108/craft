@@ -28,9 +28,9 @@ services:
     logging:
       driver: fluentd
       options:
-        fluentd-address: "fluentbit:24224"
+        fluentd-address: "localhost:24224"
         fluentd-async-connect: "true"
-        tag: 'containerssh.{{.ID}}'
+        tag: 'web-containerssh.{{.ID}}'
 
     environment:
       - SLEEP_LENGTH=5
@@ -71,9 +71,9 @@ services:
     logging:
       driver: fluentd
       options:
-        fluentd-address: "fluentbit:24224"
+        fluentd-address: "localhost:24224"
         fluentd-async-connect: "true"
-        tag: 'containerssh.{{.ID}}'
+        tag: 'worker-containerssh.{{.ID}}'
 
     environment:
       - SLEEP_LENGTH=5
@@ -144,6 +144,29 @@ services:
     ports:
       - '3306:3306'
 
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: "localhost:24224"
+        fluentd-async-connect: "true"
+        tag: 'db-containerssh.{{.ID}}'
+
+  fluentbit:
+    image: 'shubham01/fluentbit:latest'
+    container_name: fluentbit
+    hostname: fluentbit
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    volumes:
+      - ./fluentbit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+      #      - ./fluentbit/parsers.conf:/fluent-bit/etc/parsers.conf
+      - ./log/:/etc/data
+    environment:
+      - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+      - AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
+
   zookeeper:
     container_name: zookeeper
     image: confluentinc/cp-zookeeper:latest
@@ -152,6 +175,13 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
     ports:
       - 22181:2181
+
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: "localhost:24224"
+        fluentd-async-connect: "true"
+        tag: 'zookeeper-containerssh.{{.ID}}'
 
   kafka:
     container_name: kafka
@@ -169,6 +199,13 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: "localhost:24224"
+        fluentd-async-connect: "true"
+        tag: 'kafka-containerssh.{{.ID}}'
+
   kafdrop:
     container_name: kafdrop
     image: obsidiandynamics/kafdrop
@@ -181,29 +218,12 @@ services:
     depends_on:
       - "kafka"
 
-  fluentbit:
-    image: 'shubham01/fluentbit:latest'
-    container_name: fluentbit
-    hostname: fluentbit
-    ports:
-      - "24224:24224"
-      - "24224:24224/udp"
-    volumes:
-      - ./fluentbit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
-#      - ./fluentbit/parsers.conf:/fluent-bit/etc/parsers.conf
-      - ./log/:/etc/data
-    environment:
-      - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-      - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-      - AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
-
-  cloudwatch-agent:
-    container_name: cloudwatch-agent
-    image: amazon/cloudwatch-agent
-    environment:
-      - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-      - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-      - AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: "localhost:24224"
+        fluentd-async-connect: "true"
+        tag: 'kafdrop-containerssh.{{.ID}}'
 
 volumes:
   grafana_data: { }

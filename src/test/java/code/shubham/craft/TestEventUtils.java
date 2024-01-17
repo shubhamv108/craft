@@ -102,7 +102,7 @@ public class TestEventUtils {
 	}
 
 	public static Event getEmptyEvent() {
-		return Event.builder().eventName("empty").build();
+		return Event.builder().eventName("name").eventType("type").build();
 	}
 
 	public static Event getCreateOrderCommandEvent() {

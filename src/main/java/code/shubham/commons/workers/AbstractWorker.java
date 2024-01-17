@@ -5,11 +5,15 @@ import code.shubham.commons.contexts.UserIDContextHolder;
 import code.shubham.commons.exceptions.SentryCaptureException;
 import code.shubham.commons.kafka.KafkaPublisher;
 import code.shubham.commons.models.Event;
+import code.shubham.commons.models.Label;
+import code.shubham.commons.models.MetricEvent;
 import code.shubham.commons.utils.JsonUtils;
+import code.shubham.commons.utils.MetricsLogger;
 import io.sentry.Sentry;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.kafka.support.Acknowledgment;
 
@@ -18,17 +22,27 @@ import java.util.Set;
 @Slf4j
 public abstract class AbstractWorker {
 
+	@Value("${service.name}")
+	private String serviceName;
+
+	@Value("${service.module}")
+	private String serviceModule;
+
 	@Autowired
 	protected ApplicationContext applicationContext;
 
 	@Autowired
 	protected KafkaPublisher kafkaPublisher;
 
+	@Autowired
+	protected MetricsLogger metricsLogger;
+
 	protected abstract void process(final Event event);
 
 	public void work(final ConsumerRecord<?, ?> consumerRecord, final Acknowledgment acknowledgment) {
 		String data = null;
 		Event event = null;
+		final Long requestStartTimestamp = System.currentTimeMillis();
 		try {
 			data = consumerRecord.value().toString();
 			event = JsonUtils.as(data, Event.class);
@@ -55,6 +69,7 @@ public abstract class AbstractWorker {
 		finally {
 			log.info(String.format("[COMPLETED]: Processing event %s", event));
 			acknowledgment.acknowledge();
+			this.metricsLogger.log(event, requestStartTimestamp, this.getClass());
 			CorrelationIDContext.clear();
 			UserIDContextHolder.clear();
 		}

@@ -20,6 +20,7 @@ public class InvalidRequestException extends ClientException {
 		this(null);
 	}
 
+	@SuppressWarnings("unchecked")
 	public InvalidRequestException(String key, String message, String... args) {
 		this(null);
 		this.errorMessages.put(key, new ArrayList<>(Arrays.asList(String.format(message, args))));

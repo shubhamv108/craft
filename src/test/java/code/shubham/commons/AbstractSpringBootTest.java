@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.Set;
 
 @SpringBootTest(classes = CraftApplication.class)
-public abstract class AbstractSpringBootTest {
+public abstract class AbstractSpringBootTest extends AbstractTest {
 
 	protected TestKafkaConsumer kafkaConsumer;
 
@@ -21,6 +21,7 @@ public abstract class AbstractSpringBootTest {
 	private EntityManagerRepository entityManagerRepository;
 
 	protected void setUp() {
+		super.setUp();
 		RoleContextHolder.set(Set.of());
 		UserIDContextHolder.set(null);
 	}

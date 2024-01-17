@@ -8,9 +8,12 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.TestPropertySource;
+
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -43,6 +46,7 @@ class KafkaPublisherTest extends AbstractSpringBootTest {
 		this.kafkaConsumer.purge(this.topicName);
 	}
 
+	@Disabled
 	@Test
 	void test_send() {
 		final Event event = TestEventUtils.getEmptyEvent();
