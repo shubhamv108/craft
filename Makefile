@@ -2,7 +2,7 @@ SHELL := /bin/bash
 OS := $(shell uname)
 
 define start-services
-	@docker compose -f docker-compose.yaml up --force-recreate -d --remove-orphans sonar db kafka kafdrop sonar-db sonar fluentbit
+	@docker compose -f docker-compose.yaml up --force-recreate -d --remove-orphans sonar db kafka kafdrop sonar-db sonar fluentbit prometheus grafana
 endef
 
 define start-check
@@ -97,6 +97,9 @@ clean:
 	./gradlew clean
 
 build-local: clean
+	./gradlew build -x test
+
+build-local-test: clean
 	./gradlew build
 
 rm-images: clean

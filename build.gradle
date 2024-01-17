@@ -69,11 +69,9 @@ dependencies {
 		'org.flywaydb:flyway-mysql',
 		'org.springframework.boot:spring-boot-starter-web',
 		'org.springframework.kafka:spring-kafka',
-//		'org.springframework.boot:spring-boot-starter-websocket',
 
 		'org.springframework.boot:spring-boot-starter-oauth2-resource-server',
 		'org.springframework.boot:spring-boot-starter-security',
-//		'org.springframework.boot:spring-boot-starter-thymeleaf',
 		'software.amazon.awssdk:s3:2.22.1',
 		'org.apache.commons:commons-lang3:3.14.0',
 		'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0',
@@ -84,7 +82,6 @@ dependencies {
 		'io.micrometer:micrometer-registry-prometheus',
 	)
 	testImplementation (
-		'io.rest-assured:rest-assured:5.4.0',
 		'org.springframework.boot:spring-boot-starter-test',
 		'org.springframework.security:spring-security-test',
 
@@ -99,8 +96,6 @@ hibernate {
 }
 
 tasks.withType(io.spring.javaformat.gradle.tasks.CheckFormat) {
-	exclude "code/shubham/*/*/dao/entities/*.class"
-	exclude "code/shubham/*/*models/*.class"
 }
 
 tasks.named('test') {

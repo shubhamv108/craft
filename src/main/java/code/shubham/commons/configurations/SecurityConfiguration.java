@@ -21,7 +21,7 @@ public class SecurityConfiguration {
 				.requestMatchers("/*/api-docs", "/api-docs", "/v2/api-docs", "/v3/api-docs", "/v3/api-docs/**",
 						"/swagger-resources", "/swagger-resources/**", "/configuration/ui", "/configuration/security",
 						"/swagger-ui/**", "/craft/swagger-ui/**", "/webjars/**", "/swagger-ui.html",
-						"/*/api-docs/swagger-config", "/api-docs/swagger-config", "/internal/**", "*/actuator/**")
+						"/*/api-docs/swagger-config", "/api-docs/swagger-config", "/internal/**", "/actuator/**")
 				.permitAll())
 			.authorizeHttpRequests(a -> a.requestMatchers("/**").fullyAuthenticated())
 			.sessionManagement(a -> a.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

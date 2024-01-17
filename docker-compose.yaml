@@ -217,13 +217,53 @@ services:
       JVM_OPTS: "-Xms16M -Xmx48M -Xss256K -XX:-TieredCompilation -XX:+UseStringDeduplication -noverify"
     depends_on:
       - "kafka"
-
     logging:
       driver: fluentd
       options:
         fluentd-address: "localhost:24224"
         fluentd-async-connect: "true"
         tag: 'kafdrop-containerssh.{{.ID}}'
+
+  prometheus:
+    image: prom/prometheus:v2.44.0
+    container_name: prometheus
+    restart: always
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: "localhost:24224"
+        fluentd-async-connect: "true"
+        tag: 'prometheus-containerssh.{{.ID}}'
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: always
+    ports:
+      - '3000:3000'
+    depends_on:
+      - prometheus
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_INSTALL_PLUGINS=
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: "localhost:24224"
+        fluentd-async-connect: "true"
+        tag: 'prometheus-containerssh.{{.ID}}'
 
 volumes:
   grafana_data: { }

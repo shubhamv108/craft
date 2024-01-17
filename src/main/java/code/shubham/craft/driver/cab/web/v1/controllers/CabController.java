@@ -8,6 +8,7 @@ import code.shubham.craft.driver.service.DriverService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/v1/drivers/{driverId}/cabs")
 @SecurityRequirement(name = "BearerAuth")
 @Tag(name = "Cab")
+@ConditionalOnProperty(prefix = "service", name = "module", havingValue = "web")
 public class CabController {
 
 	private final CabService service;
