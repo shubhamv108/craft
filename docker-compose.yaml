@@ -134,6 +134,7 @@ services:
   db:
     image: 'mysql:latest'
     container_name: db
+    command: --slow-query-log=on --slow-query-log-file=/var/log/mysql/slow.log
     environment:
       - 'MYSQL_DATABASE=craft'
       - 'MYSQL_PASSWORD=root1234'
