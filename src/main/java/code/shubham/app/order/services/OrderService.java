@@ -54,7 +54,7 @@ public class OrderService {
 		return this.repository.findAllByUserId(userId);
 	}
 
-	@Transactional(rollbackFor = Exception.class)
+	@Transactional
 	public Order create(final CreateOrderCommand command) {
 		final Order order = Order.builder()
 			.userId(command.getUserId())
@@ -64,7 +64,8 @@ public class OrderService {
 			.uniqueReferenceId(command.getClientReferenceId())
 			.build();
 		final Order persisted = this.save(order);
-		final List<OrderProduct> orderProducts = this.orderProductService.save(order.getId(), command.getProducts());
+		final List<OrderProduct> orderProducts = this.orderProductService.save(persisted.getId(),
+				command.getProducts());
 		this.publishEvent(persisted, orderProducts, EventName.OrderCreated);
 		return persisted;
 	}
